@@ -1,0 +1,32 @@
+.categories-container {
+	border-right: 1px solid @grey-300;
+}
+
+.responsive-design-container {
+
+	margin-bottom: 30px;
+
+	.design-options {
+		position: absolute;
+		width: 50%;
+		left: 25%;
+		top: 50%;
+		margin-top: -55px;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.browser:hover .design-options {
+		opacity: 1;
+		visibility: visible;
+	}
+	.browser:hover .browser-content:before {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}

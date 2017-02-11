@@ -39,6 +39,10 @@
     line-height: @line-height;
     color: @mdb-input-placeholder-color;
     font-weight: 400;
+
+    &.radio-title {
+      color: @mdb-text-color-primary;
+    }
   }
 
   // smaller focused or static size
@@ -65,7 +69,8 @@
       background-image: linear-gradient(@color, @color), linear-gradient(@mdb-input-underline-color, @mdb-input-underline-color);
     }
     label.control-label,
-    .help-block {
+    .help-block,
+    .form-control-feedback {
       color: @color;
     }
   }
@@ -333,6 +338,7 @@ select.form-control {
   .input-group-addon {
     border: 0;
     background: transparent;
+    padding: 12px 15px 0px;
   }
 }
 

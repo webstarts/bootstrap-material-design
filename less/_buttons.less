@@ -139,6 +139,8 @@
       height: @mdb-btn-fab-size-mini;
       min-width: @mdb-btn-fab-size-mini;
       width: @mdb-btn-fab-size-mini;
+      padding: 0;
+      font-size: 17px;
 
       &.material-icons {
         top: (@mdb-btn-icon-size-mini - @mdb-btn-fab-font-size) / 2;
@@ -146,7 +148,8 @@
       }
     }
 
-    i.material-icons {
+    i.material-icons,
+    i.fa {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -157,18 +160,27 @@
   }
 
   // Align icons inside buttons with text
-  i.material-icons {
+  i.material-icons,
+  i.fa {
     vertical-align: middle;
+    font-size: 24px;
+    top: -1px;
+    position: relative;
   }
 
   // Size variations
   &.btn,
   &btn-group & {
-    padding: 12px 30px;
+    padding: 10px 28px;
+  }
+  &.btn-xl,
+  .btn-group-xl & {
+    padding: 24px 54px;
+    font-size: 20px;
   }
   &.btn-lg,
   .btn-group-lg & {
-    padding: 18px 36px;
+    padding: 16px 36px;
     font-size: @mdb-btn-font-size-lg;
   }
   &.btn-sm,
@@ -249,4 +261,31 @@
   .btn-group {
     margin: 0;
   }
+}
+
+.btn.btn-round,
+.navbar .navbar-nav > li > a.btn.btn-round {
+  border-radius: 30px;
+}
+
+button.close {
+    font-size: inherit;
+    color: #FFFFFF;
+    opacity: .9;
+    text-shadow: none;
+
+    i {
+        font-size: 20px;
+    }
+}
+button.close:hover,
+button.close:focus {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.btn.btn-just-icon {
+    font-size: 20px;
+    padding: 12px 12px;
+    line-height: 1em;
 }

@@ -249,6 +249,25 @@
     background-color: @indigo;
   }
 
+  &-transparent {
+    background-color: transparent;
+    color: @mdb-text-color-primary;
+
+    .dropdown-menu {
+      @media (max-width: @grid-float-breakpoint-max) {
+        .dropdown-header{
+          background-color: darken(@mdb-text-color-light-hex,5%);
+        }
+      }
+      li > a {
+          &:hover,
+          &:focus {
+            color: @mdb-text-color-primary;
+          }
+      }
+    }
+  }
+
   @media (max-width: @screen-md-max) {
 
     .navbar-brand {

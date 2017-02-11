@@ -1,0 +1,234 @@
+.navbar + .page-header {
+	margin-top: -20px;	
+}
+
+.page-header {
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    .container {
+    	padding-top: 30vh;
+    }
+}
+.header-filter {
+    position: relative;
+
+    .container {
+    	z-index: 2;
+    	position: relative;
+        color: @mdb-text-color-light;
+    }
+}
+.header-filter::before {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.header-filter:before,
+.header-filter:after {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    content: "";
+}
+
+.iframe-container iframe {
+    width: 100%;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.page-title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+    padding: 30px 0;
+
+    ul {
+        margin-bottom: 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul.links-vertical li {
+        display: block;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    ul li {
+        display: inline-block;
+    }
+    ul li a {
+        color: inherit;
+        padding: 15px;
+        font-weight: 500;
+        font-size: 12px;
+        border-radius: 3px;
+        text-decoration: none;
+        position: relative;
+        display: block;
+    }
+    ul li a:hover {
+        text-decoration: none;
+    }
+    ul.links-vertical li a {
+        padding: 5px;
+    }
+}
+
+.info {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 70px 0 30px;
+    text-align: center;
+
+    .info-title {
+        margin: 30px 0 15px;
+    }
+
+    .icon > i {
+        color: @grey-500;
+        font-size: 4.4em;
+    }
+}
+
+.vertical-center {
+  height:100%;
+  width:100%;
+
+  text-align: center;  /* align the inline(-block) elements horizontally */
+}
+
+.vertical-center:before {    /* create a full-height inline block pseudo=element */
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;    /* vertical alignment of the inline element */
+  height: 100%;
+}
+
+.vertical-center > .container {
+  max-width: 100%;
+
+  display: inline-block;
+  vertical-align: middle;  /* vertical alignment of the inline element */
+}
+
+.page-header .vertical-center > .container {
+    padding-top: 0;
+}
+
+.review-stars {
+    i.fa,
+    i.material-icons {
+        color: @yellow-A700;
+    }
+}
+
+.section-grey-100 {
+    background-color: @grey-100;
+}
+
+.strike {
+    position: relative;
+}
+.strike:after {
+    content: " ";
+    border-bottom: 2px solid rgba(204, 0, 0, 0.7);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    transform: rotateZ(-4deg);
+}
+
+
+
+/****
+***** Browser Frame
+****/
+.browser {
+    /* This is for shadow */
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    overflow: hidden;
+    text-align: left;
+}
+/****
+***** Browser Bar
+****/
+.browser-bar {
+    -moz-border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    height: 21px;
+    font-size: 1px;
+    background-color: #e0e0e0;
+    line-height: 26px;
+}
+.browser-btn:first-child {
+    margin-left: 8px;
+}
+.browser-btn {
+    display: inline-block;
+    height: 21px;
+    font-size: inherit;
+    margin-left: 6px;
+}
+.browser-btn:before {
+    content: "\25cf";
+    font-size: 9px;
+    line-height: 20px;
+    color: #7f7f7f;
+}
+
+/****
+***** Browser Content
+****/
+.browser-content {
+    position: relative;
+    width: 100%;
+    height: 214px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/****
+***** Browser Sizes
+****/
+.browser-sm .browser-bar {
+    height: 11px;
+    line-height: 11px;
+}
+.browser-sm .browser-btn {
+    height: 11px;
+    margin-left: 5px;
+}
+.browser-sm .browser-btn:before {
+    line-height: 11px;
+    font-size: 5px;
+}
+.browser-sm .browser-btn:first-child {
+    margin-left: 7px;
+}
+
+/****
+***** Browser Add-Ons
+****/
+.browser-shadow {
+    -webkit-box-shadow: rgba(0,0,0,.06) 0px 3px 10px;
+    -moz-box-shadow: rgba(0,0,0,.06) 0px 3px 10px;
+    box-shadow: rgba(0,0,0,.06) 0px 3px 10px;
+}
+.browser-content .browser-image {
+    width: 100%;
+}
