@@ -5169,7 +5169,7 @@ hr[data-divider-text]:before {
 }
 /* Panels */
 .panel-popup {
-  position: absolute;
+  position: fixed;
   z-index: 1001;
 }
 .panel-backdrop {
@@ -5820,6 +5820,32 @@ footer ul.links-vertical li a {
 }
 .page-header .vertical-center > .container {
   padding-top: 0;
+}
+.fluid-width {
+  position: relative;
+  padding-bottom: 100%;
+  padding-top: 0;
+  height: 0;
+}
+.fluid-width .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.fluid-width iframe,
+.fluid-width embed,
+.fluid-width object {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+.fluid-width.ratio-1-1 {
+  padding-bottom: 100%;
+}
+.fluid-width.ratio-16-9 {
+  padding-bottom: 56.25%;
 }
 .review-stars i.fa,
 .review-stars i.material-icons {

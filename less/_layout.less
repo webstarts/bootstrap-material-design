@@ -133,6 +133,34 @@ footer {
     padding-top: 0;
 }
 
+.fluid-width {
+    position: relative;
+    padding-bottom: 100%; // default to 1-1
+    padding-top: 0;
+    height: 0;
+
+    .content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+    }
+
+    iframe, embed, object {
+        border: none;
+        width: 100%;
+        height: 100%;
+    }
+
+    &.ratio-1-1 {
+        padding-bottom: 100%;
+    }
+    &.ratio-16-9 {
+        padding-bottom: 56.25%;
+    }
+}
+
 .review-stars {
     i.fa,
     i.material-icons {
