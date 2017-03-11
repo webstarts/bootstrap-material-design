@@ -1,6 +1,6 @@
 .pricing-grid {
 	position: relative;
-	margin-top: 40px;
+	margin-top: 20px;
 	text-align: center;
 
 	ul {
@@ -65,8 +65,8 @@
 	.pricing-card-info {
 		position: absolute;
 		top: 306px;
-		left: 15px;
-		right: 15px;
+		left: 20px;
+		right: 20px;
 		text-align: left;
 	}
 	.pricing-card-info + .pricing-card-container {
@@ -90,6 +90,7 @@
 		}
 
 		.card {
+			margin-top: 0;
 			box-shadow: none;
 			border: 1px solid #d9d9d9;
 		}
@@ -129,6 +130,14 @@
 		}
 	}
 
+	&.num-cards-2 {
+		.pricing-card-container {
+			width: 25%;
+		}
+		.pricing-card-info + .pricing-card-container {
+			margin-left: 50%;
+		}
+	}
 	&.num-cards-3 {
 		.pricing-card-container {
 			width: 25%;
@@ -136,5 +145,14 @@
 		.pricing-card-info + .pricing-card-container {
 			margin-left: 25%;
 		}
+	}
+}
+
+.tool-grid {
+	.pricing-card-container .pricing-header {
+		height: 70px;
+	}
+	.pricing-card-info {
+		top: 76px;
 	}
 }
