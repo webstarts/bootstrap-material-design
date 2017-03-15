@@ -6139,6 +6139,9 @@ footer ul.links-vertical li a {
 .fluid-width.ratio-1-1 {
   padding-bottom: 100%;
 }
+.fluid-width.ratio-4-3 {
+  padding-bottom: 75%;
+}
 .fluid-width.ratio-16-9 {
   padding-bottom: 56.25%;
 }
@@ -6439,6 +6442,17 @@ footer ul.links-vertical li a {
   opacity: 0;
   visibility: hidden;
   padding: 0px 15px;
+}
+.dashboard-app {
+  cursor: pointer;
+}
+.dashboard-site-thumbnail {
+  margin: 25px auto 35px;
+  max-width: 480px;
+  height: auto;
+}
+.dashboard-site-thumbnail .browser-content {
+  height: 100%;
 }
 .site-container {
   margin-bottom: 30px;
