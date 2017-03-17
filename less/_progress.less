@@ -8,3 +8,126 @@
         .variations(~".progress-bar", ~"", background-color, @brand-primary);
     }
 }
+
+.indeterminate-loader {
+    
+    .indeterminate-progress,
+    .message {
+        float: left;
+    }
+
+    .indeterminate-progress {
+        position: relative;
+        width: 100px;
+    }
+    .indeterminate-progress.center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .indeterminate-progress:before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+
+    .indeterminate-progress .circular {
+        animation: rotate 2s linear infinite;
+        height: 100%;
+        transform-origin: center center;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .indeterminate-progress .path {
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0;
+        animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+        stroke-linecap: round;
+        stroke: #000;
+    }
+    
+    .message {
+        height: 100px;
+        line-height: 100px;
+    }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124;
+  }
+}
+
+
+.image-loader {
+    padding: 12.5px 0;
+}
+.image-loader .rect {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    animation: rotating 1.7s linear infinite;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.image-loader .rect .dot{
+    position: absolute;
+    left: 28px;
+    top: 28px;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    background-color: @brand-primary;
+}
+.image-loader .rect .dot.d_i{
+    animation: dot_i 1.5s ease-in-out infinite;
+}
+.image-loader .rect .dot.d_ii{
+    animation: dot_ii 1.5s ease-in-out infinite;
+}
+
+@keyframes dot_i{
+    0%, 100%{
+        transform: translateY(0) scale(1);
+    }
+    50%{
+        transform: translateY(20px) scale(0.8);
+    }
+}
+
+@keyframes dot_ii{
+    0%, 100%{
+        transform: translateY(0) scale(1);
+    }
+    50%{
+        transform: translateY(-20px) scale(0.8);
+    }
+}

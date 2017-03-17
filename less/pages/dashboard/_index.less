@@ -1,13 +1,32 @@
 .dashboard-app {
 	cursor: pointer;
+	background-color: @blue-500;
+	color: #fff;
+
+	transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+	&:hover {
+		background-color: @blue-400;
+		box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+	}
+
+	&.inactive {
+		background-color: #777;
+
+		&:hover {
+			background-color: #999;
+		}
+	}
+
+	.info .icon > i {
+		color: #fff;
+	}
 }
 
 .dashboard-site-thumbnail {
 	margin: 25px auto 35px;
 	max-width: 480px;
 	height: auto;
-
-	.browser-content {
-		height: 100%;
-	}
 }
