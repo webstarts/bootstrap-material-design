@@ -6730,6 +6730,9 @@ footer ul.links-vertical li a {
   max-width: 480px;
   height: auto;
 }
+.update-title-action i {
+  font-size: 20px;
+}
 .site-container {
   margin-bottom: 30px;
 }
