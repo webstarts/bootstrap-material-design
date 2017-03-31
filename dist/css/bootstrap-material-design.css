@@ -7053,6 +7053,7 @@ footer ul.links-vertical li a {
 .domain-form-group .domain-group-addon {
   width: 1%;
   white-space: nowrap;
+  vertical-align: top;
 }
 .domain-form-group .domain-group-addon .tld {
   width: 5em;
