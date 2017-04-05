@@ -4886,15 +4886,6 @@ h6,
 .card-testimonial.card-plain .card-avatar {
   margin-top: 0;
 }
-.card form [class*="col-"] {
-  padding: 6px;
-}
-.card form [class*="col-"]:first-child {
-  padding-left: 15px;
-}
-.card form [class*="col-"]:last-child {
-  padding-right: 15px;
-}
 .modal-content {
   -webkit-box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
           box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22);
