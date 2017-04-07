@@ -7,6 +7,8 @@ body {
 }
 
 .page-header {
+    position: relative;
+
     max-height: initial;
     height: auto;
     min-height: 100vh;
@@ -20,6 +22,21 @@ body {
     .container {
         padding-top: 50px;
         padding-bottom: 50px;
+    }
+
+    &.with-scroller .container {
+        padding-bottom: 130px;
+    }
+
+    .scroller {
+        position: absolute;
+        bottom: 20px; font-size: 76px;
+        color: @grey;
+        z-index: 10;
+    }
+
+    &.header-filter .scroller {
+        color: @mdb-text-color-light;
     }
 }
 

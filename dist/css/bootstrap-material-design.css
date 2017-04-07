@@ -6534,6 +6534,7 @@ body {
   margin-top: -20px;
 }
 .page-header {
+  position: relative;
   max-height: initial;
   height: auto;
   min-height: 100vh;
@@ -6547,6 +6548,19 @@ body {
 .page-header .container {
   padding-top: 50px;
   padding-bottom: 50px;
+}
+.page-header.with-scroller .container {
+  padding-bottom: 130px;
+}
+.page-header .scroller {
+  position: absolute;
+  bottom: 20px;
+  font-size: 76px;
+  color: #9e9e9e;
+  z-index: 10;
+}
+.page-header.header-filter .scroller {
+  color: rgba(255,255,255, 0.84);
 }
 @media (min-width: 992px) {
   .page-header {
