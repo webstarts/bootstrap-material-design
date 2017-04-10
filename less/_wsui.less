@@ -804,3 +804,110 @@ f/*
   box-shadow: 1px 3px 5px rgba(128, 128, 128, 0.7);
   color: #fff;
 }
+
+/* Share site popup on save congratulations message */
+.site-share {
+    display: inline-block;
+    width: 175px;
+    text-align: center;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.site-share:first-child {
+  margin-left: 0;
+}
+.site-share:last-child {
+  margin-right: 0;
+}
+.site-share .icon-container {
+  color: #ffffff;
+  font-size: 32px;
+  line-height: 2.5em;
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0 auto;
+  border: 2px solid;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+.site-share .share-title {
+  line-height: 2.5em;
+}
+.site-share.site-share-facebook .share-title,
+.site-share.site-share-facebook .icon-container {
+  color: @facebook;
+  border-color: @facebook;
+}
+.site-share.site-share-facebook:hover .icon-container {
+  color: #fff;
+  background-color: @facebook;
+}
+
+.site-share.site-share-twitter .share-title,
+.site-share.site-share-twitter .icon-container {
+  color: @twitter;
+  border-color: @twitter;
+}
+.site-share.site-share-twitter:hover .icon-container {
+  color: #fff;
+  background-color: @twitter;
+}
+
+.site-share.site-share-email .share-title,
+.site-share.site-share-email .icon-container {
+  color: @grey;
+  border-color: @grey;
+}
+.site-share.site-share-email:hover .icon-container {
+  color: #fff;
+  background-color: @grey;
+}
+
+.mobile-view .site-share {
+  margin: 0;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #000;
+
+  padding: 0.8em;
+  cursor: pointer;
+}
+.mobile-view .site-share:last-child {
+  margin-bottom: 0;
+}
+.mobile-view .site-share .icon-container {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-size: 1.5em;
+  margin-right: 0.5em;
+
+  width: auto;
+  height: auto;
+  line-height: initial;
+  color: inherit !important;
+  border: none !important;
+  background-color: transparent !important;
+}
+.mobile-view .site-share .share-title {
+  color: inherit !important;
+}
+.mobile-view .site-share.site-share-twitter {
+  border-color: @twitter;
+  background-color: @twitter;
+  color: #ffffff;
+}
+.mobile-view .site-share.site-share-facebook {
+  border-color: @facebook;
+  background-color: @facebook;
+  color: #ffffff;
+}
+.mobile-view .site-share.site-share-email {
+  border-color: @grey;
+  background-color: @grey;
+  color: #ffffff;
+}
+
+#dont-show-again { margin: 7px 0; }
