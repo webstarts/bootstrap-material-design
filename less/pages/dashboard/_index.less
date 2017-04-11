@@ -3,6 +3,10 @@
 	background-color: @blue-500;
 	color: #fff;
 
+	display: block;
+	max-width: 320px;
+	margin: 30px auto 0 auto;
+
 	transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1), color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
 	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
@@ -20,8 +24,56 @@
 		}
 	}
 
-	.info .icon > i {
-		color: #fff;
+	.info {
+		padding: 50px 10px 20px;
+
+		.icon > i {
+			color: @mdb-text-color-light;
+		}
+
+		> p {
+			line-height: 1.5em;
+			height: 3em;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			margin: 0;
+		}
+	}
+
+	.label {
+		position: absolute;
+
+		&.position-top-left {
+			top: 10px;
+			left: 10px;
+		}
+
+		&.position-top-center {
+			top: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&.position-top-right {
+			top: 10px;
+			right: 10px;
+		}
+
+		&.position-bottom-left {
+			bottom: 10px;
+			left: 10px;
+		}
+
+		&.position-bottom-center {
+			bottom: 10px;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&.position-bottom-right {
+			bottom: 10px;
+			right: 10px;
+		}
 	}
 }
 
