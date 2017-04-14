@@ -6672,6 +6672,7 @@ body {
 }
 @media (min-width: 992px) {
   .page-header {
+    min-height: initial;
     height: 100vh;
     max-height: 800px;
   }
