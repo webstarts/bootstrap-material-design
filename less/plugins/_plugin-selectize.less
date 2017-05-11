@@ -109,13 +109,13 @@
 @selectize-font-size: 13px;
 @selectize-line-height: 18px;
 
-@selectize-color-text: rgba(255,255,255, 0.84);
+@selectize-color-text: #333;
 @selectize-color-border: transparent;
 @selectize-color-highlight: rgba(125,168,208,0.2);
 @selectize-color-input: #fff;
 @selectize-color-input-full: @selectize-color-input;
 @selectize-color-disabled: #fafafa;
-@selectize-color-item: #03a9f4;
+@selectize-color-item: #333;
 @selectize-color-item-text: @selectize-color-text;
 @selectize-color-item-border: transparent;
 @selectize-color-item-active: #0fb2fc;
@@ -124,8 +124,8 @@
 @selectize-color-dropdown: #fff;
 @selectize-color-dropdown-border: @selectize-color-border;
 @selectize-color-dropdown-border-top: #f0f0f0;
-@selectize-color-dropdown-item-active: rgba(0, 0, 0, 0.0980392);
-@selectize-color-dropdown-item-active-text: #495c68;
+@selectize-color-dropdown-item-active: #eee;
+@selectize-color-dropdown-item-active-text: #333;
 @selectize-color-dropdown-item-create-text: rgba(red(@selectize-color-text), green(@selectize-color-text), blue(@selectize-color-text), 0.5);
 @selectize-color-dropdown-item-create-active-text: @selectize-color-dropdown-item-active-text;
 @selectize-color-optgroup: @selectize-color-dropdown;
@@ -148,8 +148,8 @@
 @selectize-padding-y: 8px;
 @selectize-padding-item-x: 6px;
 @selectize-padding-item-y: 2px;
-@selectize-padding-dropdown-item-x: 10px;
-@selectize-padding-dropdown-item-y: 8px;
+@selectize-padding-dropdown-item-x: 14px;
+@selectize-padding-dropdown-item-y: 10px;
 @selectize-margin-item-x: 3px;
 @selectize-margin-item-y: 3px;
 
@@ -318,7 +318,7 @@
   background: @selectize-color-dropdown;
   margin: 5px 0 0 0;
   border-top: 0 none;
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px  6px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
   .selectize-box-sizing(border-box);
   .selectize-border-radius(0 0 @selectize-border-radius @selectize-border-radius);
 
@@ -358,6 +358,7 @@
   overflow-x: hidden;
   max-height: @selectize-max-height-dropdown;
   -webkit-overflow-scrolling: touch;
+  font-size: 14px;
 }
 
 .selectize-control.single .selectize-input {
