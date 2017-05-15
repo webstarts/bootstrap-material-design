@@ -2724,6 +2724,9 @@ textarea.auto-resize {
   line-height: 60px;
   font-size: 24px;
   cursor: pointer;
+}
+.notification-bell,
+.notification-bell:hover {
   color: inherit;
 }
 .notification-bell .badge {
