@@ -5619,7 +5619,7 @@ hr[data-divider-text]:before {
   padding: 6px 0 3px;
 }
 .selectize-input.full {
-  background-color: #fff;
+  background-color: transparent;
 }
 .selectize-input.disabled,
 .selectize-input.disabled * {
@@ -5772,6 +5772,9 @@ hr[data-divider-text]:before {
   -webkit-overflow-scrolling: touch;
   font-size: 14px;
 }
+.selectize-control.single .selectize-input {
+  padding-right: 36px;
+}
 .selectize-control.single .selectize-input,
 .selectize-control.single .selectize-input input {
   cursor: pointer;
@@ -5785,7 +5788,7 @@ hr[data-divider-text]:before {
   display: block;
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 10px;
   margin-top: -3px;
   width: 0;
   height: 0;
@@ -5799,7 +5802,7 @@ hr[data-divider-text]:before {
   border-color: transparent transparent #808080 transparent;
 }
 .selectize-control.rtl.single .selectize-input:after {
-  left: 15px;
+  left: 10px;
   right: auto;
 }
 .selectize-control.rtl .selectize-input > input {
@@ -7051,6 +7054,12 @@ footer ul.links-vertical li a {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+.aligner > .container {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .absolute-center {
   position: absolute;

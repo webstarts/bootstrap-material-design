@@ -113,7 +113,7 @@
 @selectize-color-border: transparent;
 @selectize-color-highlight: rgba(125,168,208,0.2);
 @selectize-color-input: #fff;
-@selectize-color-input-full: @selectize-color-input;
+@selectize-color-input-full: transparent;
 @selectize-color-disabled: #fafafa;
 @selectize-color-item: #333;
 @selectize-color-item-text: @selectize-color-text;
@@ -155,7 +155,7 @@
 
 @selectize-arrow-size: 5px;
 @selectize-arrow-color: #808080;
-@selectize-arrow-offset: 15px;
+@selectize-arrow-offset: 10px;
 
 @selectize-caret-margin: 0 2px 0 0;
 @selectize-caret-margin-rtl: 0 4px 0 -2px;
@@ -364,6 +364,8 @@
 .selectize-control.single .selectize-input {
   &, input { cursor: pointer; }
   &.input-active, &.input-active input { cursor: text; }
+
+  padding-right: 36px;
 
   &:after {
     content: ' ';
