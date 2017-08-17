@@ -2973,6 +2973,13 @@ legend {
   background-color: transparent;
   opacity: 0.9;
 }
+.navbar .nav-stacked {
+  font-size: 16px;
+}
+.navbar .nav-stacked > li > a {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
 .navbar .navbar-toggle {
   border: 0;
 }
@@ -3808,7 +3815,8 @@ fieldset[disabled] .navbar .btn-link:focus {
     position: fixed;
     top: 0;
     bottom: 0;
-    right: 0;
+    right: -8px;
+    /* This allows the box-shadow to be hidden */
     -webkit-box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.35);
             box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.35);
     -webkit-transform: translate3d(280px, 0, 0);
@@ -3827,8 +3835,8 @@ fieldset[disabled] .navbar .btn-link:focus {
     background-color: #fff;
   }
   .navbar-sidebar.open {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(-8px, 0, 0);
+    transform: translate3d(-8px, 0, 0);
   }
   .sidebar-overlay {
     visibility: hidden;
@@ -4556,6 +4564,13 @@ a.text-info:hover {
 .nav-tabs > li.disabled > a,
 .nav-tabs > li.disabled > a:hover {
   color: rgba(0, 0, 0, 0.5) !important;
+}
+.nav-tabs.nav-stacked {
+  float: none;
+}
+.nav-tabs.nav-stacked > li {
+  float: none;
+  border-width: 0 0 0 5px;
 }
 .nav-pills {
   background: transparent;
@@ -6454,8 +6469,8 @@ f .scrollable {
   line-height: 24px;
   height: 24px;
   width: 85%;
-  width: -webkit-calc(70%);
-  width: calc(70%);
+  width: -webkit-calc(66%);
+  width: calc(66%);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
