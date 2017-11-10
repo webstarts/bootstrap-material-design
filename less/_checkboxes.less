@@ -26,11 +26,14 @@ label.checkbox-inline {
   .checkbox-material {
     vertical-align: middle;
     position: relative;
-    top: 3px;
+    top: 1px;
+    padding-right: 5px;
+    display: inline-block;
+
     &:before { // FIXME: document why this is necessary (doesn't seem to be on chrome)
       display: block;
       position: absolute;
-      top:-5px;
+      top: 0;
       left: 0;
       content: "";
       background-color: rgba(0, 0, 0, .84);
@@ -58,8 +61,8 @@ label.checkbox-inline {
       content: "";
       transform: rotate(45deg);
       display: block;
-      margin-top: -4px;
-      margin-left: 6px;
+      margin-top: -3px;
+      margin-left: 7px;
       width: 0;
       height: 0;
       box-shadow:
@@ -70,6 +73,7 @@ label.checkbox-inline {
         0 0 0 0,
         0 0 0 0,
         0 0 0 0 inset;
+      /* @include animation(checkbox-off $mdb-checkbox-animation-check forwards); */
     }
   }
 
