@@ -45,39 +45,29 @@ a, a:hover, a:focus {
 @import '_togglebutton';
 @import '_radios';
 @import '_inputs';
+@import '_pagination';
+@import '_tables';
+@import '_notifications';
 
 legend {
   border-bottom: 0;
 }
 
+@import '_wells';
 @import '_lists';
 @import '_navbar';
-
-.dropdown-menu {
-  border: 0;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-  .divider {
-    background-color: rgba(0, 0, 0, .12);
-  }
-  li {
-    overflow: hidden;
-    position: relative;
-    a:hover {
-      background-color: transparent;
-      color: $brand-primary;
-    }
-  }
-}
-
+@import '_sidebar';
 @import '_alerts';
 @import '_progress';
 @import '_typography';
 @import '_tabs';
+@import '_pills';
 @import '_popups';
 @import '_cards';
 @import '_dialogs';
 @import '_panels';
 @import '_dividers';
+@import '_dropdowns';
 
 // Prevent highlight on mobile
 * {
@@ -93,3 +83,7 @@ legend {
 
 // External plugins
 @import '_plugins';
+@import '_wsui';
+@import '_layout';
+@import '_pages';
+@import '_editor';

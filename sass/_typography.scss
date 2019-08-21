@@ -3,15 +3,63 @@
 .text-warning {
   color: $brand-warning;
 }
+a.text-warning:focus, a.text-warning:hover {
+  color: darken($brand-warning, 20%);
+}
+.text-default {
+  color: $grey;
+}
+a.text-default:focus, a.text-default:hover {
+  color: darken($grey, 20%);
+}
 .text-primary {
   color: $brand-primary;
+}
+a.text-primary:focus, a.text-primary:hover {
+  color: darken($brand-primary, 20%);
+}
+.text-secondary {
+  color: $brand-secondary;
+}
+a.text-secondary:focus, a.text-secondary:hover {
+  color: darken($brand-secondary, 20%);
 }
 .text-danger {
   color: $brand-danger;
 }
+a.text-danger:focus, a.text-danger:hover {
+  color: darken($brand-danger, 20%);
+}
 .text-success {
   color: $brand-success;
 }
+a.text-success:focus, a.text-success:hover {
+  color: darken($brand-success, 20%);
+}
 .text-info {
   color: $brand-info;
+}
+a.text-info:focus, a.text-info:hover {
+  color: darken($brand-info, 20%);
+}
+
+@media (min-width: $screen-md-min) {
+  h1, .h1 {
+  	font-size: 48px;
+  }
+  h2, .h2 {
+  	font-size: 36px;
+  }
+  h3, .h3 {
+  	font-size: 24px;
+  }
+  h4, .h4 {
+  	font-size: 18px;
+  }
+  h5, .h5 {
+  	font-size: 16px;
+  }
+  h6, .h6 {
+  	font-size: 14px;
+  }
 }

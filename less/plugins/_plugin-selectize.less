@@ -352,6 +352,16 @@
   .create {
     color: @selectize-color-dropdown-item-create-text;
   }
+  
+  &.selectize-dropdown-dark {
+	background-color: #333;
+	color: @mdb-dark-bg-text-color;
+	
+	.active {
+		color: @brand-primary;
+		background-color: #393939;
+	}
+  }
 }
 
 .selectize-dropdown-content {
@@ -360,6 +370,7 @@
   max-height: @selectize-max-height-dropdown;
   -webkit-overflow-scrolling: touch;
   font-size: 14px;
+  position: relative;
 }
 
 .selectize-control.single .selectize-input {
