@@ -5,7 +5,6 @@
 @mixin typo-button($colorContrast: false){
   font-size: $mdb-btn-font-size-base;
   font-weight: 500;
-  text-transform: uppercase;
   //line-height: 1;
   letter-spacing: 0;
 
@@ -70,7 +69,8 @@
   &.btn-raised,
   .btn-group-raised & {
     &:not(.btn-link) {
-      @include shadow-2dp();
+      //.shadow-2dp();
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
       // colors on hover, focus, active
       &:hover,
@@ -79,10 +79,13 @@
       &:active {
 
         outline: 0;
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 
         // FIXME: SPEC - this should be the 600 color, how can we get that programmatically if at all? Or are we limited to the color palette only?
         // SASS conversion note: please mirror any content change in _mixins-shared.scss button-variations-content
-        @include button-variations(unquote(".btn"), "", $mdb-btn-background-color);
+        .generic-variations(unquote(".btn"), unquote(""), $mdb-btn-background-color, {
+          background-color: contrast($variation-color, darken($variation-color, 4%), lighten($variation-color, 4%), $contrast-factor);
+        });
 
         // Spec:
         //  - Raised Light/Light theme no hover.
@@ -96,7 +99,7 @@
       &:active {
         &,
         &:hover {
-          @include shadow-4dp();
+          // @include shadow-4dp();
         }
       }
 
@@ -108,7 +111,7 @@
         &:active {
           &,
           &:hover {
-            @include focus-shadow();
+            // @include focus-shadow();
           }
         }
       }
@@ -138,6 +141,8 @@
       height: $mdb-btn-fab-size-mini;
       min-width: $mdb-btn-fab-size-mini;
       width: $mdb-btn-fab-size-mini;
+      padding: 0;
+      font-size: 17px;
 
       &.material-icons {
         top: ($mdb-btn-icon-size-mini - $mdb-btn-fab-font-size) / 2;
@@ -145,7 +150,8 @@
       }
     }
 
-    i.material-icons {
+    i.material-icons,
+    i.fa {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -156,13 +162,35 @@
   }
 
   // Align icons inside buttons with text
-  i.material-icons {
+  i.material-icons,
+  i.fa {
     vertical-align: middle;
+    font-size: 1em;
+    top: -1px;
+    position: relative;
+  }
+
+  i.icon-left {
+    margin-right: 10px;
+  }
+
+  i.icon-right {
+    margin-left: 10px;
   }
 
   // Size variations
+  &.btn,
+  &btn-group & {
+    padding: 10px 28px;
+  }
+  &.btn-xl,
+  .btn-group-xl & {
+    padding: 24px 54px;
+    font-size: 20px;
+  }
   &.btn-lg,
   .btn-group-lg & {
+    padding: 16px 36px;
     font-size: $mdb-btn-font-size-lg;
   }
   &.btn-sm,
@@ -243,4 +271,39 @@
   .btn-group {
     margin: 0;
   }
+}
+
+.btn.btn-round,
+.navbar .navbar-nav > li > a.btn.btn-round {
+  border-radius: 30px;
+}
+
+button.close {
+    font-size: inherit;
+    color: #FFFFFF;
+    opacity: .9;
+    text-shadow: none;
+
+    i {
+        font-size: 20px;
+    }
+}
+button.close:hover,
+button.close:focus {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.btn.btn-just-icon {
+    font-size: 20px;
+    padding: 12px 12px;
+    line-height: 1em;
+}
+
+@media (max-width: $screen-xs-max) {
+	.btn {
+		.block-phone {
+			display: block;
+		}
+	}
 }

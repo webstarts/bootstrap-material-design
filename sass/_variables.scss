@@ -3,7 +3,7 @@
 @import '_colors';
 
 // Typography elements
-$mdb-font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
+$mdb-font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif !default;
 $mdb-text-color-light:  unquote("rgba(#{$rgb-white}, 0.84)") !default;
 $mdb-text-color-light-hex: $white !default; // for contrast function in inverse
 $mdb-text-color-primary: unquote("rgba(#{$rgb-black}, 0.87)") !default;
@@ -22,20 +22,21 @@ $mdb-label-color-toggle-focus: unquote("rgba(#{$rgb-black}, .54)") !default;
 // Converted bs variables
 
 // Bootstrap brand color customization
-$brand-primary: $teal !default;
+$brand-primary: $light-blue !default;
+$brand-secondary: $pink !default;
 $brand-success: $green !default;
 $brand-danger: $red !default;
 $brand-warning: $deep-orange !default;
-$brand-info: $light-blue !default;
+$brand-info: $cyan !default;
 
 $border-radius-base: 2px !default;
 $border-radius-small: 1px !default;
 
 // Typography
-$font-family-sans-serif: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
+$font-family-sans-serif: 'Open Sans', 'Helvetica', 'Arial', sans-serif !default;
 $headings-font-weight: 300 !default;
 
-$body-bg: #EEEEEE !default;
+$body-bg: #f2f2f2 !default;
 //---
 
 // import bs variables for sass, first declared wins.
@@ -128,7 +129,7 @@ $mdb-checkbox-animation-ripple: 500ms !default;
 $mdb-checkbox-animation-check: 0.3s !default;
 $mdb-checkbox-checked-color: $brand-primary !default;
 
-$mdb-checkbox-border-size: 2px !default;
+$mdb-checkbox-border-size: 1px !default;
 $mdb-checkbox-label-color: $mdb-label-color !default;
 $mdb-checkbox-border-color: $mdb-label-color-toggle-focus !default;
 
@@ -137,7 +138,7 @@ $mdb-popover-background: rgba(101, 101, 101, 0.9) !default;
 $mdb-popover-color: #ececec !default;
 
 // Dropdown Menu
-$mdb-dropdown-font-size: 16px !default;
+$mdb-dropdown-font-size: 14px !default;
 
 // Toggle
 $mdb-toggle-label-color: $mdb-label-color !default;

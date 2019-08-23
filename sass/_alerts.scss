@@ -4,8 +4,27 @@
     border: 0;
     border-radius: 0;
 
+    .alert-icon {
+        display: block;
+        float: left;
+        margin-right: 15px;
+
+        i {
+            margin-top: -7px;
+            top: 5px;
+            position: relative;
+        }
+    }
+
     // SASS conversion note: please mirror any content change in _mixins-shared.scss alert-variations-content
-    @include alert-variations(unquote(".alert"), unquote(""), $mdb-text-color-light);
+    .generic-variations(unquote(".alert"), unquote(""), $mdb-text-color-light, {
+        background-color: $variation-color;
+        color: $variation-color-text;
+
+        a, .alert-link {
+            color: $variation-color-text;
+        }
+    });
 
     &-info, &-danger, &-warning, &-success {
         color: $mdb-text-color-light;
