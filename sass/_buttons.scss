@@ -302,8 +302,9 @@ button.close:focus {
 
 @media (max-width: $screen-xs-max) {
 	.btn {
-		.block-phone {
+		&.block-phone {
 			display: block;
+			padding: 16px 36px !important;
 		}
 	}
 }

@@ -162,11 +162,18 @@
 	#dashboard-page {
 		.container-button .btn {
 			display: block;
-			width: 300px;
 			margin: 12px auto;
+			padding: 16px 36px;
+			font-size: 16px;
 		}
 		.link-to-site {
 			font-size: 85%;
+		}
+	}
+	.free-banner {
+		.btn {
+			padding: 16px 36px;
+			font-size: 16px;
 		}
 	}
 }

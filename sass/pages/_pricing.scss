@@ -8,7 +8,7 @@
 	ul {
 		list-style: none;
 		margin: 0;
-		padding: 0 0 10px 0;
+		padding: 0;
 
 		li {
 			position: relative;
@@ -198,6 +198,7 @@
 		font-size: 16px;
 		
 		.nav-tabs {
+			border-bottom: 1px solid $grey-300;
 			.nav-link {
 				h4 {
 					font-weight: 500;
@@ -216,28 +217,6 @@
 			}
 		}
 		
-		.price-div {
-			margin: 15px 0;
-			font-size: 170%;
-			text-align: center;
-			
-			.sign {
-				vertical-align: top;
-			}
-			.amount {
-				font-weight: 900;
-				font-size: 300%;
-				line-height: 1;
-			}
-			.period {
-				vertical-align: bottom;
-			}
-			.annual {
-				vertical-align: bottom;
-				font-size: initial;
-			}
-		}
-		
 		ul.key-features {
 			padding: 0;
 			
@@ -246,6 +225,10 @@
 				
 				i {
 					margin-right: 10px;
+				}
+				
+				img {
+					width: 55px;
 				}
 			}
 		}
@@ -274,6 +257,27 @@
 	}
 }
 
+.price-div {
+	margin: 15px 0;
+	font-size: 170%;
+	text-align: center;
+	
+	.sign {
+		vertical-align: top;
+	}
+	.amount {
+		font-weight: 900;
+		font-size: 300%;
+		line-height: 1;
+	}
+	.period {
+		vertical-align: bottom;
+	}
+	.annual {
+		vertical-align: bottom;
+		font-size: initial;
+	}
+}
 
 @media (min-width: $screen-md-min) {
 

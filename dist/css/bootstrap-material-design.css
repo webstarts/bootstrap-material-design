@@ -1199,8 +1199,9 @@ button.close:focus {
   line-height: 1em;
 }
 @media (max-width: 767px) {
-  .btn .block-phone {
+  .btn.block-phone {
     display: block;
+    padding: 16px 36px !important;
   }
 }
 .checkbox label,
@@ -1869,6 +1870,30 @@ label.radio-inline input[type=radio][disabled] ~ .circle {
 .theme-dark .radio input[type=radio][disabled] ~ .circle,
 .theme-dark label.radio-inline input[type=radio][disabled] ~ .circle {
   border-color: #ffffff;
+}
+/* block not inline */
+.radio.radio-md {
+  padding: 10px 0;
+}
+.radio.radio-md .circle,
+.radio.radio-md .check {
+  height: 20px;
+  width: 20px;
+}
+.radio.radio-md .check:after {
+  height: 55px;
+  width: 55px;
+}
+.radio.radio-md label {
+  padding-left: 40px;
+  font-size: 16px !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+.radio.radio-md span {
+  top: 1px;
+}
+.radio.radio-md + .radio.radio-md {
+  margin-top: 10px;
 }
 @keyframes rippleOn {
   0% {
@@ -4574,6 +4599,9 @@ a.text-info:hover {
 .nav-tabs > li.disabled > a,
 .nav-tabs > li.disabled > a:hover {
   color: rgba(0, 0, 0, 0.5) !important;
+}
+.nav-tabs.underline {
+  border-bottom: 1px solid #e0e0e0 !important;
 }
 .nav-tabs.nav-stacked {
   float: none;
@@ -11485,6 +11513,35 @@ footer ul.links-vertical li a {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.aligner.vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.aligner.left-center {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+.aligner.right-center {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
 .aligner > .container {
   margin-left: 0;
   margin-right: 0;
@@ -11661,7 +11718,7 @@ footer ul.links-vertical li a {
 .pricing-grid ul {
   list-style: none;
   margin: 0;
-  padding: 0 0 10px 0;
+  padding: 0;
 }
 .pricing-grid ul li {
   position: relative;
@@ -11819,6 +11876,9 @@ footer ul.links-vertical li a {
   margin: 0;
   font-size: 16px;
 }
+.pricing-grid.phone-view .nav-tabs {
+  border-bottom: 1px solid #e0e0e0;
+}
 .pricing-grid.phone-view .nav-tabs .nav-link h4 {
   font-weight: 500;
   margin: 6px 0px;
@@ -11831,26 +11891,6 @@ footer ul.links-vertical li a {
 .pricing-grid.phone-view .nav-tabs li a {
   color: #000000;
 }
-.pricing-grid.phone-view .price-div {
-  margin: 15px 0;
-  font-size: 170%;
-  text-align: center;
-}
-.pricing-grid.phone-view .price-div .sign {
-  vertical-align: top;
-}
-.pricing-grid.phone-view .price-div .amount {
-  font-weight: 900;
-  font-size: 300%;
-  line-height: 1;
-}
-.pricing-grid.phone-view .price-div .period {
-  vertical-align: bottom;
-}
-.pricing-grid.phone-view .price-div .annual {
-  vertical-align: bottom;
-  font-size: initial;
-}
 .pricing-grid.phone-view ul.key-features {
   padding: 0;
 }
@@ -11859,6 +11899,9 @@ footer ul.links-vertical li a {
 }
 .pricing-grid.phone-view ul.key-features li i {
   margin-right: 10px;
+}
+.pricing-grid.phone-view ul.key-features li img {
+  width: 55px;
 }
 .pricing-grid .red-strike {
   position: relative;
@@ -11876,6 +11919,26 @@ footer ul.links-vertical li a {
 }
 .tool-grid .pricing-card-info {
   top: 76px !important;
+}
+.price-div {
+  margin: 15px 0;
+  font-size: 170%;
+  text-align: center;
+}
+.price-div .sign {
+  vertical-align: top;
+}
+.price-div .amount {
+  font-weight: 900;
+  font-size: 300%;
+  line-height: 1;
+}
+.price-div .period {
+  vertical-align: bottom;
+}
+.price-div .annual {
+  vertical-align: bottom;
+  font-size: initial;
 }
 @media (min-width: 992px) {
   .pricing-grid .pricing-card-container .se-bg {
@@ -11954,6 +12017,22 @@ footer ul.links-vertical li a {
 }
 .site-example {
   margin-bottom: 30px;
+}
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .domain-form-group {
   position: relative;
@@ -12133,11 +12212,16 @@ footer ul.links-vertical li a {
 @media (max-width: 767px) {
   #dashboard-page .container-button .btn {
     display: block;
-    width: 300px;
     margin: 12px auto;
+    padding: 16px 36px;
+    font-size: 16px;
   }
   #dashboard-page .link-to-site {
     font-size: 85%;
+  }
+  .free-banner .btn {
+    padding: 16px 36px;
+    font-size: 16px;
   }
 }
 .site-container {

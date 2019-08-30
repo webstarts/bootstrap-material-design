@@ -169,6 +169,20 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+	
+	&.vertical {
+		flex-direction: column;
+	}
+	
+	&.left-center {
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	
+	&.right-center {
+		flex-direction: row;
+		justify-content: flex-end;
+	}
 }
 
 .aligner > .container {
