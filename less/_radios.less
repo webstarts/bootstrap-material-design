@@ -91,6 +91,35 @@
   }
 }
 
+/* block not inline */
+.radio {
+	&.radio-md {
+		padding: 10px 0;
+		
+		
+		.circle, .check {
+			height: 20px;
+			width: 20px;
+		}
+		.check:after {
+			height: 55px;
+			width: 55px;
+		}
+		label {
+			padding-left: 40px;
+			font-size: 16px !important;
+			color: rgba(0,0,0,.54) !important;
+		}
+		span {
+			top: 1px;
+		}
+	}
+	  
+	&.radio-md + .radio.radio-md {
+		margin-top: 10px;
+	}
+}
+
 @keyframes rippleOn {
   0% {
     opacity: 0;

@@ -301,3 +301,12 @@ button.close:focus {
     padding: 12px 12px;
     line-height: 1em;
 }
+
+@media (max-width: $screen-xs-max) {
+	.btn {
+		&.block-phone {
+			display: block;
+			padding: 16px 36px !important;
+		}
+	}
+}

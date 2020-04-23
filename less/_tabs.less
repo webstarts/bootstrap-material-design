@@ -1,12 +1,14 @@
 .nav-tabs {
     background: transparent;
     border: 0;
+	
     > li {
         border-width: 0 0 2px;
         border-style: solid;
         border-color: transparent;
         &.active {
             border-color: @mdb-text-color-primary;
+			background-color: fade(@mdb-text-color-primary-hex, 5%);
         }
         > a {
             cursor: pointer;
@@ -33,14 +35,18 @@
             color: @mdb-text-color-primary !important;
             font-weight: 500;
         }
-        & > a:hover {
+        /*& > a:hover {
             background-color: @grey-200 !important;
-        }
+        }*/
 
         &.disabled > a, &.disabled > a:hover {
             color: fade(@mdb-text-color-primary-hex, 50%) !important;
         }
     }
+	
+	&.underline {
+		border-bottom: 1px solid @grey-300 !important;
+	}
 
     &.nav-stacked {
         float: none;

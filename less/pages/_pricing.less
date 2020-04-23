@@ -6,7 +6,7 @@
 	ul {
 		list-style: none;
 		margin: 0;
-		padding: 0 0 10px 0;
+		padding: 0;
 
 		li {
 			position: relative;
@@ -42,30 +42,31 @@
 		left: 0;
 		margin-top: -12px;
 		width: 100%;
-	}
-	.icon-set i {
-	    display: inline-block;
-	    background-color: #333;
-	    color: #fff;
-	    margin: 0 2px;
-	    font-size: 16px;
-	    width: 24px;
-	    height: 24px;
-	    line-height: 24px;
-	    text-align: center;
+		
+		i {
+			display: inline-block;
+			background-color: #333;
+			color: #fff;
+			margin: 0 2px;
+			font-size: 16px;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			text-align: center;
 
-	    &.fa-facebook {
-	    	background-color: @facebook;
-	    }
-	    &.fa-twitter {
-	    	background-color: @twitter;
-	    }
-	    &.fa-instagram {
-	    	background-color: @instagram;
-	    }
-	    &.fa-pinterest {
-	    	background-color: @pinterest;
-	    }
+			&.fa-facebook {
+				background-color: @facebook;
+			}
+			&.fa-twitter {
+				background-color: @twitter;
+			}
+			&.fa-instagram {
+				background-color: @instagram;
+			}
+			&.fa-pinterest {
+				background-color: @pinterest;
+			}
+		}
 	}
 
 	.pricing-card-info {
@@ -74,9 +75,9 @@
 		left: 20px;
 		right: 20px;
 		text-align: left;
-	}
-	.pricing-card-info + .pricing-card-container {
-		margin-left: 20%;
+		&+.pricing-card-container {
+			margin-left: 20%;
+		}
 	}
 
 	.pricing-card-container {
@@ -91,14 +92,42 @@
 		.pricing-footer {
 			padding: 5px;
 		}
-		.pricing-footer .btn {
-			margin-bottom: 20px;
+		.pricing-footer {
+			.btn {
+				margin-bottom: 20px;
+			}
 		}
 
 		.card {
 			margin-top: 0;
 			box-shadow: none;
 			border: 1px solid #d9d9d9;
+			
+			.btn-flat {
+				border-radius: 0;
+				box-shadow: none!important;
+				color: #fff!important;
+				font-size: 1em;
+				margin: -5px!important;
+				position: relative;
+				padding: 15px;
+				min-width: ~'calc(100% + 10px)';
+				
+				.label-primary {
+					padding: 5px 10px;
+					position: absolute;
+					right: 10px;
+					top: 15px;
+				}
+				
+				&:nth-child(1) {
+					margin-bottom: 5px!important;
+				}
+				
+				&:last-child {
+					margin-top: 0;
+				}
+			}
 		}
 
 		.plan-name {
@@ -140,6 +169,19 @@
 		.pricing-card-info + .pricing-card-container {
 			margin-left: 50%;
 		}
+		
+		&.num-cards-lg {
+			.pricing-card-container {
+				width: 38%;
+			}
+			.pricing-card-info + .pricing-card-container {
+				margin-left: 24%;
+			}
+			.plan-sub {
+				padding: 10px;
+				margin:0;
+			}
+		}
 	}
 	&.num-cards-3 {
 		.pricing-card-container {
@@ -147,6 +189,59 @@
 		}
 		.pricing-card-info + .pricing-card-container {
 			margin-left: 25%;
+		}
+	}
+	&.phone-view {
+		margin: 0;
+		font-size: 16px;
+		
+		.nav-tabs {
+			border-bottom: 1px solid @grey-300;
+			.nav-link {
+				h4 {
+					font-weight: 500;
+					margin: 6px 0px;
+				}
+			}
+			
+			li {
+				float: left;
+				width: 50%;
+				padding: 0;
+				
+				a {
+					color: rgba(0,0,0,1);
+				}
+			}
+		}
+		
+		ul.key-features {
+			padding: 0;
+			
+			li {
+				padding: 8px 0 8px 10px;
+				
+				i {
+					margin-right: 10px;
+				}
+				
+				img {
+					width: 55px;
+				}
+			}
+		}
+
+	}
+	
+	.red-strike {
+		position: relative;
+		&:after {
+			content: '';
+			border-bottom: 2px solid red;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 100%;
 		}
 	}
 }
@@ -160,42 +255,68 @@
 	}
 }
 
+.price-div {
+	margin: 15px 0;
+	font-size: 170%;
+	text-align: center;
+	
+	.sign {
+		vertical-align: top;
+	}
+	.amount {
+		font-weight: 900;
+		font-size: 300%;
+		line-height: 1;
+	}
+	.period {
+		vertical-align: bottom;
+	}
+	.annual {
+		vertical-align: bottom;
+		font-size: initial;
+	}
+}
 
 @media (min-width: @screen-md-min) {
 
-    .pricing-grid .pricing-card-container .se-bg {
-		width: 170px;
-		height: 20px;
-		margin-top: -10px;
-		margin-left: -85px;
-		background-size: 170px auto;
-    }
-    .pricing-grid .pricing-card-container .se-bg.google-only {
-		width: 54px;
-		margin-left: -27px;
-    }
-
-	.pricing-grid .pricing-card-info {
-		top: 321px;
+	.pricing-grid {
+		.pricing-card-container {
+			.se-bg {
+				width: 170px;
+				height: 20px;
+				margin-top: -10px;
+				margin-left: -85px;
+				background-size: 170px auto;
+			}
+			.se-bg.google-only {
+				width: 54px;
+				margin-left: -27px;
+			}
+			.pricing-header {
+				height: 315px;
+			}
+			.plan-sub {
+				height: 4em;
+			}
+		}
+		.pricing-card-info {
+			top: 321px;
+		}
 	}
-
-    .pricing-grid .pricing-card-container .pricing-header {
-    	height: 315px;
-    }
-    .pricing-grid .pricing-card-container .plan-sub {
-    	height: 4em;
-    }
 }
 @media (min-width: @screen-lg-min) {
 
-	.pricing-grid .pricing-card-info {
-		top: 306px;
+	.pricing-grid {
+		.pricing-card-info {
+			top: 306px;
+		}
+		.pricing-card-container {
+			.pricing-header {
+				height: 300px;
+			}
+			.plan-sub {
+				height: 3em;
+			}
+		}
 	}
-
-    .pricing-grid .pricing-card-container .pricing-header {
-    	height: 300px;
-    }
-    .pricing-grid .pricing-card-container .plan-sub {
-    	height: 3em;
-    }
 }

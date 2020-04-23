@@ -118,3 +118,62 @@
 		font-size: 20px;
 	}
 }
+
+.free-banner {
+	background-color: $brand-secondary;
+	color: #fff;
+	transform: translateY(-100%);
+	transition: transform 1s ease-out;
+	
+	.aligner {
+		flex-wrap: wrap;
+	}
+	
+	.banner-col-left {
+		font-size: 96%;
+		padding: 10px 0;
+		flex: 78%;
+	}
+	
+	.banner-col-right {
+		text-align: center;
+		flex: 10%;
+	}
+	
+	.text {
+		font-size: 1em;
+		padding: 10px 10px 10px 0;
+	}
+}
+.free-banner.animate {
+	transform: translateY(0);
+}
+
+.contrib-role-tag {
+	border: 1px solid #03a9f4;
+	margin-top: -20px;
+	background-color: #03a9f4;
+	color: white;
+	padding: 0px 5px 0px 5px;
+	border-radius: 0px 0px 0px 0px;
+}
+
+@media (max-width: $screen-xs-max) {
+	#dashboard-page {
+		.container-button .btn {
+			display: block;
+			margin: 12px auto;
+			padding: 16px 36px;
+			font-size: 16px;
+		}
+		.link-to-site {
+			font-size: 85%;
+		}
+	}
+	.free-banner {
+		.btn {
+			padding: 16px 36px;
+			font-size: 16px;
+		}
+	}
+}
