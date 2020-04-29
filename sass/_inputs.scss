@@ -52,7 +52,7 @@
     font-size: $static-font-size;
     line-height: $static-line-height;
     font-weight: 400;
-    margin: 16px 0 0 0; // std and lg
+    margin: 16px 0 5px 0; // std and lg
   }
 
   .help-block {
@@ -147,6 +147,7 @@
   float: none;
   box-shadow: none;
   border-radius: 0;
+  padding: 7px .15em;
 
   // Placeholders and and labels-as-placeholders should look the same
   .material-placeholder({

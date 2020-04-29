@@ -47,11 +47,19 @@
       &:focus {
         // spec: flat/light bg Hover: 20% #999999
         background-color: rgba(#999999, (20/100));
+        border: 1px solid rgba(#999999, (0/100));
 
         .theme-dark & {
           // spec: dark bg Hover: 15% #CCCCCC
           background-color: rgba(#CCCCCC, (15/100));
+          border: 1px solid rgba(#CCCCCC, (0/100));
         }
+      }
+      border: 1px solid rgba(#999999, (20/100));
+
+      .theme-dark & {
+        // spec: dark bg Hover: 15% #CCCCCC
+        border: 1px solid rgba(#CCCCCC, (15/100));
       }
     }
   }
@@ -147,6 +155,21 @@
       &.material-icons {
         top: ($mdb-btn-icon-size-mini - $mdb-btn-fab-font-size) / 2;
         left: ($mdb-btn-icon-size-mini - $mdb-btn-fab-font-size) / 2;
+      }
+    }
+
+    &.btn-fab-xs,
+    .btn-group-xs & {
+      min-width: $mdb-btn-fab-size-xs;
+      width: $mdb-btn-fab-size-xs;
+      height: $mdb-btn-fab-size-xs;
+      padding: $mdb-btn-fab-size-xs / 2;
+      font-size: $mdb-btn-fab-size-xs;
+      line-height: $mdb-btn-fab-size-xs;
+
+      &.material-icons {
+        top: $mdb-btn-fab-size-xs / 2;
+        left: $mdb-btn-fab-size-xs / 2;
       }
     }
 
