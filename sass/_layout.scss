@@ -5,7 +5,7 @@ body {
 }
 
 .navbar + .page-header {
-	margin-top: -20px;	
+	margin-top: -20px;
 }
 
 .page-header {
@@ -171,16 +171,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-	
+
 	&.vertical {
 		flex-direction: column;
 	}
-	
+
 	&.left-center {
 		flex-direction: row;
 		justify-content: flex-start;
 	}
-	
+
 	&.right-center {
 		flex-direction: row;
 		justify-content: flex-end;
@@ -352,3 +352,18 @@ footer {
     width: 44px;
     height: 44px;
 }
+
+/* bootstrap 4 */
+.d-flex {
+    display: flex;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-grow {
+    flex: 1;
+}
+/* bootstrap 4 */
