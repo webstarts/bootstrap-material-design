@@ -1023,51 +1023,69 @@
 
 }
 
-.mobile-view .site-share {
-    margin: 0;
-    width: 100%;
-    margin-bottom: 10px;
-    border: 1px solid #000;
-    padding: 0.8em;
-    cursor: pointer;
-    &:last-child {
-      margin-bottom: 0;
-    }
-    .icon-container {
-        display: inline-block;
-        vertical-align: middle;
-
-        font-size: 1.5em;
-        margin-right: 0.5em;
-
-        width: auto;
-        height: auto;
-        line-height: initial;
-        color: inherit !important;
-        border: none !important;
-        background-color: transparent !important;
-    }
-    .share-title {
-        color: inherit !important;
-    }
-    &.site-share-twitter {
-        border-color: @twitter;
-        background-color: @twitter;
-        color: #ffffff;
-    }
-    &.site-share-facebook {
-        border-color: @facebook;
-        background-color: @facebook;
-        color: #ffffff;
-    }
-    &.site-share-email {
-        border-color: @grey;
-        background-color: @grey;
-        color: #ffffff;
+.mobile-view {
+    .site-share {
+        margin: 0;
+        width: 100%;
+        margin-bottom: 10px;
+        border: 1px solid #000;
+        padding: 0.8em;
+        cursor: pointer;
+        flex: 1 1 100% !important;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .icon-container {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 1.5em;
+            margin-right: 0.5em;
+            width: auto;
+            height: auto;
+            line-height: initial;
+            color: inherit !important;
+            border: none !important;
+            background-color: transparent !important;
+        }
+        .share-title {
+            color: inherit !important;
+        }
+        &.site-share-twitter {
+            border-color: @twitter;
+            background-color: @twitter;
+            color: #ffffff;
+        }
+        &.site-share-facebook {
+            border-color: @facebook;
+            background-color: @facebook;
+            color: #ffffff;
+        }
+        &.site-share-email {
+            border-color: @grey;
+            background-color: @grey;
+            color: #ffffff;
+        }
+        &.site-share-copy {
+            border-color: @brand-primary;
+            background-color: @brand-primary;
+            color: #ffffff;
+        }
+        &.site-share-sms {
+            border-color: @brand-secondary;
+            background-color: @brand-secondary;
+            color: #ffffff;
+        }
+        &.site-share-whatsapp {
+            border-color: @whatsapp;
+            background-color: @whatsapp;
+            color: #ffffff;
+        }
     }
 }
 
-
+@media (max-width: 767px) {
+    .mobile-view();
+}
 
 #dont-show-again { margin: 7px 0; }
 

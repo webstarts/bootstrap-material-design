@@ -31,16 +31,29 @@
     &-snakbar {
         background-color: #444;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+        border-radius: 4px;
     }
 
     &-float {
         position: absolute;
-        z-index: 1044;
+        z-index: 5000;
 
         & + .alert-float.alert-bottom {
             bottom: 72px;
         }
         & + .alert-float.alert-bottom + .alert-float.alert-bottom {
+            bottom: 144px;
+        }
+    }
+
+    &-fixed {
+        position: fixed;
+        z-index: 5000;
+
+        & + .alert-fixed.alert-bottom {
+            bottom: 72px;
+        }
+        & + .alert-fixed.alert-bottom + .alert-fixed.alert-bottom {
             bottom: 144px;
         }
     }

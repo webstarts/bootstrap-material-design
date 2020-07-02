@@ -4267,15 +4267,26 @@ fieldset[disabled] .navbar .btn-link:focus {
   background-color: #444;
   -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 .alert-float {
   position: absolute;
-  z-index: 1044;
+  z-index: 5000;
 }
 .alert-float + .alert-float.alert-bottom {
   bottom: 72px;
 }
 .alert-float + .alert-float.alert-bottom + .alert-float.alert-bottom {
+  bottom: 144px;
+}
+.alert-fixed {
+  position: fixed;
+  z-index: 5000;
+}
+.alert-fixed + .alert-fixed.alert-bottom {
+  bottom: 72px;
+}
+.alert-fixed + .alert-fixed.alert-bottom + .alert-fixed.alert-bottom {
   bottom: 144px;
 }
 .alert-bottom {
@@ -11570,6 +11581,10 @@ hr[data-divider-text]:before {
   border: 1px solid #000;
   padding: 0.8em;
   cursor: pointer;
+  -webkit-box-flex: 1 !important;
+  -webkit-flex: 1 1 100% !important;
+      -ms-flex: 1 1 100% !important;
+          flex: 1 1 100% !important;
 }
 .mobile-view .site-share:last-child {
   margin-bottom: 0;
@@ -11603,6 +11618,83 @@ hr[data-divider-text]:before {
   border-color: #9e9e9e;
   background-color: #9e9e9e;
   color: #ffffff;
+}
+.mobile-view .site-share.site-share-copy {
+  border-color: #03a9f4;
+  background-color: #03a9f4;
+  color: #ffffff;
+}
+.mobile-view .site-share.site-share-sms {
+  border-color: #e91e63;
+  background-color: #e91e63;
+  color: #ffffff;
+}
+.mobile-view .site-share.site-share-whatsapp {
+  border-color: #25d366;
+  background-color: #25d366;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .site-share {
+    margin: 0;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #000;
+    padding: 0.8em;
+    cursor: pointer;
+    -webkit-box-flex: 1 !important;
+    -webkit-flex: 1 1 100% !important;
+        -ms-flex: 1 1 100% !important;
+            flex: 1 1 100% !important;
+  }
+  .site-share:last-child {
+    margin-bottom: 0;
+  }
+  .site-share .icon-container {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.5em;
+    margin-right: 0.5em;
+    width: auto;
+    height: auto;
+    line-height: initial;
+    color: inherit !important;
+    border: none !important;
+    background-color: transparent !important;
+  }
+  .site-share .share-title {
+    color: inherit !important;
+  }
+  .site-share.site-share-twitter {
+    border-color: #55acee;
+    background-color: #55acee;
+    color: #ffffff;
+  }
+  .site-share.site-share-facebook {
+    border-color: #3b5998;
+    background-color: #3b5998;
+    color: #ffffff;
+  }
+  .site-share.site-share-email {
+    border-color: #9e9e9e;
+    background-color: #9e9e9e;
+    color: #ffffff;
+  }
+  .site-share.site-share-copy {
+    border-color: #03a9f4;
+    background-color: #03a9f4;
+    color: #ffffff;
+  }
+  .site-share.site-share-sms {
+    border-color: #e91e63;
+    background-color: #e91e63;
+    color: #ffffff;
+  }
+  .site-share.site-share-whatsapp {
+    border-color: #25d366;
+    background-color: #25d366;
+    color: #ffffff;
+  }
 }
 #dont-show-again {
   margin: 7px 0;
