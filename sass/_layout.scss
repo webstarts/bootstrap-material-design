@@ -352,10 +352,41 @@ footer {
     width: 44px;
     height: 44px;
 }
+.phone-footer-nav-bar {
+    display: none;
+}
+@media (max-width: $grid-float-breakpoint-max) {
+    .phone-footer-nav-bar {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0 -5px 5px 0 rgba(50, 50, 50, 0.20);
+        background-color: #fff;
 
-/* bootstrap 4 */
+        .btn {
+            margin: 0;
+            padding: 0;
+        }
+        .btn-fab {
+            margin-top: -28px;
+        }
+        .btn-default {
+            padding: 10px;
+            flex: 1 1 0;
+            &:hover, &:active, &:focus {
+                background-color: transparent;
+                border-radius: 0;
+                border: 0;
+                outline: 0;
+            }
+        }
+    }
+}
+
+/* Bootstrap 4 flex basics */
 .d-flex {
-    display: flex;
+    display: flex!important;
 }
 .flex-row {
     flex-direction: row;
@@ -366,4 +397,19 @@ footer {
 .flex-grow {
     flex: 1;
 }
-/* bootstrap 4 */
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+.align-items-center {
+    align-items: center;
+}
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+/* Bootstrap 4 flex basics */
