@@ -889,19 +889,19 @@ body .container-fluid .jumbotron-yahoo {
 .input-group-btn .btn.btn-fab.btn-fab-xs,
 .btn-group-xs .btn.btn-fab,
 .btn-group-xs .input-group-btn .btn.btn-fab {
-  min-width: 16px;
-  width: 16px;
-  height: 16px;
-  padding: 8px;
-  font-size: 16px;
-  line-height: 16px;
+  min-width: 15px;
+  width: 15px;
+  height: 15px;
+  padding: 7.5px;
+  font-size: 15px;
+  line-height: 15px;
 }
 .btn.btn-fab.btn-fab-xs.material-icons,
 .input-group-btn .btn.btn-fab.btn-fab-xs.material-icons,
 .btn-group-xs .btn.btn-fab.material-icons,
 .btn-group-xs .input-group-btn .btn.btn-fab.material-icons {
-  top: 8px;
-  left: 8px;
+  top: 7.5px;
+  left: 7.5px;
 }
 .btn.btn-fab i.material-icons,
 .input-group-btn .btn.btn-fab i.material-icons,
@@ -5270,6 +5270,17 @@ a.text-info:hover {
 }
 .panel-popup.panel-dark .nav-tabs > li.active > a {
   color: #03a9f4 !important;
+}
+.panel-popup.panel-dark .nav-tabs > li.disable {
+  pointer-events: none;
+  border-bottom-color: rgba(20, 20, 20, 0.65);
+  background-color: rgba(15, 15, 15, 0.45);
+}
+.panel-popup.panel-dark .nav-tabs > li.disable i {
+  color: rgba(65, 65, 65, 0.65);
+}
+.panel-popup.panel-dark .nav-tabs > li.disable span {
+  color: rgba(75, 75, 75, 0.65);
 }
 .panel-popup.panel-dark .btn:not(.btn-raised).btn-default,
 .panel-popup.panel-dark .dropdown-menu > li > a {
