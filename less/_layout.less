@@ -3,7 +3,7 @@ body {
 }
 
 .navbar + .page-header {
-	margin-top: -20px;	
+	margin-top: -20px;
 }
 
 .page-header {
@@ -169,16 +169,16 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-	
+
 	&.vertical {
 		flex-direction: column;
 	}
-	
+
 	&.left-center {
 		flex-direction: row;
 		justify-content: flex-start;
 	}
-	
+
 	&.right-center {
 		flex-direction: row;
 		justify-content: flex-end;
@@ -350,3 +350,64 @@ footer {
     width: 44px;
     height: 44px;
 }
+.phone-footer-nav-bar {
+    display: none;
+}
+@media (max-width: @grid-float-breakpoint-max) {
+    .phone-footer-nav-bar {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        box-shadow: 0 -5px 5px 0 rgba(50, 50, 50, 0.20);
+        background-color: #fff;
+
+        .btn {
+            margin: 0;
+            padding: 0;
+        }
+        .btn-fab {
+            margin-top: -28px;
+        }
+        .btn-default {
+            padding: 10px;
+            flex: 1 1 0;
+            &:hover, &:active, &:focus {
+                background-color: transparent;
+                border-radius: 0;
+                border: 0;
+                outline: 0;
+            }
+        }
+    }
+}
+
+/* Bootstrap 4 flex basics */
+.d-flex {
+    display: flex!important;
+}
+.flex-row {
+    flex-direction: row;
+}
+.flex-column {
+    flex-direction: column;
+}
+.flex-grow {
+    flex: 1;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.justify-content-evenly {
+    justify-content: space-evenly;
+}
+.align-items-center {
+    align-items: center;
+}
+.flex-nowrap {
+    flex-wrap: nowrap;
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+/* Bootstrap 4 flex basics */
