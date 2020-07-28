@@ -356,16 +356,11 @@ body .container-fluid .jumbotron-whatsapp {
 .input-group-btn .btn:not(.btn-raised).btn-whatsapp {
   color: #25d366;
 }
-.btn:not(.btn-raised):not(.btn-link),
-.input-group-btn .btn:not(.btn-raised):not(.btn-link) {
-  border: 1px solid rgba(153, 153, 153, 0.2);
-}
 .btn:not(.btn-raised):not(.btn-link):hover,
 .input-group-btn .btn:not(.btn-raised):not(.btn-link):hover,
 .btn:not(.btn-raised):not(.btn-link):focus,
 .input-group-btn .btn:not(.btn-raised):not(.btn-link):focus {
   background-color: rgba(153, 153, 153, 0.2);
-  border: 1px solid rgba(153, 153, 153, 0);
 }
 .theme-dark .btn:not(.btn-raised):not(.btn-link):hover,
 .theme-dark .input-group-btn .btn:not(.btn-raised):not(.btn-link):hover,
@@ -373,6 +368,250 @@ body .container-fluid .jumbotron-whatsapp {
 .theme-dark .input-group-btn .btn:not(.btn-raised):not(.btn-link):focus {
   background-color: rgba(204, 204, 204, 0.15);
   border: 1px solid rgba(204, 204, 204, 0);
+}
+.btn:not(.btn-raised):not(.btn-link)-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link)-outline,
+.btn:not(.btn-raised):not(.btn-link).btn-default-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-default-outline {
+  color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link)-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link)-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-default-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-default-outline:hover,
+.btn:not(.btn-raised):not(.btn-link)-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link)-outline:focus,
+.btn:not(.btn-raised):not(.btn-link).btn-default-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-default-outline:focus {
+  background-color: #f2f2f2;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-inverse-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-inverse-outline {
+  color: #3f51b5;
+  border: 1px solid #3f51b5;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-inverse-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-inverse-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-inverse-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-inverse-outline:focus {
+  background-color: #3f51b5;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-primary-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-primary-outline {
+  color: #03a9f4;
+  border: 1px solid #03a9f4;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-primary-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-primary-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-primary-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-primary-outline:focus {
+  background-color: #03a9f4;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-secondary-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-secondary-outline {
+  color: #e91e63;
+  border: 1px solid #e91e63;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-secondary-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-secondary-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-secondary-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-secondary-outline:focus {
+  background-color: #e91e63;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-success-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-success-outline {
+  color: #4caf50;
+  border: 1px solid #4caf50;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-success-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-success-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-success-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-success-outline:focus {
+  background-color: #4caf50;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-info-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-info-outline {
+  color: #00bcd4;
+  border: 1px solid #00bcd4;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-info-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-info-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-info-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-info-outline:focus {
+  background-color: #00bcd4;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-warning-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-warning-outline {
+  color: #ff5722;
+  border: 1px solid #ff5722;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-warning-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-warning-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-warning-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-warning-outline:focus {
+  background-color: #ff5722;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-danger-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-danger-outline {
+  color: #f44336;
+  border: 1px solid #f44336;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-danger-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-danger-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-danger-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-danger-outline:focus {
+  background-color: #f44336;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-facebook-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-facebook-outline {
+  color: #3b5998;
+  border: 1px solid #3b5998;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-facebook-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-facebook-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-facebook-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-facebook-outline:focus {
+  background-color: #3b5998;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-twitter-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-twitter-outline {
+  color: #55acee;
+  border: 1px solid #55acee;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-twitter-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-twitter-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-twitter-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-twitter-outline:focus {
+  background-color: #55acee;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-instagram-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-instagram-outline {
+  color: #3f729b;
+  border: 1px solid #3f729b;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-instagram-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-instagram-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-instagram-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-instagram-outline:focus {
+  background-color: #3f729b;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-youtube-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-youtube-outline {
+  color: #cd201f;
+  border: 1px solid #cd201f;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-youtube-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-youtube-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-youtube-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-youtube-outline:focus {
+  background-color: #cd201f;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-pinterest-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-pinterest-outline {
+  color: #cc2127;
+  border: 1px solid #cc2127;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-pinterest-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-pinterest-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-pinterest-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-pinterest-outline:focus {
+  background-color: #cc2127;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-linkedin-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-linkedin-outline {
+  color: #0077b5;
+  border: 1px solid #0077b5;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-linkedin-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-linkedin-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-linkedin-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-linkedin-outline:focus {
+  background-color: #0077b5;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-google-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-google-outline {
+  color: #d34836;
+  border: 1px solid #d34836;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-google-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-google-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-google-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-google-outline:focus {
+  background-color: #d34836;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-yahoo-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-yahoo-outline {
+  color: #400191;
+  border: 1px solid #400191;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-yahoo-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-yahoo-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-yahoo-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-yahoo-outline:focus {
+  background-color: #400191;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
+}
+.btn:not(.btn-raised):not(.btn-link).btn-whatsapp-outline,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-whatsapp-outline {
+  color: #25d366;
+  border: 1px solid #25d366;
+  background-color: transparent;
+}
+.btn:not(.btn-raised):not(.btn-link).btn-whatsapp-outline:hover,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-whatsapp-outline:hover,
+.btn:not(.btn-raised):not(.btn-link).btn-whatsapp-outline:focus,
+.input-group-btn .btn:not(.btn-raised):not(.btn-link).btn-whatsapp-outline:focus {
+  background-color: #25d366;
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
 }
 .theme-dark .btn:not(.btn-raised):not(.btn-link),
 .theme-dark .input-group-btn .btn:not(.btn-raised):not(.btn-link) {
@@ -923,9 +1162,7 @@ body .container-fluid .jumbotron-whatsapp {
   left: 0px;
 }
 .btn.btn-fab.btn-fab-xs,
-.input-group-btn .btn.btn-fab.btn-fab-xs,
-.btn-group-xs .btn.btn-fab,
-.btn-group-xs .input-group-btn .btn.btn-fab {
+.input-group-btn .btn.btn-fab.btn-fab-xs {
   min-width: 15px;
   width: 15px;
   height: 15px;
@@ -934,11 +1171,23 @@ body .container-fluid .jumbotron-whatsapp {
   line-height: 15px;
 }
 .btn.btn-fab.btn-fab-xs.material-icons,
-.input-group-btn .btn.btn-fab.btn-fab-xs.material-icons,
-.btn-group-xs .btn.btn-fab.material-icons,
-.btn-group-xs .input-group-btn .btn.btn-fab.material-icons {
+.input-group-btn .btn.btn-fab.btn-fab-xs.material-icons {
   top: 7.5px;
   left: 7.5px;
+}
+.btn.btn-fab.btn-fab-sm,
+.input-group-btn .btn.btn-fab.btn-fab-sm {
+  min-width: 20px;
+  width: 20px;
+  height: 20px;
+  padding: 15px;
+  font-size: 24px;
+  line-height: 24px;
+}
+.btn.btn-fab.btn-fab-sm.material-icons,
+.input-group-btn .btn.btn-fab.btn-fab-sm.material-icons {
+  top: 50%;
+  left: 50%;
 }
 .btn.btn-fab i.material-icons,
 .input-group-btn .btn.btn-fab i.material-icons,
@@ -5403,6 +5652,9 @@ a.text-info:hover {
 .panel-popup.panel-dark .nav-tabs > li.active > a {
   background-color: rgba(255, 255, 255, 0.03) !important;
 }
+.panel-popup.panel-dark .nav-tabs > li.active {
+  border-color: #03a9f4 !important;
+}
 .panel-popup.panel-dark .nav-tabs > li.active > a {
   color: #03a9f4 !important;
 }
@@ -5420,6 +5672,17 @@ a.text-info:hover {
 .panel-popup.panel-dark .btn:not(.btn-raised).btn-default,
 .panel-popup.panel-dark .dropdown-menu > li > a {
   color: #fff;
+}
+.panel-popup.panel-dark .btn:not(.btn-raised).btn-default-outline {
+  border: 1px solid rgba(153, 153, 153, 0.2);
+  color: #fff;
+  background-color: transparent;
+}
+.panel-popup.panel-dark .btn:not(.btn-raised).btn-default-outline:hover,
+.panel-popup.panel-dark .btn:not(.btn-raised).btn-default-outline:focus {
+  background-color: rgba(153, 153, 153, 0.2);
+  border-color: transparent;
+  color: rgba(255,255,255, 0.84);
 }
 .panel-popup.panel-dark .dropdown-menu {
   background-color: #333;
@@ -5473,6 +5736,13 @@ a.text-info:hover {
 .panel-popup.panel-dark .checkbox .checkbox-material .check,
 .panel-popup.panel-dark .radio .circle {
   border-color: #fff;
+}
+.panel-popup.panel-dark .window-sidebar {
+  border-color: #000;
+}
+.panel-popup.panel-dark .well {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.8);
 }
 hr {
   border-color: #eeeeee;
@@ -10548,6 +10818,12 @@ hr[data-divider-text]:before {
   color: #03a9f4;
   background-color: #393939;
 }
+.selectize-dropdown.selectize-dropdown-dark .optgroup-header,
+.selectize-dropdown.form-control.selectize-dropdown-dark .optgroup-header,
+.form-group .selectize-dropdown.form-control.selectize-dropdown-dark .optgroup-header {
+  color: #fff;
+  background: transparent;
+}
 .selectize-dropdown-content {
   overflow-y: auto;
   overflow-x: hidden;
@@ -11907,12 +12183,28 @@ hr[data-divider-text]:before {
   -webkit-transform: translateZ(0);
           transform: translateZ(0);
   border: 1px solid #cacaca;
-  -webkit-background-size: 20px 20px;
-          background-size: 20px 20px;
+  background-color: #fff;
   background-image: -webkit-linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), -webkit-linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
   background-image: -o-linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), -o-linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
   background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%, #ccc);
+  -webkit-background-size: 20px 20px;
+          background-size: 20px 20px;
   background-position: 5px 5px, 15px 15px;
+}
+.transparent-bg-sm {
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%), -webkit-linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%);
+  background-image: -o-linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%), -o-linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%);
+  background-image: linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%), linear-gradient(45deg, #ccc 25%, transparent 25%, transparent 75%, #ccc 75%);
+  -webkit-background-size: 14px 14px;
+          background-size: 14px 14px;
+  background-position: 0 0, 7px 7px;
+}
+ul.unlist,
+ol.unlist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 body {
   word-wrap: break-word;

@@ -47,7 +47,6 @@
       &:focus {
         // spec: flat/light bg Hover: 20% #999999
         background-color: rgba(#999999, (20/100));
-        border: 1px solid rgba(#999999, (0/100));
 
         .theme-dark & {
           // spec: dark bg Hover: 15% #CCCCCC
@@ -55,7 +54,18 @@
           border: 1px solid rgba(#CCCCCC, (0/100));
         }
       }
-      border: 1px solid rgba(#999999, (20/100));
+
+      .generic-variations(unquote(".btn"), unquote("-outline"), $mdb-btn-background-color, {
+        color: $variation-color;
+        border: 1px solid $variation-color;
+        background-color: transparent;
+        &:hover,
+        &:focus {
+            background-color: $variation-color;
+            border-color: transparent;
+            color: $mdb-text-color-light;
+        }
+      });
 
       .theme-dark & {
         // spec: dark bg Hover: 15% #CCCCCC
@@ -158,8 +168,7 @@
       }
     }
 
-    &.btn-fab-xs,
-    .btn-group-xs & {
+    &.btn-fab-xs {
       min-width: $mdb-btn-fab-size-xs;
       width: $mdb-btn-fab-size-xs;
       height: $mdb-btn-fab-size-xs;
@@ -170,6 +179,20 @@
       &.material-icons {
         top: $mdb-btn-fab-size-xs / 2;
         left: $mdb-btn-fab-size-xs / 2;
+      }
+    }
+
+    &.btn-fab-sm {
+      min-width: 20px;
+      width: 20px;
+      height: 20px;
+      padding: 15px;
+      font-size: 24px;
+      line-height: 24px;
+
+      &.material-icons {
+        top: 50%;
+        left: 50%;
       }
     }
 

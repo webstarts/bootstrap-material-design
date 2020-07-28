@@ -363,6 +363,10 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
 		color: $brand-primary;
 		background-color: #393939;
 	}
+    .optgroup-header {
+        color: $mdb-dark-bg-text-color;
+        background: transparent;
+    }
   }
 }
 
