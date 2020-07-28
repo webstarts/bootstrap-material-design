@@ -75,4 +75,22 @@
         }
     }
 
+    &.nav-horizontal {
+        float: none;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        &>li {
+            float: none;
+            flex-basis: 100%;
+            &>a {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+    }
+
 }

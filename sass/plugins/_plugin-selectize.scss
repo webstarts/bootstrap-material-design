@@ -298,6 +298,13 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
     @include selectize-box-shadow(none !important);
     &:focus { outline: none !important; }
   }
+  /*> .item {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: auto;
+      max-width: unquote("calc(100% - 7px)");
+    }*/
 }
 
 .selectize-input::after {

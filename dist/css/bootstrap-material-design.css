@@ -5062,6 +5062,43 @@ a.text-info:hover {
 .nav-tabs.nav-stacked > li > a {
   padding-left: 15px;
 }
+.nav-tabs.nav-horizontal {
+  float: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav-tabs.nav-horizontal > li {
+  float: none;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+}
+.nav-tabs.nav-horizontal > li > a {
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
 .nav-pills {
   background: transparent;
   border: 0;
@@ -10654,6 +10691,13 @@ hr[data-divider-text]:before {
   overflow: hidden;
   position: relative;
   z-index: 1;
+  /*> .item {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: auto;
+      max-width: ~"calc(100% - 7px)";
+    }*/
 }
 .selectize-control.multi .selectize-input.has-items {
   padding: 6px 0 3px;
