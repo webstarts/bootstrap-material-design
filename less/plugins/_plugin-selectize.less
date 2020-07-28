@@ -296,6 +296,13 @@
     .selectize-box-shadow(none) !important;
     &:focus { outline: none !important; }
   }
+  /*> .item {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: auto;
+      max-width: ~"calc(100% - 7px)";
+    }*/
 }
 
 .selectize-input::after {
@@ -305,7 +312,7 @@
 }
 
 .selectize-input.dropdown-active::before {
-  
+
 }
 
 .selectize-dropdown,
