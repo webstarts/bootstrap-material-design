@@ -173,12 +173,12 @@
       width: $mdb-btn-fab-size-xs;
       height: $mdb-btn-fab-size-xs;
       padding: $mdb-btn-fab-size-xs / 2;
-      font-size: $mdb-btn-fab-size-xs;
-      line-height: $mdb-btn-fab-size-xs;
+      font-size: $mdb-btn-fab-font-size-xs;
+      line-height: 1;
 
       &.material-icons {
-        top: $mdb-btn-fab-size-xs / 2;
-        left: $mdb-btn-fab-size-xs / 2;
+        top: $mdb-btn-fab-font-size-xs / 2;
+        left: $mdb-btn-fab-font-size-xs / 2;
       }
     }
 
