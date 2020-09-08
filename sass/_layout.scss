@@ -384,6 +384,17 @@ footer {
     }
 }
 
+/** Utils **/
+.drag-handle {
+    cursor: move;
+    &.vert {
+        cursor: ns-resize
+    }
+}
+
+/** Utils **/
+
+
 /* Bootstrap 4 flex basics */
 .d-flex {
     display: flex!important;

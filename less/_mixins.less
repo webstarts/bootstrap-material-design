@@ -5,15 +5,12 @@
   &::-webkit-input-placeholder  { @rules(); } // Safari and Chrome
 }
 
-
 // usage: .variations(~" .check", color, transparent);
 .variations(@component, @selector-suffix, @property, @color-default) {
   .generic-variations(@component, @selector-suffix, @color-default, {
     @{property}: @variation-color;
   });
 }
-
-
 
 .background-variations(@component, @selector-suffix, @color-default) {
   .generic-variations(@component, @selector-suffix, @color-default, {

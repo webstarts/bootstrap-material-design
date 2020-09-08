@@ -53,18 +53,6 @@
         }
       }
 
-      .generic-variations(~".btn", ~"-outline", @mdb-btn-background-color, {
-        color: @variation-color;
-        border: 1px solid @variation-color;
-        background-color: transparent;
-        &:hover,
-        &:focus {
-            background-color: @variation-color;
-            border-color: transparent;
-            color: @mdb-text-color-light;
-        }
-      });
-
       .theme-dark & {
         // spec: dark bg Hover: 15% #CCCCCC
         border: 1px solid fade(#CCCCCC, 15%);
