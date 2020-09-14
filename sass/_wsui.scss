@@ -796,7 +796,7 @@
       }
   }
 
-  .btn:not(.btn-raised).btn-default, .dropdown-menu>li>a {
+  .btn:not(.btn-raised), .btn:not(.btn-raised).btn-default, .dropdown-menu>li>a {
     color: $mdb-dark-bg-text-color;
   }
 
@@ -868,6 +868,10 @@
   }
 
 }
+.panel-backdrop.dark {
+  background-color: rgb(100,100,100);
+}
+
 /* Panel Dark */
 
 

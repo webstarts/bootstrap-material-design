@@ -13,6 +13,27 @@
   }
 }
 
+@mixin btn-sets(){
+  primary: $brand-primary;
+  secondary: $brand-secondary;
+  success: $brand-success;
+  danger: $brand-danger;
+  warning: $brand-warning;
+  info: $brand-info;
+  default: $grey-200;
+};
+
+@mixin outline-button($color){
+    color: $color;
+    border: 1px solid $color;
+    background-color: transparent;
+    &.active, &:hover, &:focus {
+        color: $mdb-text-color-light;
+        border-color: transparent;
+        background-color: $color;
+    }
+}
+
 // mdb default buttons are flat by default
 // synchronized with mdl 11/23/15
 .btn,
@@ -59,6 +80,13 @@
         // spec: dark bg Hover: 15% #CCCCCC
         border: 1px solid rgba(#CCCCCC, (15/100));
       }
+
+      // outline buttons
+        /*each(@mixin btn-sets(), .($v, $k, $i){
+            .btn-#{$k}-outline {
+                @include outline-button($v);
+            }
+        });*/
     }
   }
 
@@ -92,6 +120,7 @@
         .generic-variations(unquote(".btn"), unquote(""), $mdb-btn-background-color, {
           background-color: contrast($variation-color, darken($variation-color, 4%), lighten($variation-color, 4%), $contrast-factor);
         });
+
 
         // Spec:
         //  - Raised Light/Light theme no hover.

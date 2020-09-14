@@ -15,6 +15,17 @@
 	.list-group {
 		.list-group-item {
 			padding: 0 10px;
+			.drag-handle{
+				padding: 0 10px;
+			}
+			.form-group {
+				flex: 1;
+			    padding: 15px;
+			    margin: 0;
+			    .form-control {
+			    	margin: 0;
+			    }
+			}
 			.track-cover {
 				width: 30px;
 				height: 30px;
@@ -22,12 +33,11 @@
 				background-position: center center;
 				background-size: cover;
 				cursor: pointer;
+				padding: 0 10px;
 			}
 			.track-delete {
+				height: 24px;
 				cursor: pointer;
-				> i {
-					font-size: 20px;
-				}
 			}
 		}
 	}
@@ -61,6 +71,34 @@
 	    }
 	}
 }
+
+// Playlist Manager
+#social-editable {
+	.list-group {
+		.list-group-item {
+			padding: 0 10px;
+			.drag-handle{
+				padding: 0 10px;
+			}
+			.social-icon {
+				padding: 0 10px;
+			}
+			.form-group {
+				flex: 1;
+			    padding: 15px;
+			    margin: 0;
+			    .form-control {
+			    	margin: 0;
+			    }
+			}
+			.social-delete {
+				height: 24px;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
 
 
 .panel-dark {
