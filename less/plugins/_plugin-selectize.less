@@ -116,7 +116,7 @@
 @selectize-color-input-full: transparent;
 @selectize-color-disabled: transparent;
 @selectize-color-item: #333;
-@selectize-color-item-text: @selectize-color-text;
+@selectize-color-item-text: @selectize-color-input;
 @selectize-color-item-border: transparent;
 @selectize-color-item-active: #0fb2fc;
 @selectize-color-item-active-text: @selectize-color-text;
@@ -213,7 +213,8 @@
 
 .selectize-input {
   border: @selectize-border;
-  padding: 7px 0;
+  /*padding: 7px 0;*/
+  padding: 7px 5px;
   display: inline-block;
   width: 100%;
   overflow: hidden;
@@ -364,10 +365,10 @@
 	background-color: #333;
 	color: @mdb-dark-bg-text-color;
 
-	.active {
-		color: @brand-primary;
-		background-color: #393939;
-	}
+  	.active {
+  		color: @brand-primary;
+  		background-color: #393939;
+  	}
     .optgroup-header {
         color: @mdb-dark-bg-text-color;
         background: transparent;

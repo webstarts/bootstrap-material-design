@@ -308,6 +308,7 @@ span.space {
 			display: flex;
 			flex-flow: row nowrap;
 			align-items: center;
+			user-select: none;
 			&:first-child {
 				border-top: 0;
 			}
@@ -352,7 +353,7 @@ span.space {
 			padding: 5px 0;
 
 			+.file-list {
-				margin-top: 22px;
+				margin-top: 31px;
 			}
 
 			.column {
@@ -427,10 +428,11 @@ span.space {
 			position: relative;
 			float: left;
 			text-align: center;
-			width: 25%;
+			min-width: 25%;
 			height: auto;
 			padding: 4px;
 			margin: 0;
+			user-select: none;
 			.leaf {
 				width: 100%;
 				height: 100%;
@@ -781,7 +783,7 @@ span.space {
 		}
 	}
 	.pexel-result-container {
-		height: calc(100% - 30px);
+		height: unquote("calc(100% - 30px)");
 		overflow-y: auto;
 	}
 	.pexel-no-results {
@@ -832,9 +834,11 @@ span.space {
 	}
 	.youtube-no-results {
 		position: absolute;
-		top: 50%;
+		top: 0;
+		left: 0;
+		right:0;
+		bottom:0;
 		text-align: center;
-		width: 793px;
 		font-size: 16px;
 	}
 	.youtube-no-more-results {
@@ -843,7 +847,7 @@ span.space {
 		margin-top: 15px;
 	}
 	.more-youtube-videos {
-		width: calc(100% - 20px);
+		width: unquote("calc(100% - 20px)");
 		margin-left: auto;
 		margin-right: auto;
 	}
@@ -851,7 +855,7 @@ span.space {
 .file-manager-topbar {
 	padding: 20px;
 	border-bottom: 1px solid #eee;
-	display: flex !important;
+	display: flex;
 	align-items: center;
 	h2 {
 		flex: 1;
@@ -871,6 +875,9 @@ span.space {
 			background-color: inherit;
 			border: 1px solid;
 		}
+	}
+	.btn-raised + .btn-raised {
+		margin-left: 8px;
 	}
 }
 .file-viewer {
@@ -1055,7 +1062,7 @@ span.space {
 					white-space: nowrap;
 					overflow: hidden;
 					display: inline-block;
-					width: calc(100% - 50px);
+					width: unquote("calc(100% - 50px)");
 					vertical-align: middle;
 				}
 			}
@@ -1346,7 +1353,7 @@ span.space {
 			}
 		}
 	}
-	.file-viewer-main {
+	.file-manager {
 		.grid-view {
 			.file {
 				.file-actions {
@@ -1370,7 +1377,7 @@ span.space {
 	}
 }
 @media (max-width:600px) {
-	.file-viewer-main {
+	.file-manager {
 		.grid-view {
 			.file {
 				width: 33%;
@@ -1379,7 +1386,7 @@ span.space {
 	}
 }
 @media (max-width:450px) {
-	.file-viewer-main {
+	.file-manager {
 		.grid-view {
 			.file {
 				width: 50%;
@@ -1391,16 +1398,14 @@ span.space {
 // - dark theme
 .panel-popup.panel-dark {
 
-	&.file-manager-popup {
-		.file-manager-topbar {
-			border-bottom-color: #000;
-		}
-		.nav-tabs:not(.hide) + .file-viewer-sidebar {
-			border-top-color: #000;
-		}
-		.file-viewer-sidebar .folder .folder-actions {
-			color: #fff;
-		}
+	.nav-tabs:not(.hide) + .file-viewer-sidebar {
+		border-top-color: #000;
+	}
+	.file-viewer-sidebar .folder .folder-actions {
+		color: #fff;
+	}
+	.file-manager-topbar {
+		border-bottom-color: #000;
 	}
 
 	.file-manager {

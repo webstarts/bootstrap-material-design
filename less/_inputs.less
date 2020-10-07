@@ -145,7 +145,8 @@
   float: none;
   box-shadow: none;
   border-radius: 0;
-  padding: 7px .15em;
+  /*padding: 7px .15em;*/
+  padding: 7px 5px;
 
   // Placeholders and and labels-as-placeholders should look the same
   .material-placeholder({
@@ -356,6 +357,9 @@ select.form-control {
     border: 0;
     background: transparent;
     padding: 12px 15px 0px;
+    > i {
+      cursor: pointer;
+    }
   }
 }
 
