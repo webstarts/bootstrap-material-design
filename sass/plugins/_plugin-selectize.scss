@@ -392,7 +392,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
   &.input-active, &.input-active input { cursor: text; }
 
   padding-right: 36px;
-  padding-left: .15em;
+  padding-left: 5px;
 
   &:after {
     content: ' ';
