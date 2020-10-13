@@ -334,7 +334,7 @@
   height: 100%;
   width: 100%;
 }
-.panel-popup .form-group {
+.panel-popup .form-group:not(.label-floating) {
   margin-top: 10px;
   > label.control-label {
     margin: 0;
@@ -1135,9 +1135,45 @@ ul.unlist, ol.unlist {
     }
 }
 
-.material-icons.help-tip {
-    margin-left: 5px;
-    vertical-align: middle;
-    margin-top: -3px;
-    cursor: pointer;
+.material-icons {
+/* Rules for sizing the icon. */
+    &.md-18 { font-size: 18px; }
+    &.md-24 { font-size: 24px; }
+    &.md-36 { font-size: 36px; }
+    &.md-48 { font-size: 48px; }
+/* Rules for using icons as black on a light background. */
+    &.md-dark {
+        color: rgba(0, 0, 0, 0.54);
+        &.md-inactive {
+            color: rgba(0, 0, 0, 0.26);
+        }
+    }
+/* Rules for using icons as white on a dark background. */
+    &.md-light {
+        color: rgba(255, 255, 255, 1);
+        &.md-inactive {
+            color: rgba(255, 255, 255, 0.3);
+        }
+    }
+    &.help-tip {
+        margin-left: 5px;
+        vertical-align: middle;
+        color: #aaa;
+        margin-top: -3px;
+        cursor: pointer;
+        margin-bottom: -3px;
+        line-height: 1.4;
+    }
+}
+
+.side-nav {
+    height: 100%;
+    padding: 0px;
+    border-right: 1px solid rgb(224, 224, 224);
+    background-color: #fff;
+}
+
+.dtp-buttons button.btn {
+    margin-top: 0;
+    margin-bottom: 0;
 }

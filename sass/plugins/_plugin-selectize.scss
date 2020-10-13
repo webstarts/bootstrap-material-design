@@ -127,7 +127,7 @@ $selectize-color-dropdown: #fff !default;
 $selectize-color-dropdown-border: $selectize-color-border !default;
 $selectize-color-dropdown-border-top: #f0f0f0 !default;
 $selectize-color-dropdown-item-active: #eee !default;
-$selectize-color-dropdown-item-active-text: #333 !default;
+$selectize-color-dropdown-item-active-text: $brand-primary !default;
 $selectize-color-dropdown-item-create-text: rgba(red($selectize-color-text), green($selectize-color-text), blue($selectize-color-text), 0.5) !default;
 $selectize-color-dropdown-item-create-active-text: $selectize-color-dropdown-item-active-text !default;
 $selectize-color-optgroup: $selectize-color-dropdown !default;
@@ -224,7 +224,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
   z-index: 1;
 
   .selectize-control.multi &.has-items {
-    $padding-x: 0 !default;
+    $padding-x: 5px !default;
     $padding-top: $selectize-padding-y - $selectize-padding-item-y - $selectize-width-item-border !default;
     $padding-bottom: $selectize-padding-y - $selectize-padding-item-y - $selectize-margin-item-y - $selectize-width-item-border !default;
     padding: $padding-top $padding-x $padding-bottom;

@@ -125,7 +125,7 @@
 @selectize-color-dropdown-border: @selectize-color-border;
 @selectize-color-dropdown-border-top: #f0f0f0;
 @selectize-color-dropdown-item-active: #eee;
-@selectize-color-dropdown-item-active-text: #333;
+@selectize-color-dropdown-item-active-text: @brand-primary;
 @selectize-color-dropdown-item-create-text: rgba(red(@selectize-color-text), green(@selectize-color-text), blue(@selectize-color-text), 0.5);
 @selectize-color-dropdown-item-create-active-text: @selectize-color-dropdown-item-active-text;
 @selectize-color-optgroup: @selectize-color-dropdown;
@@ -222,7 +222,7 @@
   z-index: 1;
 
   .selectize-control.multi &.has-items {
-    @padding-x: 0;
+    @padding-x: 5px;
     @padding-top: @selectize-padding-y - @selectize-padding-item-y - @selectize-width-item-border;
     @padding-bottom: @selectize-padding-y - @selectize-padding-item-y - @selectize-margin-item-y - @selectize-width-item-border;
     padding: @padding-top @padding-x @padding-bottom;

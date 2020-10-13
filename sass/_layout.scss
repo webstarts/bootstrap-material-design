@@ -419,6 +419,9 @@ footer {
 .flex-grow {
     flex: 1;
 }
+.justify-content-around {
+    justify-content: space-around;
+}
 .justify-content-between {
     justify-content: space-between;
 }
@@ -448,5 +451,14 @@ footer {
 }
 .mb-0 {
     margin-bottom: 0!important;
+}
+.pt-0 {
+    padding-top: 0!important;
+}
+.pb-0 {
+    padding-bottom: 0!important;
+}
+.h-100 {
+    height: 100%;
 }
 /* Bootstrap 4 flex basics */

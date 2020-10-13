@@ -98,6 +98,15 @@
 		}
 	}
 }
+#social-icon-option-set {
+	display: flex;
+	flex-flow: row wrap;
+	.btn {
+		flex: 0 1 48%;
+		margin: 5px auto;
+		padding: 10px 18px;
+	}
+}
 
 // Music Store
 .music-store-popup {
@@ -292,6 +301,15 @@
 		line-height: 20px;
 	}
 	.dd-item {
+		color: #333;
+		&:hover {
+			text-decoration: none;
+			color: #333;
+			background-color: rgba(153,153,153,.2);
+			.dd-action.hover-icon {
+				display: block;
+			}
+		}
 		.dd-handle {
 			.title {
 				font-size: 14px;
@@ -349,8 +367,11 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		.dd-list {
+		.dd-list a {
 			padding-left: 20px;
+			.dd-list a {
+				padding-left: 30px;
+			}
 		}
 	}
 	.dd-collapsed {
@@ -364,6 +385,10 @@
 			color: #555;
 			vertical-align: middle;
 		}
+		>i:first-child {
+			margin-right: 10px;
+			font-size: 18px;
+		}
 		cursor: move;
 		display: block;
 		padding: 10px;
@@ -374,15 +399,6 @@
 		text-overflow: ellipsis;
 		overflow: hidden;
 		white-space: nowrap;
-		color: #333;
-		&:hover {
-			text-decoration: none;
-			color: #333;
-			background-color: rgba(153,153,153,.2);
-			.dd-action.hover-icon {
-				display: block;
-			}
-		}
 		&:before {
 			display: table;
 			content: " ";
@@ -551,7 +567,7 @@
 	height: auto;
 }
 
-.panel-dark {
+.theme-dark {
 	#playlist-editable .track-cover.default-cover {
 		filter: invert(.82);
 	}
@@ -565,15 +581,27 @@
 	    }
 	}
 	.pages-container {
-		.dd-handle {
-			color: $mdb-dark-bg-text-color;
+		.dd-handle, .dd-handle>i, .dd-action i {
+			color: #eee;
+		}
+		.dd-action i:hover {
+			color: #ddd;
 		}
 	}
-	&.form-builder-popup {
+	.form-builder-popup {
 		.live-demo {
 			.del-dup, label, strong {
 				color: #fff!important;
 			}
+		}
+	}
+	.sale_details .sales_records {
+		thead {
+		    background-color: #111;
+		    border-top: 1px solid #333;
+		}
+		tbody {
+		    background-color: #2a2a2a;
 		}
 	}
 }

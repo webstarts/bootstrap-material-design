@@ -2,7 +2,21 @@
 
 // this is mostly a marker class, add it to something like the body or container.  Subordinates will look for this marker - see buttons
 .theme-dark {
+	.panel-backdrop {
+	    background-color: rgb(100,100,100);
+	}
+	.dtp-buttons button.btn:hover{
+		background-color: #000;
+	}
+}
 
+.body-dark {
+    color: @mdb-dark-bg-text-color;
+    background-color: @mdb-dark-bg-color;
+	.side-nav {
+	    border-color: #111;
+	    background-color: @mdb-dark-bg-color;
+	}
 }
 
 /* Panel Dark */
@@ -34,9 +48,85 @@
             }
         }
     }
+}
 
+
+
+/* Panel Dark */
+
+.theme-dark,
+.panel-popup.panel-dark {
+
+    .form-group .selectize-dropdown.form-control,
+    .selectize-dropdown,
+    .selectize-dropdown.form-control {
+        background-color: #333;
+        color: @mdb-dark-bg-text-color;
+
+        .active {
+            color: @brand-primary;
+            background-color: #393939;
+        }
+        .optgroup-header {
+            color: @mdb-dark-bg-text-color;
+            background: transparent;
+        }
+    }
+
+    .dropdown-menu {
+        background-color: #333;
+        border: 1px solid #2d2d2d;
+
+        li a {
+            color: @mdb-dark-bg-text-color;
+        }
+
+        li a:hover, li a.active {
+            color: @brand-primary;
+            background-color: #393939;
+        }
+    }
+
+    .table>tbody>tr>td,
+    .table>tbody>tr>th,
+    .table>tfoot>tr>td,
+    .table>tfoot>tr>th,
+    .table>thead>tr>td,
+    .table>thead>tr>th {
+    	border-color: #333;
+    }
+
+    .table-bordered>tbody>tr>td,
+    .table-bordered>tbody>tr>th,
+    .table-bordered>tfoot>tr>td,
+    .table-bordered>tfoot>tr>th,
+    .table-bordered>thead>tr>td,
+    .table-bordered>thead>tr>th {
+    	border-color: #333;
+    }
+
+    .table-striped>tbody>tr:nth-of-type(odd) {
+    	background-color: rgba(255,255,255,.03);
+    }
+    .table-hover>tbody>tr:hover {
+    	background-color: #232323;
+    }
+
+    pre {
+    	background-color: rgba(255,255,255,.04);
+	    border-color: #232323;
+	    color: @mdb-dark-bg-text-color;
+    }
+	// From here
     .panel {
     	background-color: rgba(255,255,255,.03);
+    	&.panel-lite {
+    		border-color: #444 #444 #333 #333;
+    	}
+    	.panel-heading {
+			background-color: #222;
+			color: #fff;
+		}
     }
 
     .radio .circle, label.radio-inline .circle {
@@ -101,11 +191,16 @@
         }
     }
 
-    .btn:not(.btn-raised), .btn:not(.btn-raised).btn-default, .dropdown-menu>li>a {
-        color: @mdb-dark-bg-text-color;
-    }
+    &:not(.panel-light) {
+	    .btn:not(.btn-raised).btn-default,
+	    .dropdown-menu>li>a,
+	    .btn.dropdown-toggle {
+	        color: @mdb-dark-bg-text-color;
+	    }
+	}
 
-    .btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    .btn-default.active, .btn-default:active,
+    .open>.dropdown-toggle.btn-default {
         background-color: rgba(153,153,153,.2);
         border-color: transparent;
         color: @mdb-text-color-light;
@@ -168,67 +263,5 @@
 
     .indeterminate-progress .circular circle {
         stroke: #fff;
-    }
-
-}
-.panel-backdrop.dark {
-    background-color: rgb(100,100,100);
-}
-
-/* Panel Dark */
-
-.theme-dark,
-.panel-popup.panel-dark {
-
-    .form-group .selectize-dropdown.form-control,
-    .selectize-dropdown,
-    .selectize-dropdown.form-control {
-        background-color: #333;
-        color: @mdb-dark-bg-text-color;
-
-        .active {
-            color: @brand-primary;
-            background-color: #393939;
-        }
-        .optgroup-header {
-            color: @mdb-dark-bg-text-color;
-            background: transparent;
-        }
-    }
-
-    .dropdown-menu {
-        background-color: #333;
-        border: 1px solid #2d2d2d;
-
-        li a {
-            color: @mdb-dark-bg-text-color;
-        }
-
-        li a:hover, li a.active {
-            color: @brand-primary;
-            background-color: #393939;
-        }
-    }
-
-    .table-bordered>tbody>tr>td,
-    .table-bordered>tbody>tr>th,
-    .table-bordered>tfoot>tr>td,
-    .table-bordered>tfoot>tr>th,
-    .table-bordered>thead>tr>td,
-    .table-bordered>thead>tr>th {
-    	border-color: #444;
-    }
-
-    .table-striped>tbody>tr:nth-of-type(odd) {
-    	background-color: rgba(255,255,255,.04);
-    }
-    .table-hover>tbody>tr:hover {
-    	background-color: #232323;
-    }
-
-    pre {
-    	background-color: rgba(255,255,255,.04);
-	    border-color: #232323;
-	    color: @mdb-dark-bg-text-color;
     }
 }

@@ -3,7 +3,7 @@
 /* Sidebar Menu */
 /* Sidebar Menu Buttons */
 /* Sidebar Panel */
-#editor-sidebar {
+.wsme #editor-sidebar {
     position: absolute;
     top: 0;
     left: 0;
@@ -22,7 +22,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: $mdb-dark-bg-color;
+        background-color: #333333;
         .icon-holder {
             display: block;
         }
@@ -83,9 +83,54 @@
         position: absolute;
         top: 64px;
         bottom: 0;
-        overflow-y: auto;
         left: 0;
         right: 0;
+        .editor-sidebar-buttons {
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+            height: 100%;
+            .top-buttons {
+                flex: 1;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+            .bottom-buttons {
+                height: 50px;
+                .theme-switch {
+                    margin-left: 20px;
+                    label.control-label {
+                        margin: 0;
+                        cursor: pointer;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        i {
+                            font-size: 18px;
+                            margin: 5px;
+                            vertical-align: middle;
+                            opacity: .35;
+                            transition: opacity .5s ease;
+                            &:hover, &.active {
+                                opacity: 1;
+                                color: #fff;
+                            }
+                        }
+                        i.dark {
+                            transform: rotateZ(160deg);
+                            margin: 0 0 2.5px 2.5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.folded:not(.folded-open) {
+        .theme-switch {
+            margin: 0 auto;
+            span, i:not(.active) {
+                display: none;
+            }
+        }
     }
     .nav-item {
         .nav-link {
@@ -120,6 +165,14 @@
                 min-height: 20px;
                 line-height: 20px;
                 margin-right: 18px;
+            }
+            .nav-link-icon.material-icons {
+                font-size: 24px;
+                width: 24px;
+                height: 24px;
+                min-width: 24px;
+                min-height: 24px;
+                line-height: 24px;
             }
             >.nav-link-title {
                 flex: 1;
@@ -307,33 +360,31 @@
 #editor-sidebar {
     .hidden-view {
         margin: 0 10px;
-        ul {
+        ul.object-list {
             list-style: none;
             padding: 0;
             margin: 0;
-        }
-        li {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .object-list {
             text-align: left;
             font-size: 12px;
             li {
                 padding: 10px;
                 background-color: rgba(255,255,255,.05);
                 margin: 2px 0;
+                position: relative;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
             }
             .object-id {
-                float: left;
-                display: block;
-                width: 185px;
+                flex: 1;
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
                 >i {
                     margin-right: 10px;
+                    font-size: 16px;
+                    vertical-align: middle;
                 }
                 >img {
                     margin-right: 10px;
@@ -394,5 +445,17 @@
             white-space: nowrap;
             overflow: hidden;
         }
+    }
+    img {
+        height: 30px;
+        max-width: 100px;
+        width: auto;
+        margin-right: 10px;
+    }
+}
+
+.theme-dark {
+    .wsme #editor-sidebar .editor-sidebar-content {
+        background-color: $mdb-dark-bg-color;
     }
 }
