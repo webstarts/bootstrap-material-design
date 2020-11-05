@@ -311,6 +311,7 @@
 			}
 		}
 		.dd-handle {
+			color: #333;
 			.title {
 				font-size: 14px;
 				pointer-events: none;
@@ -367,10 +368,10 @@
 		margin: 0;
 		padding: 0;
 		list-style: none;
-		.dd-list a {
-			padding-left: 20px;
-			.dd-list a {
-				padding-left: 30px;
+		.dd-list {
+			padding-left: 10px;
+			.dd-list {
+				padding-left: 20px;
 			}
 		}
 	}
@@ -418,7 +419,6 @@
 		padding: 0;
 		min-height: 28px;
 		box-sizing: border-box;
-		-moz-box-sizing: border-box;
 		min-height: 100px;
 	}
 	.dd-placeholder {
@@ -432,7 +432,6 @@
 		padding: 0;
 		min-height: 28px;
 		box-sizing: border-box;
-		-moz-box-sizing: border-box;
 		margin: 0;
 		padding: 0;
 	}
@@ -459,19 +458,6 @@
 	}
 	.dd-empty.dragging {
 		border: 1px dashed #ccc;
-	}
-	.dd-dragel {
-		position: absolute;
-		pointer-events: none;
-		z-index: 100010;
-		>.dd-item {
-			.dd-handle {
-				margin-top: 0;
-			}
-		}
-	}
-	.dd-dragel.dragging {
-		opacity: 0.9;
 	}
 	.dd-action {
 		&:first {
@@ -566,6 +552,45 @@
 .dtp > .dtp-content > .dtp-date-view > header.dtp-header {
 	height: auto;
 }
+.dd-dragel {
+	position: absolute;
+	pointer-events: none;
+	z-index: 100010;
+	list-style: none;
+	>.dd-item {
+		background-color: rgba(153,153,153,.2);
+		.dd-handle {
+			cursor: move;
+			display: block;
+			padding: 10px;
+			margin: 0;
+			text-decoration: none;
+			word-wrap: break-word;
+			position: relative;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			>i {
+			    margin-right: 5px;
+			    color: #555;
+			    vertical-align: middle;
+			}
+			>i:first-child {
+				margin-right: 10px;
+				font-size: 18px;
+			}
+		}
+	}
+	&.dragging {
+		opacity: 0.9;
+	}
+	.dd-action {
+		visibility: hidden;
+	}
+	a {
+		color: #222;
+	}
+}
 
 .theme-dark {
 	#playlist-editable .track-cover.default-cover {
@@ -602,6 +627,11 @@
 		}
 		tbody {
 		    background-color: #2a2a2a;
+		}
+	}
+	.dd-dragel {
+		a,>.dd-item .dd-handle>i {
+			color: #fff;
 		}
 	}
 }
