@@ -5086,23 +5086,42 @@ a.text-info:hover {
   display: none;
 }
 .tour-tour.popover {
-  background-color: #262626;
-  color: #fff;
   max-width: 278px;
   line-height: 1.3;
 }
 .tour-tour.popover .popover-title-div {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
   font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px;
 }
 .tour-tour.popover .popover-title-div .popover-title {
   background-color: transparent;
   border: 0;
   border-radius: 0;
+  padding: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 16px;
+  font-weight: 400;
 }
 .tour-tour.popover .popover-title-div i {
-  padding: 5px;
   cursor: pointer;
+}
+.tour-tour.popover .popover-navigation {
+  padding: 0 14px;
 }
 .tour-tour.popover .popover-content {
   font-weight: 300;
@@ -5110,29 +5129,82 @@ a.text-info:hover {
 .tour-tour.popover .arrow {
   display: block;
 }
+/* Mixin defined in _mixin.less */
+.tour-tour.popover {
+  background-color: #fff;
+}
+.tour-tour.popover .popover-title-div {
+  border-bottom: 1px solid #e2e2e2;
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.87);
+}
+.tour-tour.popover .popover-title-div i {
+  color: #8a8a8a;
+}
+.tour-tour.popover .popover-content {
+  color: rgba(0, 0, 0, 0.87);
+}
 .tour-tour.popover.left > .arrow {
-  border-left-color: #262626;
+  border-left-color: #fff;
 }
 .tour-tour.popover.left > .arrow:after {
-  border-left-color: #262626;
+  border-left-color: #fff;
 }
 .tour-tour.popover.right > .arrow {
-  border-right-color: #262626;
+  border-right-color: #fff;
 }
 .tour-tour.popover.right > .arrow:after {
-  border-right-color: #262626;
+  border-right-color: #fff;
 }
 .tour-tour.popover.bottom > .arrow {
-  border-bottom-color: #262626;
+  border-bottom-color: #fff;
 }
 .tour-tour.popover.bottom > .arrow:after {
-  border-bottom-color: #262626;
+  border-bottom-color: #fff;
 }
 .tour-tour.popover.top > .arrow {
-  border-top-color: #262626;
+  border-top-color: #fff;
 }
 .tour-tour.popover.top > .arrow:after {
-  border-top-color: #262626;
+  border-top-color: #fff;
+}
+.theme-dark .tour-tour.popover {
+  background-color: #262626;
+}
+.theme-dark .tour-tour.popover .popover-title-div {
+  border-bottom: 1px solid transparent;
+  background-color: #111;
+  color: #fff;
+}
+.theme-dark .tour-tour.popover .popover-title-div i {
+  color: #fff;
+}
+.theme-dark .tour-tour.popover .popover-content {
+  color: #fff;
+}
+.theme-dark .tour-tour.popover.left > .arrow {
+  border-left-color: #000;
+}
+.theme-dark .tour-tour.popover.left > .arrow:after {
+  border-left-color: #000;
+}
+.theme-dark .tour-tour.popover.right > .arrow {
+  border-right-color: #000;
+}
+.theme-dark .tour-tour.popover.right > .arrow:after {
+  border-right-color: #000;
+}
+.theme-dark .tour-tour.popover.bottom > .arrow {
+  border-bottom-color: #000;
+}
+.theme-dark .tour-tour.popover.bottom > .arrow:after {
+  border-bottom-color: #000;
+}
+.theme-dark .tour-tour.popover.top > .arrow {
+  border-top-color: #000;
+}
+.theme-dark .tour-tour.popover.top > .arrow:after {
+  border-top-color: #000;
 }
 /*
 .card {
@@ -12589,6 +12661,10 @@ ol.unlist {
   margin-top: 0;
   margin-bottom: 0;
 }
+*[class*=wseft-] {
+  line-height: 1;
+  vertical-align: middle;
+}
 body {
   word-wrap: break-word;
 }
@@ -13968,14 +14044,13 @@ table.mce-colorbutton-grid .my-list .body {
 .selectize-dropdown-content .page i.wseft-blog,
 .selectize-input .page i.wseft-store,
 .selectize-dropdown-content .page i.wseft-store {
-  margin-top: 2px;
-  margin-bottom: -2px;
   font-size: 16px;
 }
 .selectize-input .page .item-text,
 .selectize-dropdown-content .page .item-text {
   font-size: 14px;
   line-height: 18px;
+  vertical-align: middle;
 }
 .selectize-dropdown .add-page {
   color: #333;
@@ -14702,6 +14777,17 @@ table.mce-colorbutton-grid .my-list .body {
   height: 30px;
   width: 100px;
   margin: auto;
+}
+.feedback-target {
+  position: absolute;
+  margin: 0;
+  top: 80%;
+  right: -45px;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+       -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  letter-spacing: 1.05px;
 }
 /* Util */
 .theme-dark {

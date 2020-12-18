@@ -21,57 +21,54 @@
   }
 }
 
-$tour-popover-bg-color: #262626 !default;
 .tour-tour.popover {
-    background-color: $tour-popover-bg-color;
-    color: #fff;
     max-width: 278px;
     line-height: 1.3;
-
     .popover-title-div {
-        border-bottom: 1px solid rgba(255,255,255,.09);
         font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
         .popover-title {
             background-color: transparent;
             border: 0;
             border-radius: 0;
+            padding: 0;
+            flex: 1;
+            font-size: 16px;
+            font-weight: 400;
         }
         i {
-            padding: 5px;
             cursor: pointer;
         }
     }
-
+    .popover-navigation {
+        padding: 0 14px;
+    }
     .popover-content {
         font-weight: 300;
     }
-
     .arrow {
         display: block;
     }
+}
 
-    &.left>.arrow {
-        border-left-color: $tour-popover-bg-color;
-        &:after {
-            border-left-color: $tour-popover-bg-color;
-        }
-    }
-    &.right>.arrow {
-        border-right-color: $tour-popover-bg-color;
-        &:after {
-            border-right-color: $tour-popover-bg-color;
-        }
-    }
-    &.bottom>.arrow {
-        border-bottom-color: $tour-popover-bg-color;
-        &:after {
-            border-bottom-color: $tour-popover-bg-color;
-        }
-    }
-    &.top>.arrow {
-        border-top-color: $tour-popover-bg-color;
-        &:after {
-            border-top-color: $tour-popover-bg-color;
-        }
-    }
+/* Mixin defined in _mixin.less */
+$bg-color: #fff !default;
+$fg-color: rgba(0,0,0,.87) !default;
+$bd-color: #e2e2e2 !default;
+$hd-color: transparent !default;
+$arw-color: #fff !default;
+$cl-color: #8a8a8a !default;
+@include tour-popup($bg-color, $fg-color, $bd-color, $hd-color, $arw-color, $cl-color);
+
+.theme-dark {
+    $bg-color: #262626 !default;
+    $fg-color: #fff !default;
+    $bd-color: transparent !default;
+    $hd-color: #111 !default;
+    $arw-color: #000 !default;
+    $cl-color: #fff !default;
+    @include tour-popup($bg-color, $fg-color, $bd-color, $hd-color, $arw-color, $cl-color);
 }

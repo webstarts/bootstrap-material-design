@@ -65,6 +65,51 @@
     }
 }
 
+.tour-popup(@bg-color, @fg-color, @bd-color, @hd-color, @arw-color, @cl-color) {
+
+    .tour-tour.popover {
+        background-color: @bg-color;
+
+        .popover-title-div {
+            border-bottom: 1px solid @bd-color;
+            background-color: @hd-color;
+            color: @fg-color;
+
+            i {
+              color: @cl-color;
+            }
+        }
+        .popover-content {
+          color: @fg-color;
+        }
+
+        &.left>.arrow {
+            border-left-color: @arw-color;
+            &:after {
+                border-left-color: @arw-color;
+            }
+        }
+        &.right>.arrow {
+            border-right-color: @arw-color;
+            &:after {
+                border-right-color: @arw-color;
+            }
+        }
+        &.bottom>.arrow {
+            border-bottom-color: @arw-color;
+            &:after {
+                border-bottom-color: @arw-color;
+            }
+        }
+        &.top>.arrow {
+            border-top-color: @arw-color;
+            &:after {
+                border-top-color: @arw-color;
+            }
+        }
+    }
+}
+
 //
 // To use this mixin you should pass a function as final parameter to define
 // the style. In that definition you can use the following variables to define it.

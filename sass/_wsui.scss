@@ -1208,3 +1208,8 @@ ul.unlist, ol.unlist {
     margin-top: 0;
     margin-bottom: 0;
 }
+
+*[class*=wseft-] {
+    line-height: 1;
+    vertical-align: middle;
+}
