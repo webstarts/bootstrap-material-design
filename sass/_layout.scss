@@ -406,7 +406,16 @@ footer {
 /** Utils **/
 
 
-/* Bootstrap 4 flex basics */
+/* Bootstrap 4 flex basics & display */
+.d-table {
+    display: table!important;
+}
+.d-table-row {
+    display: table-row!important;
+}
+.d-table-cell {
+    display: table-cell!important;
+}
 .d-flex {
     display: flex!important;
 }

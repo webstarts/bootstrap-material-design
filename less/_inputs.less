@@ -135,41 +135,51 @@
 // MDL implementation: http://www.getmdl.io/components/index.html#textfields-section
 .form-control,
 .form-group .form-control {
-  border: 0;
-  background-image: linear-gradient(@brand-primary, @brand-primary), linear-gradient(@mdb-input-underline-color, @mdb-input-underline-color);
-  background-size: 0 2px, 100% 1px;
-  background-repeat: no-repeat;
-  background-position: center bottom, center calc(~"100% - 1px");
-  background-color: rgba(0, 0, 0, 0);
-  transition: background 0s ease-out;
-  float: none;
-  box-shadow: none;
-  border-radius: 0;
-  /*padding: 7px .15em;*/
-  padding: 7px 5px;
+    border: 0;
+    background-image: linear-gradient(@brand-primary, @brand-primary), linear-gradient(@mdb-input-underline-color, @mdb-input-underline-color);
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center calc(~"100% - 1px");
+    background-color: rgba(0, 0, 0, 0);
+    transition: background 0s ease-out;
+    float: none;
+    box-shadow: none;
+    border-radius: 0;
+    /*padding: 7px .15em;*/
+    padding: 7px 5px;
 
-  // Placeholders and and labels-as-placeholders should look the same
-  .material-placeholder({
-    color: @mdb-input-placeholder-color;
-    font-weight: 400;
-  });
+    // Placeholders and and labels-as-placeholders should look the same
+    .material-placeholder({
+        color: @mdb-input-placeholder-color;
+        font-weight: 400;
+    });
+
+
 
 
   //&:textarea {    // appears to be an invalid selector
   //  height: 40px;
   //}
 
-  &[readonly],
-  &[disabled],
-  fieldset[disabled] & {
-    background-color: rgba(0, 0, 0, .02);
-  }
+    &[readonly],
+    &[disabled],
+    fieldset[disabled] & {
+        background-color: rgba(0, 0, 0, .02);
+    }
 
-  &[disabled],
-  fieldset[disabled] & {
-    background-image: none;
-    border-bottom: 1px dotted @mdb-input-underline-color;
-  }
+    &[disabled],
+    fieldset[disabled] & {
+        background-image: none;
+        border-bottom: 1px dotted @mdb-input-underline-color;
+    }
+}
+
+.form-control:not(.selectize-dropdown), .form-group .form-control:not(.selectize-dropdown) {
+    background-color: rgba(0,0,0,0.04);
+    padding: 10px;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    height: auto;
 }
 
 select.form-control,

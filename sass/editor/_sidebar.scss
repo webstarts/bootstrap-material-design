@@ -15,14 +15,14 @@
         box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
         transition: all .3s cubic-bezier(.55,0,.55,.2),width .1s linear,min-width .1s linear,max-width .1s linear;
         transform: translateX(0);
-        color: rgba(255,255,255,0.84);
+        /*color: rgba(255,255,255,0.84);*/
         z-index: 2;
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: #333333;
+        background-color: #ddd;
         .icon-holder {
             display: block;
         }
@@ -35,7 +35,7 @@
         height: 64px;
         min-height: 64px;
         justify-content: space-between;
-        color: rgba(255,255,255,0.84);
+        /*color: rgba(255,255,255,0.84);*/
         background-color: hsla(0,0%,100%,.05);
         transition: padding .2s ease;
         box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
@@ -43,27 +43,20 @@
         align-items: center;
         a {
             text-decoration: none;
+            color: initial;
         }
         .logo {
             display: flex;
             align-items: center;
-            .logo-icon {
-                width: 38px;
-            }
-            .logo-text {
-                margin-left: 8px;
-                font-size: 16px;
-                font-weight: 300;
-                letter-spacing: .4px;
-                color: #fff;
-            }
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
         }
         .toggle-button-navbar {
             width: 40px;
             height: 40px;
             padding: 0;
             border-radius: 50%;
-            color: white;
             font-size: 20px;
             margin: 0;
             outline: none;
@@ -91,12 +84,12 @@
             justify-content: space-between;
             height: 100%;
             .top-buttons {
-                flex: 1;
+                /*flex: 1;*/
                 overflow-y: auto;
                 overflow-x: hidden;
             }
             .bottom-buttons {
-                height: 50px;
+                /*height: 50px;*/
                 .theme-switch {
                     margin-left: 20px;
                     label.control-label {
@@ -104,20 +97,23 @@
                         cursor: pointer;
                         white-space: nowrap;
                         overflow: hidden;
+                        color: inherit;
                         i {
                             font-size: 18px;
                             margin: 5px;
                             vertical-align: middle;
-                            opacity: .35;
+                            opacity: .4;
                             transition: opacity .5s ease;
                             &:hover, &.active {
                                 opacity: 1;
-                                color: #fff;
                             }
                         }
                         i.dark {
                             transform: rotateZ(160deg);
                             margin: 0 0 2.5px 2.5px;
+                        }
+                        span {
+                            margin: 0 5px;
                         }
                     }
                 }
@@ -127,7 +123,7 @@
     &.folded:not(.folded-open) {
         .theme-switch {
             margin: 0 auto;
-            span, i:not(.active) {
+            span, i.active {
                 display: none;
             }
         }
@@ -192,6 +188,24 @@
                 }
             }
         }
+        .bubble-number {
+            position: absolute;
+            background-color: $brand-danger;
+            color: #fff;
+            border-radius: 50%;
+            padding: 5px 0;
+            right: -15px;
+            top: 10px;
+            text-align: center;
+            min-width: 30px;
+            height: 30px;
+            box-shadow: 2px 2px 8px 0 rgba(0, 0, 0, 0.4);
+        }
+        &.open {
+            .bubble-number {
+                display: none;
+            }
+        }
     }
     .nav-group {
         .group-title {
@@ -211,7 +225,7 @@
         }
     }
     .nav-collapse.open {
-        background-color: rgba(0,0,0,.12);
+        background-color: rgba(0,0,0,.05);
         >.nav-link {
             .collapse-arrow {
                 transform: rotate(90deg);
@@ -255,22 +269,21 @@
     }
     .font-set {
         position: relative;
-        background-color: #2d2d2d;
+        background-color: rgba(255,255,255,.3);
         border-radius: 3px;
         padding: 10px;
         margin-bottom: 10px;
         box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
         h4 {
             font-size: 17px;
-            color: #fff;
             white-space: nowrap;
             width: 99.99%;
             text-overflow: ellipsis;
             overflow: hidden;
+            line-height: 1.6em;
         }
         p {
             font-size: 14px;
-            color: #fff;
         }
         h4, p {
             margin: 0;
@@ -302,6 +315,9 @@
             .logo-text {
                 opacity: 0;
                 transition: opacity .2s ease;
+            }
+            .material-icons {
+                margin-left: 12px;
             }
         }
         .nav-group {
@@ -381,15 +397,16 @@
                 white-space: nowrap;
                 text-overflow: ellipsis;
                 overflow: hidden;
+                display: flex;
+                align-items: center;
                 >i {
                     margin-right: 10px;
-                    font-size: 16px;
+                    font-size: 18px;
                     vertical-align: middle;
                 }
                 >img {
                     margin-right: 10px;
                     height: 30px;
-                    max-width: 100px;
                     width: auto;
                     margin-right: 10px;
                 }
@@ -442,8 +459,10 @@
         }
         h4 {
             font-size: 17px;
+            line-height: 1.6em;
             white-space: nowrap;
             overflow: hidden;
+            text-shadow: none;
         }
     }
     img {
@@ -452,10 +471,39 @@
         width: auto;
         margin-right: 10px;
     }
+    .object-id {
+        display: flex;
+        align-items: center;
+        span.text {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
 }
 
 .theme-dark {
-    .wsme #editor-sidebar .editor-sidebar-content {
-        background-color: $mdb-dark-bg-color;
+    .wsme {
+        #editor-sidebar {
+            .editor-sidebar-content {
+                background-color: $mdb-dark-bg-color;
+                color: $mdb-dark-bg-text-color;
+                .editor-sidebar-header {
+                    .logo {
+                        color: $mdb-dark-bg-text-color;
+                    }
+                }
+                .editor-sidebar-main {
+                    .font-set {
+                        background-color: rgba(255,255,255,.1)
+                    }
+                    .nav-collapse.open {
+                        background-color: rgba(0,0,0,.12);
+                    }
+                }
+            }
+        }
     }
 }

@@ -30,6 +30,41 @@
   });
 }
 
+// specification: https://www.google.com/design/spec/components/buttons.html
+
+.typo-button(@colorContrast: false) {
+  font-size: @mdb-btn-font-size-base;
+  font-weight: 500;
+  //line-height: 1;
+  letter-spacing: 0;
+
+  & when (@colorContrast) {
+    opacity: 0.87;
+  }
+}
+
+@colors : @brand-primary, @brand-secondary, @brand-success, @brand-danger, @brand-warning, @brand-info, @grey-400;
+@names  : primary, secondary, success, danger, warning, info, default;
+@length : length(@colors);
+
+.outline-button(@index) when (@index > 0) {
+  .outline-button((@index - 1));    // next iteration
+
+    @name: extract(@names, @index);
+    @color: extract(@colors, @index);
+
+    &.btn-@{name}-outline {
+        color: @color;
+        border: 1px solid @color;
+        background-color: transparent;
+        &.active, &:hover, &:focus {
+            color: @mdb-text-color-light;
+            border-color: transparent;
+            background-color: @color;
+        }
+    }
+}
+
 //
 // To use this mixin you should pass a function as final parameter to define
 // the style. In that definition you can use the following variables to define it.
