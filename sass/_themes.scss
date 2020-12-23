@@ -10,14 +10,27 @@
 	.dtp-buttons button.btn:hover{
 		background-color: #000;
 	}
+	.navbar .navbar-toggle .icon-bar {
+		border-color: $mdb-dark-bg-text-color;
+	}
+	.phone-footer-nav-bar {
+		background-color: transparent;
+	}
+	.content-wrapper.responsive-sidebar .window-sidebar {
+		background-color: $mdb-dark-bg-color;
+	}
 }
 
 .body-dark {
     color: $mdb-dark-bg-text-color;
     background-color: $mdb-dark-bg-color;
-	.side-nav {
+	.side-nav, .navbar-sidebar {
 	    border-color: #111;
 	    background-color: $mdb-dark-bg-color;
+	    .sidebar-header {
+	    	background-color: #333;
+    		color: #fff;
+	    }
 	}
 }
 

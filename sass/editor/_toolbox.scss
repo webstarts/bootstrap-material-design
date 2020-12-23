@@ -5,6 +5,24 @@
 		margin-top: 0;
 	}
 
+	.bg-thumb-preview-container {
+		position: relative;
+	    height: 80px;
+	    .bg-thumb-preview-wrap {
+		    overflow: hidden;
+		    margin: auto 5px;
+		    width: 60px;
+		    height: 60px;
+		    .bg-thumb-preview {
+		    	height: 100%;
+	    		width: auto;
+		    }
+	    }
+	    .btn+.btn {
+			margin-left: 5px;
+	    }
+	}
+
 	/* This is the 9-way alignment for strip images
 	 */
 	.bg-image-alignment {
@@ -21,9 +39,7 @@
 			display: none;
 
 			&:checked + .bg-location {
-				background: #eee;
-				-moz-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.3);
-				-webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0,0.3);
+				background: $brand-primary;
 				box-shadow: inset 0px 1px 1px rgba(0,0,0,0.3);
 			}
 		}
@@ -40,7 +56,6 @@
 			i {
 				position: absolute;
 				transform: rotate(45deg);
-				color: $mdb-text-color-primary;
 				font-size: 20px;
 				user-select: none;
 			}
@@ -62,5 +77,12 @@
 			bottom: 0px;
 			right: 0px;
 		}
+	}
+}
+
+.theme-dark {
+	.editor-toolbox .bg-image-alignment .bg-location {
+		background: #3d3d3d;
+		border-color: #222;
 	}
 }

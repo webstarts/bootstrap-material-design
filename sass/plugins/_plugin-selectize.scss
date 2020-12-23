@@ -198,7 +198,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
 .form-group .selectize-control.form-control {
   position: relative;
   padding: 0;
-  height: 42px;
+  min-height: 42px;
 }
 
 .selectize-dropdown, .selectize-input, .selectize-input input {
@@ -211,14 +211,14 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
 .selectize-input, .selectize-control.single .selectize-input.input-active {
   /*background: $selectize-color-input;*/
   cursor: text;
-  display: inline-block;
+  display: inline-flex;
 }
 
 .selectize-input {
   border: $selectize-border;
   /*padding: 7px 0;*/
   padding: 10px;
-  display: inline-block;
+  display: inline-flex;
   width: 100%;
   overflow: hidden;
   position: relative;

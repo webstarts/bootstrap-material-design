@@ -5844,13 +5844,28 @@ hr[data-divider-text]:before {
 .theme-dark .dtp-buttons button.btn:hover {
   background-color: #000;
 }
+.theme-dark .navbar .navbar-toggle .icon-bar {
+  border-color: #fff;
+}
+.theme-dark .phone-footer-nav-bar {
+  background-color: transparent;
+}
+.theme-dark .content-wrapper.responsive-sidebar .window-sidebar {
+  background-color: #262626;
+}
 .body-dark {
   color: #fff;
   background-color: #262626;
 }
-.body-dark .side-nav {
+.body-dark .side-nav,
+.body-dark .navbar-sidebar {
   border-color: #111;
   background-color: #262626;
+}
+.body-dark .side-nav .sidebar-header,
+.body-dark .navbar-sidebar .sidebar-header {
+  background-color: #333;
+  color: #fff;
 }
 /* Panel Dark */
 .panel-popup.panel-dark .panel-window .panel-window-content .window-header,
@@ -11006,7 +11021,7 @@ hr[data-divider-text]:before {
 .form-group .selectize-control.form-control {
   position: relative;
   padding: 0;
-  height: 42px;
+  min-height: 42px;
 }
 .selectize-dropdown,
 .selectize-input,
@@ -11020,13 +11035,19 @@ hr[data-divider-text]:before {
 .selectize-control.single .selectize-input.input-active {
   /*background: @selectize-color-input;*/
   cursor: text;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
 }
 .selectize-input {
   border: none;
   /*padding: 7px 0;*/
   padding: 10px;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -13080,6 +13101,9 @@ footer ul.links-vertical li a {
 .d-table-cell {
   display: table-cell !important;
 }
+.d-flex-inline {
+  display: flex-inline !important;
+}
 .d-flex {
   display: -webkit-box!important;
   display: -webkit-flex!important;
@@ -13171,6 +13195,9 @@ footer ul.links-vertical li a {
 }
 .h-100 {
   height: 100%;
+}
+.h-auto {
+  height: auto;
 }
 /* Bootstrap 4 flex basics */
 .testimonial {
@@ -14750,34 +14777,6 @@ table.mce-colorbutton-grid .my-list .body {
   line-height: 32px;
   vertical-align: bottom;
 }
-.bg-thumb-preview-container {
-  position: relative;
-  height: 80px;
-}
-.bg-thumb-preview-container .bg-thumb-preview-wrap {
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  left: 10px;
-  width: 55px;
-  height: 55px;
-  float: left;
-}
-.bg-thumb-preview-container .bg-thumb-preview-wrap .bg-thumb-preview {
-  height: 100%;
-  width: auto;
-}
-.bg-thumb-preview-container .btn {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 10px;
-  height: 30px;
-  width: 100px;
-  margin: auto;
-}
 .feedback-target {
   position: absolute;
   margin: 0;
@@ -14847,7 +14846,7 @@ table.mce-colorbutton-grid .my-list .body {
           box-shadow: none;
 }
 .theme-dark .choose-skin-placeholder img,
-.theme-dark .bg-thumb-preview {
+.theme-dark .bg-thumb-preview.invert {
   -webkit-filter: invert(0.89);
           filter: invert(0.89);
 }
@@ -14868,6 +14867,23 @@ table.mce-colorbutton-grid .my-list .body {
 .editor-toolbox .form-group {
   margin-top: 0;
 }
+.editor-toolbox .bg-thumb-preview-container {
+  position: relative;
+  height: 80px;
+}
+.editor-toolbox .bg-thumb-preview-container .bg-thumb-preview-wrap {
+  overflow: hidden;
+  margin: auto 5px;
+  width: 60px;
+  height: 60px;
+}
+.editor-toolbox .bg-thumb-preview-container .bg-thumb-preview-wrap .bg-thumb-preview {
+  height: 100%;
+  width: auto;
+}
+.editor-toolbox .bg-thumb-preview-container .btn + .btn {
+  margin-left: 5px;
+}
 .editor-toolbox .bg-image-alignment {
   width: 72px;
 }
@@ -14881,9 +14897,9 @@ table.mce-colorbutton-grid .my-list .body {
   display: none;
 }
 .editor-toolbox .bg-image-alignment input[type="radio"]:checked + .bg-location {
-  background: #eee;
+  background: #03a9f4;
   -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.3);
 }
 .editor-toolbox .bg-image-alignment .bg-location {
   position: relative;
@@ -14900,7 +14916,6 @@ table.mce-colorbutton-grid .my-list .body {
       -ms-transform: rotate(45deg);
        -o-transform: rotate(45deg);
           transform: rotate(45deg);
-  color: rgba(0,0,0, 0.87);
   font-size: 20px;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -14922,6 +14937,10 @@ table.mce-colorbutton-grid .my-list .body {
 .editor-toolbox .bg-image-alignment .bg-location-se i {
   bottom: 0px;
   right: 0px;
+}
+.theme-dark .editor-toolbox .bg-image-alignment .bg-location {
+  background: #3d3d3d;
+  border-color: #222;
 }
 #playlist-editable .add-audio-message {
   height: 100%;
