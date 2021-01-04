@@ -219,6 +219,7 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
   /*padding: 7px 0;*/
   padding: 10px;
   display: inline-flex;
+  flex-flow: wrap;
   width: 100%;
   overflow: hidden;
   position: relative;

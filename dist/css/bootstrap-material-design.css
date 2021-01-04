@@ -11048,6 +11048,9 @@ hr[data-divider-text]:before {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-flow: wrap;
+      -ms-flex-flow: wrap;
+          flex-flow: wrap;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -11768,6 +11771,13 @@ hr[data-divider-text]:before {
 }
 .panel-popup .form-group + .form-group {
   margin-top: 0px;
+}
+.panel-popup .form-group.label-floating + .form-group.label-floating {
+  margin-top: 20px;
+}
+.form-group.label-floating label.control-label,
+.form-group.label-placeholder label.control-label {
+  left: 10px;
 }
 /* Video Specific Theme */
 .panel-modal.video-theme .panel-window .panel-window-content {
