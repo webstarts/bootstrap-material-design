@@ -13100,6 +13100,9 @@ footer ul.links-vertical li a {
 .cursor-pointer {
   cursor: pointer;
 }
+.cursor-default {
+  cursor: default;
+}
 /** Utils **/
 /* Bootstrap 4 flex basics & display */
 .d-table {
