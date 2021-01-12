@@ -14773,7 +14773,7 @@ table.mce-colorbutton-grid .my-list .body {
   font-size: 12px;
 }
 .sm-tabs {
-  height: 34px;
+  /*height: 34px;*/
   border-bottom: 1px solid #e2e2e2;
 }
 .sm-tabs .nav-tabs > li.active {
@@ -14784,11 +14784,11 @@ table.mce-colorbutton-grid .my-list .body {
 }
 .wseft {
   font-size: 20px;
-  vertical-align: bottom;
+  /*vertical-align: bottom;*/
 }
 .wseft + span {
-  line-height: 32px;
-  vertical-align: bottom;
+  line-height: 38px;
+  /*vertical-align: bottom;*/
 }
 .feedback-target {
   position: absolute;
