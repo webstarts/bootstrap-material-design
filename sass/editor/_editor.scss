@@ -913,7 +913,6 @@ align-items: center;
 }
 
 .sm-tabs{
-	/*height: 34px;*/
 	border-bottom: 1px solid #e2e2e2;
 	.nav-tabs > li.active{
 		border-color: rgba(3,169,244,0.87);
@@ -925,10 +924,8 @@ align-items: center;
 
 .wseft {
 	font-size: 20px;
-	/*vertical-align: bottom;*/
 	&+ span {
 		line-height: 38px;
-		/*vertical-align: bottom;*/
 	}
 }
 

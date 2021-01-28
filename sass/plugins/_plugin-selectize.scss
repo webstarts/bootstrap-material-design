@@ -254,6 +254,14 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
     zoom: 1;
     *display: inline;
   }
+  .selectize-control.single & > .item {
+    display: inline-block;
+    flex-flow: row nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: unquote("calc(100% - 7px)");
+  }
   .selectize-control.multi & > div {
     cursor: pointer;
     margin: 0 $selectize-margin-item-x $selectize-margin-item-y 0;

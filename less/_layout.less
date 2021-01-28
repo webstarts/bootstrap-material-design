@@ -404,6 +404,20 @@ footer {
 .cursor-default {
     cursor: default;
 }
+.hlink-file-container {
+    position: relative;
+    .filename-selected {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: ~"calc(100% - 54px)";
+    }
+}
+.text-nowrap {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
 /** Utils **/
 
 
@@ -471,10 +485,41 @@ footer {
 .pb-0 {
     padding-bottom: 0!important;
 }
+.w-100 {
+    width: 100%;
+}
+.w-auto {
+    width: auto;
+}
 .h-100 {
     height: 100%;
 }
 .h-auto {
     height: auto;
+}
+.grid-row {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: start;
+    align-items: start;
+}
+.grid-row.even-col2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+.grid-row.even-col3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-row.even-col4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid-row.auto-col2 {
+    grid-template-columns: repeat(2, auto);
+}
+.grid-row.auto-col3 {
+    grid-template-columns: repeat(3, auto);
+}
+.grid-row.auto-col4 {
+    grid-template-columns: repeat(4, auto);
 }
 /* Bootstrap 4 flex basics */

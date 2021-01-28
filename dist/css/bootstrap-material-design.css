@@ -3220,6 +3220,10 @@ legend {
 .list-group.list-group-no-icon .list-group-separator:before {
   width: 100%;
 }
+.list-group.border {
+  border: 1px solid rgba(153, 153, 153, 0.15);
+  padding: 2px;
+}
 .navbar {
   background-color: #03a9f4;
   border: 0;
@@ -11091,6 +11095,17 @@ hr[data-divider-text]:before {
   zoom: 1;
   *display: inline;
 }
+.selectize-control.single .selectize-input > .item {
+  display: inline-block;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: -webkit-calc(100% - 7px);
+  max-width: calc(100% - 7px);
+}
 .selectize-control.multi .selectize-input > div {
   cursor: pointer;
   margin: 0 3px 3px 0;
@@ -13103,6 +13118,21 @@ footer ul.links-vertical li a {
 .cursor-default {
   cursor: default;
 }
+.hlink-file-container {
+  position: relative;
+}
+.hlink-file-container .filename-selected {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: -webkit-calc(100% - 54px);
+  max-width: calc(100% - 54px);
+}
+.text-nowrap {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
 /** Utils **/
 /* Bootstrap 4 flex basics & display */
 .d-table {
@@ -13206,11 +13236,45 @@ footer ul.links-vertical li a {
 .pb-0 {
   padding-bottom: 0!important;
 }
+.w-100 {
+  width: 100%;
+}
+.w-auto {
+  width: auto;
+}
 .h-100 {
   height: 100%;
 }
 .h-auto {
   height: auto;
+}
+.grid-row {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: start;
+  -webkit-box-align: start;
+  -webkit-align-items: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+.grid-row.even-col2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid-row.even-col3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid-row.even-col4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid-row.auto-col2 {
+  grid-template-columns: repeat(2, auto);
+}
+.grid-row.auto-col3 {
+  grid-template-columns: repeat(3, auto);
+}
+.grid-row.auto-col4 {
+  grid-template-columns: repeat(4, auto);
 }
 /* Bootstrap 4 flex basics */
 .testimonial {
@@ -14773,7 +14837,6 @@ table.mce-colorbutton-grid .my-list .body {
   font-size: 12px;
 }
 .sm-tabs {
-  /*height: 34px;*/
   border-bottom: 1px solid #e2e2e2;
 }
 .sm-tabs .nav-tabs > li.active {
@@ -14784,11 +14847,9 @@ table.mce-colorbutton-grid .my-list .body {
 }
 .wseft {
   font-size: 20px;
-  /*vertical-align: bottom;*/
 }
 .wseft + span {
   line-height: 38px;
-  /*vertical-align: bottom;*/
 }
 .feedback-target {
   position: absolute;
@@ -15128,6 +15189,30 @@ table.mce-colorbutton-grid .my-list .body {
 .window-body-inner .main-contents > div {
   height: 100%;
 }
+.manage-links-popup .list-group {
+  width: 100%;
+  margin: 0;
+}
+.manage-links-popup .list-group-item .actions {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-basis: 30%;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 60px;
+}
+.manage-links-popup .list-group-item > div {
+  padding: 10px 0;
+}
+.manage-links-popup .list-group-item .link-title {
+  padding-left: 10px;
+}
 .membership-popup .form-group {
   margin: 0;
   padding: 0;
@@ -15244,7 +15329,6 @@ table.mce-colorbutton-grid .my-list .body {
           transition: background-color 300ms, border-color 300ms, color 300ms;
   border-style: solid;
   border-width: 1px;
-  border-radius: 4px;
 }
 .form-builder-popup .live-demo-container .ev-visible {
   display: block!important;
@@ -15485,6 +15569,10 @@ table.mce-colorbutton-grid .my-list .body {
 .pages-container #edit-menu-pages .dd-handle:after {
   display: table;
   content: " ";
+}
+.pages-container #edit-menu-pages button[data-action="collapse"],
+.pages-container #edit-menu-pages button[data-action="expand"] {
+  display: none;
 }
 .pages-container .page-title-ph {
   height: 100%;

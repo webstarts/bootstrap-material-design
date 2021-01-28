@@ -166,6 +166,28 @@
 	}
 }
 
+// manage links
+.manage-links-popup {
+	.list-group {
+		width: 100%;
+		margin: 0;
+	}
+	.list-group-item {
+		.actions {
+			justify-content: space-between;
+		    flex-basis: 30%;
+		    display: flex;
+		    max-width: 60px;
+		}
+		> div {
+			padding: 10px 0;
+		}
+		.link-title {
+			padding-left: 10px;
+		}
+	}
+}
+
 // Membership
 .membership-popup {
 	.form-group {
@@ -263,7 +285,6 @@
 		    transition: background-color 300ms, border-color 300ms, color 300ms;
 		    border-style: solid;
 		    border-width: 1px;
-		    border-radius: 4px;
 		}
 		.ev-visible { display:block!important; }
 		.lv-visible { display:block!important; }
@@ -518,6 +539,9 @@
 				display: table;
 				content: " ";
 			}
+		}
+		button[data-action="collapse"], button[data-action="expand"] {
+			display: none;
 		}
 	}
 	.page-title-ph {
