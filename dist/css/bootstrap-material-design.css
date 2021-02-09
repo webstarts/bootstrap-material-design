@@ -13105,6 +13105,16 @@ footer ul.links-vertical li a {
 .drag-handle.vert {
   cursor: ns-resize;
 }
+.hlink-file-container {
+  position: relative;
+}
+.hlink-file-container .filename-selected {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: -webkit-calc(100% - 54px);
+  max-width: calc(100% - 54px);
+}
 .absolute-stretch {
   position: absolute;
   top: 0;
@@ -13118,17 +13128,8 @@ footer ul.links-vertical li a {
 .cursor-default {
   cursor: default;
 }
-.hlink-file-container {
-  position: relative;
-}
-.hlink-file-container .filename-selected {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: -webkit-calc(100% - 54px);
-  max-width: calc(100% - 54px);
-}
-.text-nowrap {
+.text-nowrap,
+.text-truncate {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -13868,19 +13869,49 @@ footer ul.links-vertical li a {
 .wsui.wsme > .center #header #menubar {
   height: 64px;
   padding-left: 256px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .wsui.wsme > .center #header #menubar > ul {
   height: 100%;
   list-style-type: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .wsui.wsme > .center #header #menubar > ul.right-header {
-  float: right;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   margin: 0 5px 0 0;
   padding: 0;
 }
 .wsui.wsme > .center #header #menubar > ul.right-header > li.txt-link a {
   font-size: 24px;
-  padding: 13px;
+  padding: 15px 12px;
   height: 100%;
 }
 .wsui.wsme > .center #header #menubar > ul li {
@@ -13905,6 +13936,7 @@ footer ul.links-vertical li a {
   background-color: #fff;
   padding-left: 10px;
   color: #333;
+  height: 42px;
 }
 .wsui.wsme > .center #header #menubar > ul li:not(.page-select-box) ul {
   width: 200px;
@@ -13921,7 +13953,7 @@ footer ul.links-vertical li a {
 }
 .wsui.wsme > .center #header #menubar > ul > li {
   float: left;
-  height: 100%;
+  /*height: 100%;*/
   position: relative;
   padding: 0;
   font-size: 14px;
@@ -14149,6 +14181,10 @@ table.mce-colorbutton-grid .my-list .body {
 .selectize-input .page i.wseft-store,
 .selectize-dropdown-content .page i.wseft-store {
   font-size: 16px;
+}
+.selectize-input .page i.icon-search,
+.selectize-dropdown-content .page i.icon-search {
+  font-size: 15px;
 }
 .selectize-input .page .item-text,
 .selectize-dropdown-content .page .item-text {
@@ -14876,8 +14912,6 @@ table.mce-colorbutton-grid .my-list .body {
 .theme-dark .wsui.wsme > .center #header #menubar > ul > li.page-select-box .selectize-input {
   color: #fff;
   background-color: rgba(255, 255, 255, 0.1);
-  padding-top: 8px;
-  padding-bottom: 8px;
 }
 .theme-dark .wsui.wsme > .center #header #menubar > ul > li > ul li:not(.divider):hover {
   background-color: rgba(255, 255, 255, 0.1);

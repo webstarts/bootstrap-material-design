@@ -391,21 +391,6 @@ footer {
         cursor: ns-resize
     }
 }
-
-.absolute-stretch {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-.cursor-pointer {
-    cursor: pointer;
-}
-.cursor-default {
-    cursor: default;
-}
 .hlink-file-container {
     position: relative;
     .filename-selected {
@@ -415,7 +400,23 @@ footer {
         max-width: unquote("calc(100% - 54px)");
     }
 }
-.text-nowrap {
+
+.absolute-stretch {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+// general
+.cursor-pointer {
+    cursor: pointer;
+}
+.cursor-default {
+    cursor: default;
+}
+.text-nowrap,
+.text-truncate {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
