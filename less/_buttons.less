@@ -222,6 +222,21 @@
   }
 }
 
+.btn-group.btn-group-raised.btn-splitter {
+    .btn {
+        box-shadow: none;
+        &:hover,&:active,&:focus {
+          box-shadow: none;
+          margin-top: -2px;
+        }
+    }
+    .btn-more {
+        margin: -2px 0 0 0!important;
+        padding: 10px 7px;
+        border-left: 1px solid rgba(0,0,0,.15);
+    }
+}
+
 // Disabled buttons and button groups
 .btn,
 .input-group-btn .btn,

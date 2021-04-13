@@ -1174,10 +1174,10 @@ ul.unlist, ol.unlist {
 
 .material-icons {
 /* Rules for sizing the icon. */
-    &.md-18 { font-size: 18px; }
-    &.md-24 { font-size: 24px; }
-    &.md-36 { font-size: 36px; }
-    &.md-48 { font-size: 48px; }
+    &.md-18 { font-size: 18px!important; }
+    &.md-24 { font-size: 24px!important; }
+    &.md-36 { font-size: 36px!important; }
+    &.md-48 { font-size: 48px!important; }
 /* Rules for using icons as black on a light background. */
     &.md-dark {
         color: rgba(0, 0, 0, 0.54);
@@ -1218,4 +1218,21 @@ ul.unlist, ol.unlist {
 *[class*=wseft-] {
     line-height: 1;
     vertical-align: middle;
+}
+
+#beacon-container .Beacon > div {
+    z-index: 999!important;
+}
+
+.page-loader, .loading-mask {
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:fixed;
+    background-color:rgba(153,153,153,.3);
+    z-index:10;
+    &.absolute{
+        position: absolute;
+    }
 }

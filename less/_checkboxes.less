@@ -63,8 +63,8 @@ label.checkbox-inline {
       display: block;
       margin-top: -3px;
       margin-left: 7px;
-      width: 0;
-      height: 0;
+      width: 1px;
+      height: 1px;
       box-shadow:
         0 0 0 0,
         0 0 0 0,
@@ -82,9 +82,9 @@ label.checkbox-inline {
     &:focus + .checkbox-material .check:after {
       opacity: 0.2;
     }
- 
+
     &:focus{
-      
+
       &:checked{
         & + .checkbox-material:before {
           animation: rippleOn 500ms;
@@ -96,7 +96,7 @@ label.checkbox-inline {
           animation: rippleOn @mdb-checkbox-animation-ripple forwards; // Ripple effect on check
         }
       }
-      
+
       &:not(:checked) {
         & + .checkbox-material:before {
           animation: rippleOff 500ms;
@@ -108,10 +108,10 @@ label.checkbox-inline {
           animation: rippleOff @mdb-checkbox-animation-ripple forwards; // Ripple effect on uncheck
         }
       }
-      
+
     }
-    
-    
+
+
     &:checked {
 
       // FIXME: once working - combine further to reduce code

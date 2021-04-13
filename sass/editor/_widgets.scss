@@ -46,26 +46,30 @@
 // Icon Manager
 .change-icon-set {
 	.icon-set {
-		display: flex;
-		justify-content: center;
-		flex-flow: row wrap;
+		display: grid;
+    	/*grid-template-columns: repeat(auto-fit, minmax(50px, 60px));*/
+    	grid-template-columns: repeat(auto-fit, 60px);
+    	grid-gap: 8px;
+    	justify-content: space-between;
+    	&.vectors {
+    		grid-template-columns: repeat(auto-fit, 150px);
+    		grid-gap: 15px;
+    		.icon-container {
+    			padding: 10px;
+    		}
+    	}
 	}
 	.icon-container {
-	    width: 60px;
-	    height: 60px;
+		padding: 10px 0;
 	    font-size: 24px;
 	    background-color: #fafafa;
 	    border: 2px solid #ccc;
 	    color: #222;
-	    margin: 5px;
 	    border-radius: 3px;
 	    cursor: pointer;
 	    text-align: center;
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
 	    text-decoration: none;
-	    &:hover {
+	    &:hover, &.active {
 	    	border-color: $brand-primary;
 	    	color: $brand-primary;
 	    }
@@ -219,6 +223,12 @@
 
 // form builder
 .form-builder-popup {
+	.live-demo {
+		color: inherit!important;
+		font-size: inherit!important;
+		font-weight: inherit!important;
+		font-family: inherit!important;
+	}
 	.live-demo-container {
 		.wse-form-mask{ display:none; }
 		form > ul > li {
@@ -323,6 +333,13 @@
 	}
 	.dd-item {
 		color: #333;
+		i {
+			color: #555;
+			line-height: 1;
+		}
+		i.fa {
+			font-size: 16px;
+		}
 		&:hover {
 			text-decoration: none;
 			color: #333;
@@ -331,28 +348,16 @@
 				display: block;
 			}
 		}
-		.dd-handle {
-			color: #333;
-			.title {
-				font-size: 14px;
-				pointer-events: none;
-			}
-			>i {
-				pointer-events: none;
-			}
-			>.fa {
-				pointer-events: none;
-			}
-		}
-		display: block;
+		display: grid;
+		grid-template-columns: min-content 1fr;
 		position: relative;
 		margin: 0;
 		padding: 0;
 		min-height: 20px;
-		line-height: 20px;
+		align-items: center;
 		>button {
 			display: none;
-			position: relative;
+			/*position: relative;
 			cursor: pointer;
 			float: left;
 			width: 25px;
@@ -367,34 +372,21 @@
 			font-size: 12px;
 			line-height: 1;
 			text-align: center;
-			font-weight: bold;
-			&:before {
+			font-weight: bold;*/
+			/*&:before {
 				content: "+";
 				display: block;
 				position: absolute;
 				width: 100%;
 				text-align: center;
 				text-indent: 0;
-			}
+			}*/
 		}
-		>button[data-action="collapse"] {
+		/*>button[data-action="collapse"] {
 			&:before {
 				content: "-";
 			}
-		}
-	}
-	.dd-list {
-		display: block;
-		position: relative;
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		.dd-list {
-			padding-left: 10px;
-			.dd-list {
-				padding-left: 20px;
-			}
-		}
+		}*/
 	}
 	.dd-collapsed {
 		.dd-list {
@@ -402,32 +394,43 @@
 		}
 	}
 	.dd-handle {
+		cursor: move;
 		>i {
-			margin-right: 5px;
-			color: #555;
+			margin: 0 10px;
 			vertical-align: middle;
-		}
-		>i:first-child {
-			margin-right: 10px;
 			font-size: 18px;
 		}
-		cursor: move;
-		display: block;
+	}
+	.dd-content {
+		display: flex;
+		flex: 1;
 		padding: 10px;
 		margin: 0;
-		text-decoration: none;
-		word-wrap: break-word;
 		position: relative;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-		&:before {
+		align-items: center;
+		cursor: pointer;
+		.title {
+			font-size: 14px;
+			flex: 1;
+			word-wrap: break-word;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+		}
+		>i {
+			margin-right: 8px;
+			vertical-align: middle;
+		}
+		/*&+.dd-list::before {
+			content: ' ';
+		}*/
+		/*&:before {
 			display: table;
 			content: " ";
 		}
 		&:after {
 			clear: both;
-		}
+		}*/
 	}
 	.dd-empty {
 		display: block;
@@ -460,7 +463,6 @@
 		.dd-handle {
 			cursor: default;
 			padding-left: 10px;
-			background-image: none;
 		}
 	}
 	.dd-selectable {
@@ -481,15 +483,6 @@
 		border: 1px dashed #ccc;
 	}
 	.dd-action {
-		&:first {
-			margin-right: 0px;
-		}
-		i {
-			color: #555;
-			&:hover {
-				color: #555;
-			}
-		}
 		cursor: pointer;
 	}
 	.dd-action.hover-icon {
@@ -518,7 +511,7 @@
 		float: left;
 		overflow: hidden;
 	}
-	ul {
+	/*ul {
 		.page-title {
 			max-width: 115px;
 		}
@@ -532,14 +525,14 @@
 				}
 			}
 		}
-	}
+	}*/
 	#edit-menu-pages {
-		.dd-handle {
+		/*.dd-handle {
 			&:after {
 				display: table;
 				content: " ";
 			}
-		}
+		}*/
 		button[data-action="collapse"], button[data-action="expand"] {
 			display: none;
 		}
@@ -576,7 +569,12 @@
 .site-settings-popup {
 	li.header {
 		padding: 10px;
-    	border-top: 1px solid #ccc;
+		&:not(:first-child) {
+    		border-top: 1px solid #ccc;
+    	}
+    	&:hover {
+    		background-color: transparent;
+    	}
 		h4 {
 			margin: 0;
     		font-weight: 500;
@@ -584,18 +582,34 @@
 	}
 	.colors-view {
 		.color-palettes {
-			column-gap: 5px;
-    		row-gap: 5px;
+			display: grid;
+			grid-template-rows: auto;
+			grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+			justify-content: center;
+			align-items: stretch;
+			grid-gap: 5px;
 			.color-set-container {
 				padding: 20px 15px;
 			    background-color: #fafafa;
 			    border: 1px solid #ccc;
 			    display: block;
-			    flex: 1;
 			    cursor: pointer;
+			    position: relative;
 			    &:hover,
 			    &.active {
 			    	border-color: $brand-primary;
+			    }
+			    .btn {
+			    	display: none;
+			    	position: absolute;
+			    	right: -8px;
+			    	top: -8px;
+			    	z-index: 1;
+			    }
+			    &:hover {
+			    	.btn {
+			    		display: block;
+			    	}
 			    }
 			}
 		}
@@ -631,6 +645,20 @@
 	}
 }
 
+//color edit
+.color-edit-popup {
+	.color-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+		.color-col {
+			float: none;
+    		margin: 0 auto;
+    		display: grid;
+    		grid-gap: 5px;
+		}
+	}
+}
+
 // General or Issue
 .dtp > .dtp-content > .dtp-date-view > header.dtp-header {
 	height: auto;
@@ -638,35 +666,28 @@
 .dtp > .dtp-content {
 	max-height: none;
 }
+.dd-list {
+	display: flex;
+	flex-flow: nowrap column;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	.dd-list {
+		grid-column: unquote("1 / 3");
+		.dd-item {
+			padding-left: 10px;
+			.dd-list > .dd-item {
+				padding-left: 20px;
+			}
+		}
+	}
+}
 .dd-dragel {
 	position: absolute;
 	pointer-events: none;
 	z-index: 100010;
-	list-style: none;
-	>.dd-item {
-		background-color: rgba(153,153,153,.2);
-		.dd-handle {
-			cursor: move;
-			display: block;
-			padding: 10px;
-			margin: 0;
-			text-decoration: none;
-			word-wrap: break-word;
-			position: relative;
-			text-overflow: ellipsis;
-			overflow: hidden;
-			white-space: nowrap;
-			>i {
-			    margin-right: 5px;
-			    color: #555;
-			    vertical-align: middle;
-			}
-			>i:first-child {
-				margin-right: 10px;
-				font-size: 18px;
-			}
-		}
-	}
+	@include pages-container();
 	&.dragging {
 		opacity: 0.9;
 	}
@@ -677,6 +698,7 @@
 		color: #222;
 	}
 }
+
 
 .theme-dark {
 	#playlist-editable .track-cover.default-cover {
