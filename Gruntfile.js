@@ -211,7 +211,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: "sass",
-          src: ["bootstrap-material-design.scss", "ripples.scss"],
+          src: ["bootstrap-material-design.scss", "ripples.scss", "editor-v3.scss"],
           dest: "dist/sassc", // added to gitignore, only used for local testing
           ext: ".css"
         }]
@@ -246,6 +246,19 @@ module.exports = function (grunt) {
         files: {
           "dist/css/ripples.css": "less/ripples.less",
         }
+      },
+      editor: {
+        options: {
+          paths: ["less"],
+          sourceMap: true,
+          sourceMapRootpath: "/",
+          sourceMapFilename: "dist/css/editor-v3.css.map",
+          sourceMapURL: "editor-v3.css.map",
+          outputSourceFiles: true
+        },
+        files: {
+          "dist/css/editor-v3.css": "less/editor-v3.less",
+        }
       }
     },
 
@@ -265,6 +278,11 @@ module.exports = function (grunt) {
         files: {
           "dist/css/ripples.css": "dist/css/ripples.css"
         }
+      },
+      editor: {
+        files: {
+          "dist/css/editor-v3.css": "dist/css/editor-v3.css"
+        }
       }
     },
 
@@ -275,10 +293,12 @@ module.exports = function (grunt) {
       dist: [
         'dist/css/bootstrap-material-design.css',
         'dist/css/ripples.css',
+        'dist/css/editor-v3.css'
       ],
       distmin: [
         'dist/css/bootstrap-material-design.min.css',
         'dist/css/ripples.min.css',
+        'dist/css/editor-v3.min.css'
       ]
     },
 
@@ -299,6 +319,10 @@ module.exports = function (grunt) {
       ripples: {
         src: "dist/css/ripples.css",
         dest: "dist/css/ripples.min.css"
+      },
+      editor: {
+        src: "dist/css/editor-v3.css",
+        dest: "dist/css/editor-v3.min.css"
       }
     },
 
@@ -516,7 +540,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('less-compile', [
     "less:material",
-    "less:ripples"
+    "less:ripples",
+    "less:editor"
   ]);
 
   grunt.registerTask("dist-less", [
@@ -524,9 +549,11 @@ module.exports = function (grunt) {
 
     "autoprefixer:material",
     "autoprefixer:ripples",
+    "autoprefixer:editor",
     "csslint:dist",
     "cssmin:material",
     "cssmin:ripples",
+    "cssmin:editor",
     "csslint:distmin"
   ]);
 

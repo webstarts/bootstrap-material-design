@@ -9,7 +9,8 @@
     "dist/css/bootstrap-material-design.css",
     "dist/js/material.js",
     "dist/css/ripples.css",
-    "dist/js/ripples.js"
+    "dist/js/ripples.js",
+    "dist/css/editor-v3.css"
   ],
   "ignore": [
     "test",
