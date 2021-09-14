@@ -11,9 +11,22 @@
 		    margin: auto 5px;
 		    width: 60px;
 		    height: 60px;
+		    border: 1px solid rgba(153,153,153,.2);
+		    background-color: transparent;
 		    .bg-thumb-preview {
 		    	height: 100%;
 	    		width: auto;
+		    }
+		    .material-icons {
+		    	font-size: 36px;
+		    	opacity: .8;
+		    }
+		    &:hover {
+		    	.material-icons{
+		    		opacity: 1;
+		    	}
+		    	background-color: rgba(153,153,153,.2);
+		    	border: 1px solid transparent;
 		    }
 	    }
 	    .btn+.btn {
@@ -94,12 +107,30 @@
 			&:checked + .option {
 				background: @brand-primary;
 				box-shadow: inset 0px 1px 1px rgba(0,0,0,0.3);
+				color: #fff;
 			}
 		}
 		.option {
 			padding: 5px 15px;
 			cursor: pointer;
 			display: block;
+		}
+	}
+
+	.btn-fab-sm .material-icons {
+		font-size: 20px;
+	}
+
+	.advance-sliders {
+		.noUi-horizontal {
+			height: 20px;
+			.noUi-handle {
+				border-radius:0;
+				height:30px;
+			}
+		}
+		.slider-inputs > div:not(:last-child) {
+			padding-right: 5px;
 		}
 	}
 }

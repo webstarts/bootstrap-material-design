@@ -13167,6 +13167,9 @@ footer ul.links-vertical li a {
   overflow: hidden;
   white-space: nowrap;
 }
+.vertical-align-middle {
+  vertical-align: middle;
+}
 /** Utils **/
 /* Bootstrap 4 flex basics & display */
 .d-table {
@@ -13264,20 +13267,38 @@ footer ul.links-vertical li a {
 .mb-0 {
   margin-bottom: 0!important;
 }
+.ml-0 {
+  margin-left: 0!important;
+}
+.mr-0 {
+  margin-right: 0!important;
+}
 .pt-0 {
   padding-top: 0!important;
 }
 .pb-0 {
   padding-bottom: 0!important;
 }
+.pl-0 {
+  padding-left: 0!important;
+}
+.pr-0 {
+  padding-right: 0!important;
+}
 .w-100 {
   width: 100%;
+}
+.w-50 {
+  width: 50%;
 }
 .w-auto {
   width: auto;
 }
 .h-100 {
   height: 100%;
+}
+.h-50 {
+  height: 50%;
 }
 .h-auto {
   height: auto;
@@ -13394,7 +13415,7 @@ footer ul.links-vertical li a {
 }
 .pricing-grid .pricing-card-info {
   position: absolute;
-  top: 336px;
+  top: 366px;
   left: 20px;
   right: 20px;
   text-align: left;
@@ -13408,7 +13429,7 @@ footer ul.links-vertical li a {
   float: left;
 }
 .pricing-grid .pricing-card-container .pricing-header {
-  height: 330px;
+  height: 360px;
   padding: 5px;
 }
 .pricing-grid .pricing-card-container .pricing-footer {
@@ -13575,21 +13596,21 @@ footer ul.links-vertical li a {
     margin-left: -27px;
   }
   .pricing-grid .pricing-card-container .pricing-header {
-    height: 315px;
+    height: 345px;
   }
   .pricing-grid .pricing-card-container .plan-sub {
     height: 4em;
   }
   .pricing-grid .pricing-card-info {
-    top: 321px;
+    top: 351px;
   }
 }
 @media (min-width: 1200px) {
   .pricing-grid .pricing-card-info {
-    top: 306px;
+    top: 336px;
   }
   .pricing-grid .pricing-card-container .pricing-header {
-    height: 300px;
+    height: 330px;
   }
   .pricing-grid .pricing-card-container .plan-sub {
     height: 3em;
