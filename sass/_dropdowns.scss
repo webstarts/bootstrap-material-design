@@ -22,6 +22,7 @@
   opacity: 0;
   transform: scaleY(0);
   transform-origin: left top 0px;
+  border-radius: $border-radius-base;
 }
 .open > .dropdown-menu,
 .has-submenu:hover > .dropdown-menu {

@@ -87,6 +87,58 @@
 	}
 }
 
+.navbar.navbar-dashboard {
+	ul.dropdown-menu li a {
+		padding: 7px 20px;
+		margin-top: 8px;
+		&:hover {
+			background-color: transparent;
+			color: #03a9f4;
+		}
+	}
+}
+
+.site-selector {
+	.header {
+		padding: 5px 5px 12.5px 5px;
+		border-bottom: 1px solid #eee;
+    	margin-bottom: 10px;
+	}
+	.footer {
+		padding: 12px 0;
+		text-align: center;
+		margin: 12px 0 0 0;
+		border-top: 1px solid #eee;
+	}
+	.header, .footer {
+		a {
+			vertical-align: middle;
+			font-size: 14px;
+		}
+	}
+	.thumb-row {
+		gap: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.site-thumb {
+			width: 80px;
+			height: 60px;
+			overflow: hidden;
+			border: 5px solid #eee;
+			img {
+				width: 100%;
+			}
+		}
+		.site-title {
+			flex: 1;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+}
+
 .dashboard-site-thumbnail {
 	margin: 25px auto 35px;
 	max-width: 480px;
@@ -101,7 +153,20 @@
 	    }
 	}
 
-	.browser-content:before {
+	.btn.dropdown-toggle {
+		padding: 0 15px;
+		margin: 0;
+		color: #fff;
+		width: fit-content;
+		height: 35px;
+		font-size: 16px;
+
+		> i {
+		    font-size: 20px;
+		}
+	}
+
+	.browser-content .edit_site:before {
 	    content: ' ';
 	    position: absolute;
 	    top: 0;
@@ -116,15 +181,13 @@
 	.browser:hover .site-options {
 	    opacity: 1;
 	}
-	.browser:hover .browser-content:before {
+	.browser:hover .browser-content .edit_site:before {
 	    opacity: 1;
 	}
 	.settings {
 		position: absolute;
-		bottom: 10px;
+		bottom: 5px;
 		right: 10px;
-		width: 24px;
-		height: 24px;
 		font-size: 24px;
 		cursor: pointer;
 		&:hover {
