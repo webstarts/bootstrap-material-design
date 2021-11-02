@@ -280,6 +280,14 @@
   //border-radius: 2px;
   margin: 10px 1px;
 
+  &.copy {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    border: 1px solid #efefef;
+  }
+
   // spec: https://www.google.com/design/spec/components/buttons.html#buttons-toggle-buttons
   &.open {
     .dropdown-toggle {
