@@ -9,9 +9,12 @@
   li {
     overflow: hidden;
     position: relative;
-    a:hover {
-      background-color: transparent;
-      color: $brand-primary;
+    a {
+      padding: 5px 20px;
+      &:hover {
+        background-color: transparent;
+        color: $brand-primary;
+      }
     }
   }
 }

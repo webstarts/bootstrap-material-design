@@ -237,6 +237,25 @@
     }
 }
 
+.btn-group-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    border: 1px solid #eee;
+
+    .btn {
+        margin:0;
+    }
+
+    button {
+        border-left: 1px solid #eee;
+        &:hover {
+           border-color: transparent;
+        }
+    }
+}
+
 // Disabled buttons and button groups
 .btn,
 .input-group-btn .btn,
@@ -338,6 +357,11 @@ button.close:focus {
     font-size: 20px;
     padding: 12px 12px;
     line-height: 1em;
+}
+
+.btn:not(.btn-raised).btn-primary,
+.input-group-btn .btn:not(.btn-raised).btn-primary {
+  color: @link-color;
 }
 
 @media (max-width: @screen-xs-max) {

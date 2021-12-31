@@ -2,4 +2,19 @@
 
 .table > thead > tr > th {
 	font-weight: normal;
+	border-bottom-width: 1px;
+}
+.table.with-header-padding > thead > tr > th {
+	padding: 30px 8px;
+	vertical-align: middle;
+}
+.table-bordered > tbody > tr > th {
+	white-space: nowrap;
+}
+.table > tbody > tr > td {
+  border-top: none;
+  border-bottom: none;
+}
+.table.vcenter > tbody > tr > td {
+	vertical-align: middle;
 }

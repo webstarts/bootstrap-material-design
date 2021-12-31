@@ -81,6 +81,10 @@
         margin-left: 10px;
     }
 
+    button.close {
+        right: -5px;
+    }
+
     &-default {
         a, .alert-link {
             color: $mdb-text-color-primary;

@@ -66,6 +66,7 @@
   // Darken the responsive nav toggle
   .navbar-toggle {
     border: 0;
+    margin: 0;
     &:hover,
     &:focus {
       background-color: transparent;
@@ -238,7 +239,7 @@
       }
       li > a {
         font-size: $mdb-dropdown-font-size;
-        padding: 10px 14px;
+        padding: 5px 20px;
         &:hover,
         &:focus {
           color: $variation-color;

@@ -297,6 +297,12 @@ span.space {
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-color: #eee;
+		&.bg-size-auto {
+			background-size: auto;
+		}
+		&.bg-size-contain {
+			background-size: contain;
+		}
 	}
 	.img-thumb-container.loaded {
 		background-color: transparent;
@@ -794,7 +800,7 @@ span.space {
 		font-size: 16px;
 	}
 	.pexel-loading-container {
-		height: 45px;
+		height: 150px;
 	}
 	.flash-list {
 		margin-bottom: 10px !important;
