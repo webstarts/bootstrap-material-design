@@ -517,6 +517,12 @@ span.space {
 				}
 			}
 		}
+		&.grid-col-2 {
+			.file {min-width: 50%;}
+		}
+		&.grid-col-3 {
+			.file {min-width: 33.33%;}
+		}
 		.file.state-active {
 			&:hover:not(.active) {
 				.file-name {

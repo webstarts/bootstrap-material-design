@@ -12287,12 +12287,17 @@ hr[data-divider-text]:before {
 }
 /* Panel Small */
 .panel-sz-sm .panel-window .window-header .window-header-inner {
-  padding: 10px;
+  padding: 15px 24px 9px;
 }
-.panel-sz-sm .panel-window .window-body .window-body-inner,
+.panel-sz-sm .panel-window .window-body .window-body-inner {
+  padding: 20px 24px;
+}
 .panel-sz-sm .panel-window .window-sidebar .window-sidebar-inner,
 .panel-sz-sm .panel-window .window-footer .window-footer-inner {
   padding: 10px;
+}
+.panel-sz-sm .panel-window .content-wrapper .content-body-wrapper {
+  margin-bottom: -10px;
 }
 /****
 ***** Loader
@@ -15129,6 +15134,12 @@ span.space {
   white-space: nowrap;
   overflow: hidden;
   line-height: 1.4em;
+}
+.file-manager .grid-view.grid-col-2 .file {
+  min-width: 50%;
+}
+.file-manager .grid-view.grid-col-3 .file {
+  min-width: 33.33%;
 }
 .file-manager .grid-view .file.state-active:hover:not(.active) .file-name {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(51, 51, 51, 0.7)), to(rgba(51, 51, 51, 0)));

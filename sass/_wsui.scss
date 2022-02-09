@@ -752,14 +752,19 @@
 
 /* Panel Small */
 .panel-sz-sm .panel-window .window-header .window-header-inner {
-  padding: 10px;
+  padding: 15px 24px 9px;
 }
-.panel-sz-sm .panel-window .window-body .window-body-inner,
+.panel-sz-sm .panel-window .window-body .window-body-inner{
+  padding: 20px 24px;
+}
 .panel-sz-sm .panel-window .window-sidebar .window-sidebar-inner,
 .panel-sz-sm .panel-window .window-footer .window-footer-inner {
   padding: 10px;
 }
 
+.panel-sz-sm .panel-window .content-wrapper .content-body-wrapper{
+  margin-bottom: -10px;
+}
 
 /****
 ***** Loader
