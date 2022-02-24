@@ -12923,6 +12923,12 @@ ol.unlist {
           animation: shimmer 2s infinite;
   content: "";
 }
+.icon-black {
+  color: rgba(0,0,0, 0.87);
+}
+.icon-black:hover {
+  color: #03a9f4;
+}
 @-webkit-keyframes shimmer {
   100% {
     -webkit-transform: translateX(100%);

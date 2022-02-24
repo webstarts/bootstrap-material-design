@@ -180,7 +180,12 @@
             background: inherit !important;
             padding-top: 5px;
             padding-bottom: 5px;
-            img {
+            div {
+                background-image: url(https://cdn.secure.website/library/images/transparent.gif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center center;
+                height: 100%;
                 border-radius: 2px;
                 opacity: .8;
                 &:hover {
