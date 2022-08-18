@@ -13161,6 +13161,9 @@ footer ul.links-vertical li a {
   text-align: center;
   z-index: 1;
 }
+.z-index-1 {
+  z-index: 1;
+}
 .no-underline {
   text-decoration: none;
 }
