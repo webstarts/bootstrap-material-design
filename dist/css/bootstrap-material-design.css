@@ -6103,7 +6103,7 @@ hr[data-divider-text]:before {
   color: #fff;
 }
 .panel-popup.panel-dark .panel-window .panel-window-content .window-header {
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid #000;
   background-color: #111;
   background-image: none;
 }
@@ -11165,6 +11165,9 @@ hr[data-divider-text]:before {
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 .selectize-input {
   border: none;
