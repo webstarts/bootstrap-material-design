@@ -13,9 +13,9 @@
 	.navbar .navbar-toggle .icon-bar {
 		border-color: $mdb-dark-bg-text-color;
 	}
-	.phone-footer-nav-bar {
+	/*.phone-footer-nav-bar {
 		background-color: transparent;
-	}
+	}*/
 	.content-wrapper.responsive-sidebar .window-sidebar {
 		background-color: $mdb-dark-bg-color;
 	}
@@ -168,9 +168,7 @@
     }
 
     .list-group .list-group-item {
-        background-color: #333;
         border-radius: 2px;
-        margin-bottom: 5px;
     }
 
     .text-muted {

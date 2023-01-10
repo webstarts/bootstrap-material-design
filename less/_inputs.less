@@ -10,7 +10,7 @@
 // must be broken out for reuse - webkit selector breaks firefox
 .label-static(@label-top, @static-font-size, @static-line-height) {
   label.control-label {
-    top: @label-top;
+    top: @label-top - 5;
     left: 0;
     // must repeat because the selector above is more specific than the general label sizing
     font-size: @static-font-size;

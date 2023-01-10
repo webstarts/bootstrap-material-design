@@ -3,11 +3,12 @@
 .list-group {
   border-radius: 0;
   .list-group-item {
-    background-color: transparent;
+    background-color: rgba(153,153,153,.1);
     overflow: hidden;
     border: 0;
     border-radius: 0;
-    padding: 0 16px;
+    padding: 7px 15px;
+    margin-bottom: 7px;
     &.baseline {
       border-bottom: 1px solid #cecece;
       &:last-child {

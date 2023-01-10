@@ -452,6 +452,8 @@ footer {
         align-items: center;
         box-shadow: 0 -5px 5px 0 rgba(50, 50, 50, 0.20);
         background-color: #fff;
+        border-radius: 0 0 4px 4px;
+        margin: 0 -1px;
 
         .btn {
             margin: 0;
@@ -587,8 +589,32 @@ footer {
 .d-flex-inline {
     display: flex-inline!important;
 }
+.d-grid {
+    display: grid!important;
+}
 .d-flex {
     display: flex!important;
+
+    .col-5 {flex-basis: 5%;}
+    .col-10 {flex-basis: 10%;}
+    .col-15 {flex-basis: 15%;}
+    .col-20 {flex-basis: 20%;}
+    .col-25 {flex-basis: 25%;}
+    .col-30 {flex-basis: 30%;}
+    .col-35 {flex-basis: 35%;}
+    .col-40 {flex-basis: 40%;}
+    .col-45 {flex-basis: 45%;}
+    .col-50 {flex-basis: 50%;}
+    .col-55 {flex-basis: 55%;}
+    .col-60 {flex-basis: 60%;}
+    .col-65 {flex-basis: 65%;}
+    .col-70 {flex-basis: 70%;}
+    .col-75 {flex-basis: 75%;}
+    .col-80 {flex-basis: 80%;}
+    .col-85 {flex-basis: 85%;}
+    .col-90 {flex-basis: 90%;}
+    .col-95 {flex-basis: 95%;}
+    .col-100 {flex-basis: 100%;}
 }
 .d-none {
     display: none!important;
@@ -601,6 +627,9 @@ footer {
 }
 .flex-grow {
     flex: 1;
+}
+.justify-content-center {
+    justify-content: center;
 }
 .justify-content-around {
     justify-content: space-around;
@@ -629,8 +658,14 @@ footer {
 .flex-fill {
     flex: 1 1 auto!important;
 }
+.gap-5 {
+    gap: 5px;
+}
 .gap-10 {
     gap: 10px;
+}
+.gap-15 {
+    gap: 15px;
 }
 .gap-20 {
     gap: 20px;
@@ -695,6 +730,18 @@ footer {
 .pr-10 {
     padding-right: 10px;
 }
+.pt-15 {
+    padding-top: 15px;
+}
+.pb-15 {
+    padding-bottom: 15px;
+}
+.pl-15 {
+    padding-left: 15px;
+}
+.pr-15 {
+    padding-right: 15px;
+}
 .pt-20 {
     padding-top: 20px;
 }
@@ -728,6 +775,33 @@ footer {
 .h-auto {
     height: auto;
 }
+.brd-0 {
+    border: 0;
+}
+.fs-14 {
+    font-size: 14px;
+}
+.fs-16 {
+    font-size: 16px;
+}
+.fs-18 {
+    font-size: 18px;
+}
+.fs-20 {
+    font-size: 18px;
+}
+.fs-24 {
+    font-size: 18px;
+}
+.absolute {
+    position: absolute;
+}
+.relative {
+    position: relative;
+}
+.static {
+    position: static;
+}
 @media (max-width: @grid-float-breakpoint-max) {
     .justify-content-sm-center {
         justify-content: center;
@@ -752,6 +826,11 @@ footer {
     }
     .text-sm-left {
         text-align: left;
+    }
+    .d-flex {
+        .col-sm-100 {
+            flex-basis: 100%;
+        }
     }
 }
 .grid-row {

@@ -5,6 +5,7 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
   .divider {
     background-color: rgba(0, 0, 0, .12);
+    margin: 5px 0;
   }
   li {
     overflow: hidden;
@@ -26,6 +27,7 @@
   transform: scaleY(0);
   transform-origin: left top 0px;
   border-radius: $border-radius-base;
+  padding: 5px 0!important;
 }
 .open > .dropdown-menu,
 .has-submenu:hover > .dropdown-menu {

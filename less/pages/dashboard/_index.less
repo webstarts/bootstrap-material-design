@@ -1,3 +1,17 @@
+.dashboard-grid {
+	display: grid;
+	gap: 30px;
+	grid-template-columns: repeat(auto-fill, minmax(262px, 1fr));
+	margin-top: 30px;
+
+	>div {
+		margin: 0 auto;
+		min-width: 262px;
+	}
+	.dashboard-app {
+		margin:0;
+	}
+}
 .dashboard-app {
 	cursor: pointer;
 	background-color: @blue-500;
@@ -29,6 +43,9 @@
 
 		.icon > i {
 			color: @mdb-text-color-light;
+			&[class*=wseft-]{
+				font-size: 3.96em;
+			}
 		}
 
 		> p {
@@ -300,6 +317,12 @@
 		.btn {
 			padding: 16px 36px;
 			font-size: 16px;
+		}
+	}
+	.dashboard-grid {
+		grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+		> div {
+			min-width: 330px;
 		}
 	}
 }
