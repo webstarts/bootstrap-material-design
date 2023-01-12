@@ -5126,6 +5126,68 @@ a.text-info:hover {
           justify-content: center;
   text-align: center;
 }
+.nav-tabs.tabs-2 {
+  float: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+.nav-tabs.tabs-2 > li {
+  float: none;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: auto;
+}
+.nav-tabs.tabs-2 > li > a {
+  height: 100%;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.nav-tabs.tabs-2:before,
+.nav-tabs.tabs-2:after {
+  display: none;
+}
+@media (max-width: 767px) {
+  .nav-tabs.tabs-2 {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    gap: 1px;
+  }
+}
 .nav-pills {
   background: transparent;
   border: 0;
@@ -5186,13 +5248,18 @@ a.text-info:hover {
 .popover,
 .tooltip-inner {
   color: #ececec;
-  line-height: 1em;
+  line-height: 1.3em;
   background: rgba(101, 101, 101, 0.9);
   border: none;
   border-radius: 2px;
   text-align: left;
   -webkit-box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
           box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.12), 0 1px 6px 0 rgba(0, 0, 0, 0.12);
+}
+.tooltip-inner {
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
 }
 .tooltip,
 .tooltip.in {
