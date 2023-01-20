@@ -4,7 +4,8 @@
 
 // Typography elements
 $mdb-font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif !default;
-$mdb-text-color-light:  unquote("rgba(#{$rgb-white}, 0.84)") !default;
+//$mdb-text-color-light:  unquote("rgba(#{$rgb-white}, 0.84)") !default;
+$mdb-text-color-light:  unquote("rgba(#{$rgb-white}, 0.99)") !default;
 $mdb-text-color-light-hex: $white !default; // for contrast function in inverse
 $mdb-text-color-primary: unquote("rgba(#{$rgb-black}, 0.87)") !default;
 $mdb-text-color-primary-hex: $black !default; // for contrast function in inverse
@@ -27,9 +28,11 @@ $brand-success: $green !default;
 $brand-danger: $red !default;
 $brand-warning: $deep-orange !default;
 $brand-info: $cyan !default;
+$brand-default: $grey-400 !default;
 
 $border-radius-base: 2px !default;
 $border-radius-small: 1px !default;
+$border-radius-standard: 8px !default;
 
 // Typography
 $font-family-sans-serif: 'Open Sans', 'Helvetica', 'Arial', sans-serif !default;

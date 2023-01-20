@@ -34,7 +34,7 @@
 
 .typo-button(@colorContrast: false) {
   font-size: @mdb-btn-font-size-base;
-  font-weight: 500;
+  //font-weight: 500;
   //line-height: 1;
   letter-spacing: 0;
 
@@ -43,7 +43,7 @@
   }
 }
 
-@colors : @brand-primary, @brand-secondary, @brand-success, @brand-danger, @brand-warning, @brand-info, @grey-400;
+@colors : @brand-primary, @brand-secondary, @brand-success, @brand-danger, @brand-warning, @brand-info, @brand-default;
 @names  : primary, secondary, success, danger, warning, info, default;
 @length : length(@colors);
 
@@ -52,15 +52,16 @@
 
     @name: extract(@names, @index);
     @color: extract(@colors, @index);
+    @the-color: ~"var(--brand-@{name})";
 
     &.btn-@{name}-outline {
-        color: @color;
-        border: 1px solid @color;
+        color: @the-color;
+        border: 1px solid @the-color;
         background-color: transparent;
         &.active, &:hover, &:focus {
             color: @mdb-text-color-light;
             border-color: transparent;
-            background-color: @color;
+            background-color: @the-color;
         }
     }
 }

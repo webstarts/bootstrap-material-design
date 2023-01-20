@@ -5,10 +5,11 @@
 .btn,
 .input-group-btn .btn {
   border: none;
-  border-radius: $border-radius-base;
+  border-radius: ($border-radius-standard / 2);
   position: relative;
   padding: 8px 30px;
   margin: 10px 1px;
+  font-weight: 600;
   @include typo-button();
   will-change: box-shadow, transform;
   transition: box-shadow 0.2s $mdb-animation-curve-fast-out-linear-in,
@@ -58,7 +59,7 @@
   .btn-group-raised & {
     &:not(.btn-link) {
       //.shadow-2dp();
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+      /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);*/
 
       // colors on hover, focus, active
       &:hover,
@@ -67,7 +68,8 @@
       &:active {
 
         outline: 0;
-        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+        /*box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);*/
 
         // FIXME: SPEC - this should be the 600 color, how can we get that programmatically if at all? Or are we limited to the color palette only?
         // SASS conversion note: please mirror any content change in _mixins-shared.scss button-variations-content
@@ -245,6 +247,7 @@
     align-items: center;
     flex-wrap: nowrap;
     border: 1px solid #eee;
+    border-radius: $border-radius-standard;
 
     .btn {
         margin:0;

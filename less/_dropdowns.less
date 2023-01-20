@@ -9,10 +9,10 @@
     overflow: hidden;
     position: relative;
     a {
-      padding: 5px 20px;
+      padding: 8px 20px;
       &:hover {
         background-color: transparent;
-        color: @brand-primary;
+        color: var(--brand-primary);
       }
     }
   }
@@ -24,7 +24,8 @@
   opacity: 0;
   transform: scaleY(0);
   transform-origin: left top 0px;
-  border-radius: @border-radius-base;
+  /*border-radius: @border-radius-standard;*/
+  border-radius: var(--border-radius-standard);
   padding: 5px 0!important;
 }
 .open > .dropdown-menu,

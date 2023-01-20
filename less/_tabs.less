@@ -44,6 +44,15 @@
         }
     }
 
+    &:not(.nav-stacked) {
+        li:first-of-type {
+            border-radius: var(--border-radius-standard) 0 0 0;
+        }
+        li:last-of-type {
+            border-radius: 0 var(--border-radius-standard) 0 0;
+        }
+    }
+
 	&.underline {
 		border-bottom: 1px solid @grey-300 !important;
 	}
@@ -112,6 +121,7 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+                font-weight: 600;
             }
         }
         &:before, &:after {

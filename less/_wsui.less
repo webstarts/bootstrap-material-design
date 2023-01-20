@@ -340,6 +340,12 @@
 .panel-popup {
   position: fixed;
   z-index: 1001;
+
+  &:not(.panel-dark) {
+    .generic-variations(~".panel", ~" .panel-window .panel-window-content .window-header", @mdb-dark-bg-color, {
+        background-image: linear-gradient(to bottom, @variation-color, lighten(@variation-color, 10%));
+    });
+  }
 }
 .panel-popup.animated {
   animation-duration: .3s;
@@ -353,12 +359,11 @@
   z-index: 999;
   background-color: #000;
   opacity: 0.5;
-  filter: alpha(opacity=50);
 }
 .panel-popup .panel-window-content {
   background: #fff;
   border: 1px solid #fafafa;
-  border-radius: 2px;
+  border-radius: @border-radius-standard;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
 .panel-window {
@@ -373,16 +378,16 @@
   }
 }
 .panel-popup .form-group + .form-group {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .panel-popup .form-group.label-floating + .form-group.label-floating {
     margin-top: 20px;
 }
 
-.form-group.label-floating label.control-label, .form-group.label-placeholder label.control-label {
+/*.form-group.label-floating label.control-label, .form-group.label-placeholder label.control-label {
     left: 10px;
-}
+}*/
 
 /* Video Specific Theme */
 .panel-modal.video-theme .panel-window .panel-window-content {
@@ -647,7 +652,7 @@
     background-color: @brand-primary;
     margin: -1px;
     padding: 1px;
-    border-radius: 2px 2px 0 0;
+    border-radius: @border-radius-standard @border-radius-standard 0 0;
 
     .title,
     .window-header-buttons {
@@ -660,7 +665,7 @@
     background-color: @brand-secondary;
     margin: -1px;
     padding: 1px;
-    border-radius: 2px 2px 0 0;
+    border-radius: @border-radius-standard @border-radius-standard 0 0;
 
     .title,
     .window-header-buttons {
@@ -673,7 +678,7 @@
     background-color: @brand-success;
     margin: -1px;
     padding: 1px;
-    border-radius: 2px 2px 0 0;
+    border-radius: @border-radius-standard @border-radius-standard 0 0;
 
     .title,
     .window-header-buttons {
@@ -686,7 +691,7 @@
     background-color: @brand-danger;
     margin: -1px;
     padding: 1px;
-    border-radius: 2px 2px 0 0;
+    border-radius: @border-radius-standard @border-radius-standard 0 0;
 
     .title,
     .window-header-buttons {
@@ -699,7 +704,7 @@
     background-color: @brand-warning;
     margin: -1px;
     padding: 1px;
-    border-radius: 2px 2px 0 0;
+    border-radius: @border-radius-standard @border-radius-standard 0 0;
 
     .title,
     .window-header-buttons {
@@ -712,7 +717,7 @@
     background-color: @brand-info;
     margin: -1px;
     padding: 1px;
-    border-radius: 2px 2px 0 0;
+    border-radius: @border-radius-standard @border-radius-standard 0 0;
 
     .title,
     .window-header-buttons {
@@ -762,7 +767,7 @@
 }
 .panel-sz-sm .panel-window .window-sidebar .window-sidebar-inner,
 .panel-sz-sm .panel-window .window-footer .window-footer-inner {
-  padding: 10px;
+  padding: 20px 24px;
 }
 
 .panel-sz-sm .panel-window .content-wrapper .content-body-wrapper{

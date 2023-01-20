@@ -281,7 +281,7 @@ footer {
 ****/
 .browser {
     /* This is for shadow */
-    border-radius: 3px;
+    border-radius: @border-radius-standard;
     overflow: hidden;
     text-align: left;
     display: flex;
@@ -527,7 +527,7 @@ footer {
     /*box-shadow: 0 1px 1px rgba(0,0,0,.05);*/
     border: 1px solid #eee;
     padding: 8px;
-    border-radius: 2px;
+    border-radius: @border-radius-standard;
 }
 
 .absolute-top {
@@ -818,6 +818,11 @@ footer {
     .flex-sm-wrap {
         flex-wrap: wrap;
     }
+    .d-flex {
+        .col-sm-100 {
+            flex-basis: 100%;
+        }
+    }
     .text-sm-center {
         text-align: center;
     }
@@ -826,11 +831,6 @@ footer {
     }
     .text-sm-left {
         text-align: left;
-    }
-    .d-flex {
-        .col-sm-100 {
-            flex-basis: 100%;
-        }
     }
 }
 .grid-row {

@@ -179,8 +179,8 @@
 .form-control:not(.selectize-dropdown), .form-group .form-control:not(.selectize-dropdown) {
     background-color: rgba(0,0,0,0.04);
     padding: 10px;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
+    border-top-right-radius: var(--border-radius-standard);
+    border-top-left-radius: var(--border-radius-standard);
     height: auto;
 }
 
@@ -391,4 +391,25 @@ select.form-control {
 // Auto expanding text area
 textarea.auto-resize {
   overflow:hidden;
+}
+
+.form-group.label-floating {
+  label, label.control-label {
+    margin: 0!important;
+    transform-origin: left top;
+    transform: translate(12px, 16px) scale(1);
+    font-size: 16px!important;
+    top: auto!important;
+    left: auto!important;
+    line-height: normal!important;
+  }
+  &.is-focused label.control-label, &:not(.is-empty) label.control-label {
+    transform: translate(12px, 7px) scale(0.75);
+  }
+  &:not(.selectize-input) {
+    input[type="text"], input[type="password"], .selectize-input, textarea {
+      padding: 25px 12px 8px;
+    }
+  }
+
 }
