@@ -229,13 +229,13 @@
 .btn-group.btn-group-raised.btn-splitter {
     .btn {
         box-shadow: none;
+        margin: 0;
         &:hover,&:active,&:focus {
           box-shadow: none;
-          margin-top: -2px;
+          margin: 0;
         }
     }
     .btn-more {
-        margin: -2px 0 0 0!important;
         padding: 10px 7px;
         border-left: 1px solid rgba(0,0,0,.15);
     }
@@ -259,6 +259,14 @@
            border-color: transparent;
         }
     }
+}
+
+.btn.more-btn {
+  padding: 6px !important;
+  margin: -6px 0 !important;
+  font-size: 20px !important;
+  line-height: 1em !important;
+  border-radius: 50% !important;
 }
 
 // Disabled buttons and button groups

@@ -9,6 +9,7 @@
 	>div {
 		margin: 0 auto;
 		min-width: 262px;
+		width: 100%;
 	}
 	.dashboard-app {
 		margin:0;
@@ -205,6 +206,7 @@
 		width: fit-content;
 		height: 35px;
 		font-size: 16px;
+		font-weight: normal;
 
 		> i {
 		    font-size: 20px;
@@ -326,7 +328,7 @@
 	.dashboard-grid {
 		grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
 		> div {
-			min-width: 330px;
+			min-width: 100%;
 		}
 	}
 }

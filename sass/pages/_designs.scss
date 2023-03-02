@@ -9,9 +9,13 @@
 	margin-bottom: 20px;
 }
 
-.responsive-design-container {
+.responsive-design-outer {
+	display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 20px;
+}
 
-	margin-bottom: 30px;
+.responsive-design-container {
 
 	.design-options {
 		position: absolute;
@@ -40,5 +44,11 @@
 	}
 	.browser:hover .browser-content:before {
 		opacity: 1;
+	}
+}
+
+@media (max-width: $grid-float-breakpoint-max) {
+	.responsive-design-outer {
+	    grid-template-columns: 1fr;
 	}
 }

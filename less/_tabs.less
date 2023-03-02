@@ -122,17 +122,47 @@
                 justify-content: center;
                 text-align: center;
                 font-weight: 600;
+                padding: 15px 0;
             }
         }
         &:before, &:after {
             display: none;
         }
+
+        &.tabs-2.with-help-tip {
+            &> li {
+                a:before {
+                    content: "";
+                    display: block;
+                    flex-basis: 20%;
+                }
+                span {
+                    flex-basis: 60%;
+                }
+                .info-tip {
+                    flex-basis: 20%;
+                    text-align: center;
+                    i {
+                        margin:0!important;
+                        line-height:1;
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: 767px) {
         &.tabs-2 {
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             gap: 1px;
+        }
+        &.tabs-2.with-help-tip {
+            a:before, .info-tip {
+                display: none!important;
+            }
+            span {
+                flex-basis: 100%!important;
+            }
         }
     }
 }

@@ -71,10 +71,11 @@
 
 	.pricing-card-info {
 		position: absolute;
-		top: 366px;
+		top: 322px;
 		left: 20px;
 		right: 20px;
 		text-align: left;
+
 		&+.pricing-card-container {
 			margin-left: 20%;
 		}
@@ -86,11 +87,19 @@
 		float: left;
 
 		.pricing-header {
-			height: 360px;
-			padding: 5px;
+			/*height: 360px;*/
+			padding: 20px 10px;
+
+			.btn-flat {
+				margin-top: -15px!important;
+			}
 		}
 		.pricing-footer {
-			padding: 5px;
+			padding: 20px 10px;
+
+			.btn-flat {
+				margin-bottom: -15px!important;
+			}
 		}
 		.pricing-footer {
 			.btn {
@@ -104,11 +113,11 @@
 			border: 1px solid #d9d9d9;
 			
 			.btn-flat {
-				border-radius: 0;
 				box-shadow: none!important;
 				color: #fff!important;
 				font-size: 1em;
-				margin: -5px!important;
+				margin-left: -5px!important;
+				margin-right: -5px!important;
 				position: relative;
 				padding: 15px;
 				min-width: ~'calc(100% + 10px)';
@@ -120,13 +129,13 @@
 					top: 15px;
 				}
 				
-				&:nth-child(1) {
+				/*&:nth-child(1) {
 					margin-bottom: 5px!important;
-				}
+				}*/
 				
-				&:last-child {
+				/*&:last-child {
 					margin-top: 0;
-				}
+				}*/
 			}
 		}
 
@@ -134,7 +143,7 @@
 
 		}
 		.plan-sub {
-			height: 5em;
+			/*height: 5em;*/
 		}
 
 		.se-bg {
@@ -277,6 +286,18 @@
 	}
 }
 
+@media (min-width: @screen-sm-min) {
+	.pricing-grid {
+		.pricing-card-info li {
+			font-size: 13px;
+			line-height: 1.75em;
+		}
+		&.pricing-offer .pricing-card-info {
+			top: 339px;
+		}
+	}
+}
+
 @media (min-width: @screen-md-min) {
 
 	.pricing-grid {
@@ -292,28 +313,40 @@
 				width: 54px;
 				margin-left: -27px;
 			}
-			.pricing-header {
+			/*.pricing-header {
 				height: 345px;
-			}
+			}*/
 			.plan-sub {
 				height: 4em;
 			}
 		}
 		.pricing-card-info {
-			top: 351px;
+			li {
+				font-size: inherit;
+				line-height: inherit;
+			}
+		}
+		&:not(.pricing-offer) .pricing-card-info {
+			top: 305px;
+		}
+		&.pricing-offer .pricing-card-info {
+			top: 335px;
 		}
 	}
 }
 @media (min-width: @screen-lg-min) {
 
 	.pricing-grid {
-		.pricing-card-info {
-			top: 336px;
+		&:not(.pricing-offer) .pricing-card-info {
+			top: 290px;
+		}
+		&.pricing-offer .pricing-card-info {
+			top: 322px;
 		}
 		.pricing-card-container {
-			.pricing-header {
-				height: 330px;
-			}
+			/*.pricing-header {
+				height: 265px;
+			}*/
 			.plan-sub {
 				height: 3em;
 			}

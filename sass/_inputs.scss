@@ -56,8 +56,9 @@
   }
 
   .help-block {
-    margin-top: 0; // allow the input margin to set-off the top of the help-block
+    margin: 0; // allow the input margin to set-off the top of the help-block
     font-size: $help-block-font-size;
+    bottom: unquote("-#{$help-block-font-size}");
   }
 }
 
@@ -235,6 +236,7 @@ select.form-control,
   .help-block {
     position: absolute; // do not use position: absolute because width/wrapping isn't automatic and overflows occur
     display: none;
+    right: 0;
   }
 
   // form-group is-focused display
@@ -319,7 +321,7 @@ select.form-control {
 
   .form-group.is-focused & {
     box-shadow: 0 1px 0 #03a9f4;
-    border-color: $brand-primary;
+    border-color: var(--brand-primary);
   }
 
   &[multiple] {
@@ -402,14 +404,108 @@ textarea.auto-resize {
     top: auto!important;
     left: auto!important;
     line-height: normal!important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    display: block;
   }
   &.is-focused label.control-label, &:not(.is-empty) label.control-label {
     transform: translate(12px, 7px) scale(0.75);
   }
-  &:not(.selectize-input) {
-    input[type="text"], input[type="password"], .selectize-input, textarea {
-      padding: 25px 12px 8px;
+  &.is-empty:not(.is-focused) label.control-label {
+    max-width: unquote("calc(100% - 20px)");
+  }
+  &.selectize-single.is-empty:not(.is-focused) label.control-label {
+    max-width: unquote("calc(100% - 34.9px)");
+  }
+  .form-control:not(.selectize-control):not(.selectize-dropdown),
+  .form-control > .selectize-input  {
+    padding-top: 25px!important;
+    padding-bottom: 8px!important;
+    padding-left: 12px;
+    padding-right: 12px;
+    /*padding-left: 25px 12px 8px!important;*/
+    margin-bottom: 0;
+  }
+
+  .form-control.selectize-control.multi .selectize-input.has-items {
+    padding: 6px 10px 3px;
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .form-control > .selectize-input:after  {
+    right: 15px;
+  }
+
+  .control-label + .form-control::placeholder{
+    text-align: right;
+  }
+
+  .selectize-control.single .selectize-input>.item {
+    max-width: unquote("calc(100% - 12px)");
+  }
+
+  .selectize-input .item {
+    min-height: 22.84px;
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    .input-group-addon {
+      &.currency-sign {
+        font-size: 16px;
+      }
+      &.pos-left {
+        padding: 0;
+        position: absolute;
+        bottom: 12px;
+        left: 10px;
+      }
+      &.pos-left + .form-control {
+        padding-left: 25px!important;
+      }
+      &.pos-right{
+        padding: 0;
+        position: absolute;
+        bottom: 12px;
+        right: 25px;
+        &.text-sign {
+          bottom: 20px;
+        }
+      }
+      &.pos-right .material-icons {
+        color: #aaa;
+        margin-left:-5px;
+      }
     }
   }
 
+  .input-group .form-control[type="number"]:hover + .input-group-addon.pos-right,
+  &.is-focused .input-group .form-control[type="number"] + .input-group-addon.pos-right {
+    padding-right: 25px!important;
+  }
+
+}
+
+.form-group.search-field {
+  position: relative;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  &:before {
+    content: "search";
+    font-family: 'Material Icons';
+    font-size: 24px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    bottom: 12px;
+    right: 12px;
+    pointer-events: none;
+  }
+  input[type="text"] {
+    padding: 16.5px 12px 16.5px 45px;
+  }
 }

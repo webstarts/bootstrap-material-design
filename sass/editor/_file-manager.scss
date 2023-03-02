@@ -231,7 +231,7 @@ span.space {
 	}
 	.file-manager-header {
 		width: 100%;
-		height: 70px;
+		height: 90px;
 		padding: 15px;
 		border-bottom: 1px solid #e2e2e2;
 		.btn {
@@ -250,7 +250,7 @@ span.space {
 	}
 	.file-manager-header + .file-manager-content {
 		position: absolute;
-		top: 70px;
+		top: 90px;
 		bottom: 0;
 		height: auto;
 	}
@@ -878,7 +878,8 @@ span.space {
 		text-shadow: none;
 		letter-spacing: initial;
 	}
-	.btn {
+	:not(.btn-splitter) .btn,
+	.btn-splitter {
 		margin-top: -2px;
 		margin-bottom: -2px;
 	}
