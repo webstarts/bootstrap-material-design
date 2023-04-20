@@ -211,7 +211,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: "sass",
-          src: ["bootstrap-material-design.scss", "ripples.scss", "editor-v3.scss"],
+          src: ["bootstrap-material-design.scss", "ripples.scss", "editor-v3.scss", "bootstrap-material-design-designer.scss"],
           dest: "dist/sassc", // added to gitignore, only used for local testing
           ext: ".css"
         }]
@@ -232,6 +232,18 @@ module.exports = function (grunt) {
         },
         files: {
           "dist/css/bootstrap-material-design.css": "less/bootstrap-material-design.less",
+        }
+      },
+      materialDesigner: {
+        options: {
+          paths: ["less"],
+          sourceMap: true,
+          sourceMapRootpath: "/",
+          sourceMapFilename: "dist/css/bootstrap-material-design-designer.css.map",
+          sourceMapURL: "bootstrap-material-design-designer.css.map"
+        },
+        files: {
+          "dist/css/bootstrap-material-design-designer.css": "less/bootstrap-material-design-designer.less",
         }
       },
       ripples: {
@@ -274,6 +286,11 @@ module.exports = function (grunt) {
           "dist/css/bootstrap-material-design.css": "dist/css/bootstrap-material-design.css"
         }
       },
+      materialDesigner: {
+        files: {
+          "dist/css/bootstrap-material-design-designer.css": "dist/css/bootstrap-material-design-designer.css"
+        }
+      },
       ripples: {
         files: {
           "dist/css/ripples.css": "dist/css/ripples.css"
@@ -292,11 +309,13 @@ module.exports = function (grunt) {
       },
       dist: [
         'dist/css/bootstrap-material-design.css',
+        'dist/css/bootstrap-material-design-designer.css',
         'dist/css/ripples.css',
         'dist/css/editor-v3.css'
       ],
       distmin: [
         'dist/css/bootstrap-material-design.min.css',
+        'dist/css/bootstrap-material-design-designer.min.css',
         'dist/css/ripples.min.css',
         'dist/css/editor-v3.min.css'
       ]
@@ -315,6 +334,10 @@ module.exports = function (grunt) {
       material: {
         src: "dist/css/bootstrap-material-design.css",
         dest: "dist/css/bootstrap-material-design.min.css"
+      },
+      materialDesigner: {
+        src: "dist/css/bootstrap-material-design-designer.css",
+        dest: "dist/css/bootstrap-material-design-designer.min.css"
       },
       ripples: {
         src: "dist/css/ripples.css",
@@ -540,6 +563,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('less-compile', [
     "less:material",
+    "less:materialDesigner",
     "less:ripples",
     "less:editor"
   ]);
@@ -548,10 +572,12 @@ module.exports = function (grunt) {
     "less-compile",
 
     "autoprefixer:material",
+    "autoprefixer:materialDesigner",
     "autoprefixer:ripples",
     "autoprefixer:editor",
     "csslint:dist",
     "cssmin:material",
+    "cssmin:materialDesigner",
     "cssmin:ripples",
     "cssmin:editor",
     "csslint:distmin"

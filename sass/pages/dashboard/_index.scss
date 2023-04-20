@@ -111,7 +111,7 @@
 		/*padding: 5px 20px;*/
 		&:hover {
 			background-color: transparent;
-			color: #03a9f4;
+			color: unquote("var(--brand-primary)");
 		}
 	}
 	.navbar-header {
