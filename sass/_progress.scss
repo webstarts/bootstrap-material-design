@@ -11,6 +11,19 @@
     }
 }
 
+.progress-material {
+    height: 5px;
+    border-radius: 0;
+    box-shadow: none;
+    background: rgba($brand-primary, (15/100));
+    box-shadow: none;
+    margin: 0;
+    .progress-bar {
+        box-shadow: none;
+        @include variations(unquote(".progress-bar"), unquote(""), background-color, $brand-primary);
+    }
+}
+
 .indeterminate-loader {
     
     .indeterminate-progress,

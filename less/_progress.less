@@ -9,6 +9,19 @@
     }
 }
 
+.progress-material {
+    height: 5px;
+    border-radius: 0;
+    box-shadow: none;
+    background: fade(@brand-primary, 15%);
+    box-shadow: none;
+    margin: 0;
+    .progress-bar {
+        box-shadow: none;
+        .variations(~".progress-bar", ~"", background-color, @brand-primary);
+    }
+}
+
 .indeterminate-loader {
     
     .indeterminate-progress,
