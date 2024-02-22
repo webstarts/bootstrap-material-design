@@ -1,0 +1,8 @@
+.loop-col(@prefix, @i) when (@i > 0) {
+    @colNum: @i * @step;
+    @className: ~".col-@{prefix}@{colNum}";
+    @{className} {
+        flex-basis: @colNum * 1%;
+    }
+    .loop-col(@prefix, @i - 1);
+}
