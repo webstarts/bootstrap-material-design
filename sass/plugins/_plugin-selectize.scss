@@ -250,10 +250,9 @@ $selectize-caret-margin-rtl: 0 4px 0 -2px !default;
 
   > * {
     vertical-align: baseline;
-    display: -moz-inline-stack;
+    display: unquote("-moz-inline-stack");
     display: inline-block;
     zoom: 1;
-    *display: inline;
   }
   .selectize-control.single & > .item {
     display: inline-block;

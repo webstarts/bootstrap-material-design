@@ -1,0 +1,77 @@
+.m(@value) {
+    margin: @value!important;
+}
+.mt(@value) {
+    margin-top: @value!important;
+}
+.mb(@value) {
+    margin-bottom: @value!important;
+}
+.ml(@value) {
+    margin-left: @value!important;
+}
+.mr(@value) {
+    margin-right: @value!important;
+}
+.p(@value) {
+    padding: @value!important;
+}
+.pt(@value) {
+    padding-top: @value!important;
+}
+.pb(@value) {
+    padding-bottom: @value!important;
+}
+.pl(@value) {
+    padding-left: @value!important;
+}
+.pr(@value) {
+    padding-right: @value!important;
+}
+@values: 0, 5, 10, 15, 20;
+
+.loop-values(@index) when (@index > 0) {
+    .loop-values(@index - 1);
+    @value: extract(@values, @index);
+    @value1: unit(@value, px);
+    //@value1: if(isnumber(@value) and @value > 0, unit(@value, px), @value);
+    
+    /*.assign-value(@value) when (isnumber(@value)) {
+        @value1: unit(@value, px);
+    } */
+      
+    /* .assign-value(@value); */  // call the mixin with @value
+
+    .m-@{value} {
+        .m(@value1);
+    }
+    .mt-@{value} {
+        .mt(@value1);
+    }
+    .mb-@{value} {
+        .mb(@value1);
+    }
+    .ml-@{value} {
+        .ml(@value1);
+    }
+    .mr-@{value} {
+        .mr(@value1);
+    }
+    .p-@{value} {
+        .p(@value1);
+    }
+    .pt-@{value} {
+        .pt(@value1);
+    }
+    .pb-@{value} {
+        .pb(@value1);
+    }
+    .pl-@{value} {
+        .pl(@value1);
+    }
+    .pr-@{value} {
+        .pr(@value1);
+    }
+}
+
+.loop-values(length(@values));
