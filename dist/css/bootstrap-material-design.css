@@ -14099,7 +14099,7 @@ hr.hr-border {
 /** Utils **/
 /* Bootstrap 4 flex basics & display */
 /*.assign-value(@value) when (isnumber(@value)) {
-        @value: unit(@value, px);
+        @value1: unit(@value, px);
     } */
 /* .assign-value(@value); */
 .m-0 {
@@ -14133,7 +14133,7 @@ hr.hr-border {
   padding-right: 0px !important;
 }
 /*.assign-value(@value) when (isnumber(@value)) {
-        @value: unit(@value, px);
+        @value1: unit(@value, px);
     } */
 /* .assign-value(@value); */
 .m-5 {
@@ -14167,7 +14167,7 @@ hr.hr-border {
   padding-right: 5px !important;
 }
 /*.assign-value(@value) when (isnumber(@value)) {
-        @value: unit(@value, px);
+        @value1: unit(@value, px);
     } */
 /* .assign-value(@value); */
 .m-10 {
@@ -14201,7 +14201,7 @@ hr.hr-border {
   padding-right: 10px !important;
 }
 /*.assign-value(@value) when (isnumber(@value)) {
-        @value: unit(@value, px);
+        @value1: unit(@value, px);
     } */
 /* .assign-value(@value); */
 .m-15 {
@@ -14235,7 +14235,7 @@ hr.hr-border {
   padding-right: 15px !important;
 }
 /*.assign-value(@value) when (isnumber(@value)) {
-        @value: unit(@value, px);
+        @value1: unit(@value, px);
     } */
 /* .assign-value(@value); */
 .m-20 {
@@ -14267,6 +14267,15 @@ hr.hr-border {
 }
 .pr-20 {
   padding-right: 20px !important;
+}
+.ml-auto {
+  margin-left: auto;
+}
+.mr-auto {
+  margin-right: auto;
+}
+.m-auto {
+  margin: auto;
 }
 .d-table {
   display: table!important;

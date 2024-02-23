@@ -2,6 +2,8 @@
 .wsui.wsme {
 	height: 100%;
 	height: 100vh;
+	height: 100dvh;
+	height: 100svh;
 	> .center {
 		position: relative;
 
@@ -49,8 +51,8 @@
 
 						&.page-select-box {
 	    					font-size: 16px;
-						    min-width: 155px;
-						    width: auto !important;
+						    max-width: 280px;
+						    /* width: auto !important; */
 						    padding: 12px;
 						    .selectize-input {
 							    background-color: #fff;
@@ -60,7 +62,15 @@
 							    input {
 							    	font-size: 14px;
 							    }
+								&.input-active {
+									input {
+										min-width: 100px;
+									}
 								}
+							}
+							.selectize-dropdown {
+								min-width: 200px;
+							}
 	    				}
 	    				&:not(.page-select-box) ul {
 							width: 200px;
@@ -925,6 +935,18 @@ align-items: center;
 	right: -45px;
 	transform: rotate(90deg);
 }
+
+/* Phone */
+@media (max-width: @grid-float-breakpoint-max) {
+	#editFrames {
+		overflow-x: scroll;
+	}
+	#menubar {
+		overflow-y: hidden;
+		overflow-x: scroll;
+	}
+}
+/* Phone */
 
 /* Util */
 .theme-dark {

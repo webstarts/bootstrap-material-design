@@ -36,9 +36,10 @@ $values: 0, 5, 10, 15, 20 !default;
     @include loop-values($index - 1);
     $value: extract($values, $index) !default;
     $value1: unit($value, px) !default;
+    //$value1: if(isnumber($value) and $value > 0, unit($value, px), $value) !default;
     
     /*@mixin assign-value($value) when (isnumber($value)){
-        $value: unit($value, px) !default;
+        $value1: unit($value, px) !default;
     } */
       
     /* @include assign-value($value); */  // call the mixin with $value

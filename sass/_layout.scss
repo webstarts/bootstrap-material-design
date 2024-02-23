@@ -618,6 +618,15 @@ hr.hr-border {
 /* Bootstrap 4 flex basics & display */
 @import 'layout/_margin-padding';
 @import 'layout/_cols';
+.ml-auto {
+    margin-left: auto;
+}
+.mr-auto {
+    margin-right: auto;
+}
+.m-auto {
+    margin: auto;
+}
 .d-table {
     display: table!important;
 }
