@@ -6328,8 +6328,18 @@ hr[data-divider-text]:before {
 .theme-dark .panel-backdrop {
   background-color: #646464;
 }
-.theme-dark .dtp-buttons button.btn:hover {
-  background-color: #000;
+.theme-dark .dtp-buttons button.btn {
+  color: #fff;
+}
+.theme-dark .dtp table.dtp-picker-days tr > td > a,
+.theme-dark .dtp .dtp-picker-time > a {
+  color: #f1f1f1;
+}
+.theme-dark .dtp > .dtp-content {
+  background: #222;
+}
+.theme-dark .dtp-picker-month {
+  color: #eee;
 }
 .theme-dark .navbar .navbar-toggle .icon-bar {
   border-color: #fff;
@@ -15513,6 +15523,7 @@ hr.hr-border {
   }
   .secure-logo-div div:last-child img {
     margin-top: 15px;
+    max-width: 180px;
   }
 }
 .StripeElement {
