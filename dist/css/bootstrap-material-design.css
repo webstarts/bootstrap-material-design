@@ -241,7 +241,7 @@ body .container .well-twitter,
 body .container-fluid .well-twitter,
 body .container .jumbotron-twitter,
 body .container-fluid .jumbotron-twitter {
-  background-color: #55acee;
+  background-color: #000;
 }
 body .container .well-instagram,
 body .container-fluid .well-instagram,
@@ -353,7 +353,7 @@ body .container-fluid .jumbotron-whatsapp {
 }
 .btn:not(.btn-raised).btn-twitter,
 .input-group-btn .btn:not(.btn-raised).btn-twitter {
-  color: #55acee;
+  color: #000;
 }
 .btn:not(.btn-raised).btn-instagram,
 .input-group-btn .btn:not(.btn-raised).btn-instagram {
@@ -598,7 +598,7 @@ body .container-fluid .jumbotron-whatsapp {
 .input-group-btn .btn.btn-fab.btn-twitter,
 .btn-group-raised .btn.btn-twitter,
 .btn-group-raised .input-group-btn .btn.btn-twitter {
-  background-color: #55acee;
+  background-color: #000;
   color: rgba(255,255,255, 0.99);
 }
 .btn.btn-raised.btn-instagram,
@@ -885,7 +885,7 @@ body .container-fluid .jumbotron-whatsapp {
 .input-group-btn .btn.btn-raised:not(.btn-link):active.btn-twitter,
 .btn-group-raised .btn:not(.btn-link):active.btn-twitter,
 .btn-group-raised .input-group-btn .btn:not(.btn-link):active.btn-twitter {
-  background-color: #68b5f0;
+  background-color: #0a0a0a;
 }
 .btn.btn-raised:not(.btn-link):hover.btn-instagram,
 .input-group-btn .btn.btn-raised:not(.btn-link):hover.btn-instagram,
@@ -1431,7 +1431,7 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
 }
 .btn-group.open > .dropdown-toggle.btn.btn-twitter,
 .btn-group-vertical.open > .dropdown-toggle.btn.btn-twitter {
-  background-color: #55acee;
+  background-color: #000;
 }
 .btn-group.open > .dropdown-toggle.btn.btn-instagram,
 .btn-group-vertical.open > .dropdown-toggle.btn.btn-instagram {
@@ -1548,11 +1548,19 @@ label.checkbox-inline input[type=checkbox] {
 }
 .checkbox .checkbox-material,
 label.checkbox-inline .checkbox-material {
-  vertical-align: middle;
-  position: relative;
-  top: 1px;
   padding-right: 5px;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .checkbox .checkbox-material:before,
 label.checkbox-inline .checkbox-material:before {
@@ -2351,6 +2359,25 @@ output {
   font-size: 18px;
   line-height: 1.3333333;
 }
+.checkbox,
+.radio {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.checkbox > label,
+.radio > label {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
 .form-horizontal .radio,
 .form-horizontal .checkbox,
 .form-horizontal .radio-inline,
@@ -2411,7 +2438,7 @@ output {
   background-color: #3b5998;
 }
 .label.label-twitter {
-  background-color: #55acee;
+  background-color: #000;
 }
 .label.label-instagram {
   background-color: #3f729b;
@@ -4076,7 +4103,7 @@ fieldset[disabled] .navbar .btn-link:focus {
   color: rgba(255,255,255, 0.99);
 }
 .navbar.navbar-twitter {
-  background-color: #55acee;
+  background-color: #000;
   color: rgba(255,255,255, 0.99);
 }
 .navbar.navbar-twitter .navbar-form .form-group input.form-control::-moz-placeholder,
@@ -4096,7 +4123,7 @@ fieldset[disabled] .navbar .btn-link:focus {
 }
 @media (max-width: 767px) {
   .navbar.navbar-twitter .dropdown-menu .dropdown-header {
-    background-color: #6cb7f0;
+    background-color: #0d0d0d;
   }
 }
 .navbar.navbar-twitter .dropdown-menu li > a {
@@ -4105,11 +4132,11 @@ fieldset[disabled] .navbar .btn-link:focus {
 }
 .navbar.navbar-twitter .dropdown-menu li > a:hover,
 .navbar.navbar-twitter .dropdown-menu li > a:focus {
-  color: #55acee;
+  color: #000;
   background-color: #eeeeee;
 }
 .navbar.navbar-twitter .dropdown-menu .active > a {
-  background-color: #55acee;
+  background-color: #000;
   color: rgba(255,255,255, 0.99);
 }
 .navbar.navbar-twitter .dropdown-menu .active > a:hover,
@@ -4686,8 +4713,8 @@ fieldset[disabled] .navbar .btn-link:focus {
   color: rgba(255,255,255, 0.99);
 }
 .alert.alert-twitter {
-  background-color: #55acee;
-  border-color: #55acee;
+  background-color: #000;
+  border-color: #000;
   color: rgba(255,255,255, 0.99);
 }
 .alert.alert-twitter a,
@@ -4853,7 +4880,7 @@ fieldset[disabled] .navbar .btn-link:focus {
   background-color: #3b5998;
 }
 .progress .progress-bar.progress-bar-twitter {
-  background-color: #55acee;
+  background-color: #000;
 }
 .progress .progress-bar.progress-bar-instagram {
   background-color: #3f729b;
@@ -4917,7 +4944,7 @@ fieldset[disabled] .navbar .btn-link:focus {
   background-color: #3b5998;
 }
 .progress-material .progress-bar.progress-bar-twitter {
-  background-color: #55acee;
+  background-color: #000;
 }
 .progress-material .progress-bar.progress-bar-instagram {
   background-color: #3f729b;
@@ -6142,7 +6169,7 @@ a.text-info:hover {
   background-color: #3b5998;
 }
 .panel.panel-twitter > .panel-heading {
-  background-color: #55acee;
+  background-color: #000;
 }
 .panel.panel-instagram > .panel-heading {
   background-color: #3f729b;
@@ -6418,10 +6445,10 @@ hr[data-divider-text]:before {
   background-image: linear-gradient(to bottom, #3b5998, #1e2e4f);
 }
 .panel-popup.panel-dark.panel-twitter .panel-window .panel-window-content .window-header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#55acee), to(#147bc9));
-  background-image: -webkit-linear-gradient(top, #55acee, #147bc9);
-  background-image: -o-linear-gradient(top, #55acee, #147bc9);
-  background-image: linear-gradient(to bottom, #55acee, #147bc9);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#000000));
+  background-image: -webkit-linear-gradient(top, #000, #000000);
+  background-image: -o-linear-gradient(top, #000, #000000);
+  background-image: linear-gradient(to bottom, #000, #000000);
 }
 .panel-popup.panel-dark.panel-instagram .panel-window .panel-window-content .window-header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#3f729b), to(#223d52));
@@ -11211,7 +11238,7 @@ hr[data-divider-text]:before {
   background-color: #3b5998;
 }
 .slider.slider-twitter.noUi-connect {
-  background-color: #55acee;
+  background-color: #000;
 }
 .slider.slider-instagram.noUi-connect {
   background-color: #3f729b;
@@ -11263,7 +11290,7 @@ hr[data-divider-text]:before {
   background-color: #3b5998;
 }
 .slider.slider-twitter .noUi-connect {
-  background-color: #55acee;
+  background-color: #000;
 }
 .slider.slider-instagram .noUi-connect {
   background-color: #3f729b;
@@ -11315,7 +11342,7 @@ hr[data-divider-text]:before {
   background-color: #3b5998;
 }
 .slider.slider-twitter .noUi-handle {
-  background-color: #55acee;
+  background-color: #000;
 }
 .slider.slider-instagram .noUi-handle {
   background-color: #3f729b;
@@ -11367,7 +11394,7 @@ hr[data-divider-text]:before {
   border-color: #3b5998;
 }
 .slider.slider-twitter .noUi-handle {
-  border-color: #55acee;
+  border-color: #000;
 }
 .slider.slider-instagram .noUi-handle {
   border-color: #3f729b;
@@ -12002,11 +12029,11 @@ hr[data-divider-text]:before {
 .wsui .chosen-container.error > a {
   border-color: #b94a48;
 }
-
+*/
 .wsui .number-group input {
   text-align: center;
+  max-width: 65px;
 }
-*/
 /* Toggle Button */
 .wsui .tgl {
   display: none;
@@ -12334,10 +12361,10 @@ hr[data-divider-text]:before {
   background-image: linear-gradient(to bottom, #3b5998, #4c70ba);
 }
 .panel-popup:not(.panel-dark).panel-twitter .panel-window .panel-window-content .window-header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#55acee), to(#83c3f3));
-  background-image: -webkit-linear-gradient(top, #55acee, #83c3f3);
-  background-image: -o-linear-gradient(top, #55acee, #83c3f3);
-  background-image: linear-gradient(to bottom, #55acee, #83c3f3);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#000), to(#1a1a1a));
+  background-image: -webkit-linear-gradient(top, #000, #1a1a1a);
+  background-image: -o-linear-gradient(top, #000, #1a1a1a);
+  background-image: linear-gradient(to bottom, #000, #1a1a1a);
 }
 .panel-popup:not(.panel-dark).panel-instagram .panel-window .panel-window-content .window-header {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#3f729b), to(#548cb9));
@@ -13082,12 +13109,12 @@ hr[data-divider-text]:before {
 }
 .site-share.site-share-twitter .share-title,
 .site-share.site-share-twitter .icon-container {
-  color: #55acee;
-  border-color: #55acee;
+  color: #000;
+  border-color: #000;
 }
 .site-share.site-share-twitter:hover .icon-container {
   color: #fff;
-  background-color: #55acee;
+  background-color: #000;
 }
 .site-share.site-share-email .share-title,
 .site-share.site-share-email .icon-container {
@@ -13136,6 +13163,8 @@ hr[data-divider-text]:before {
   -webkit-flex: 1 1 100% !important;
       -ms-flex: 1 1 100% !important;
           flex: 1 1 100% !important;
+  border-radius: -webkit-calc(var(--border-radius-standard) / 2);
+  border-radius: calc(var(--border-radius-standard) / 2);
 }
 .mobile-view .site-share:last-child {
   margin-bottom: 0;
@@ -13156,8 +13185,8 @@ hr[data-divider-text]:before {
   color: inherit !important;
 }
 .mobile-view .site-share.site-share-twitter {
-  border-color: #55acee;
-  background-color: #55acee;
+  border-color: #000;
+  background-color: #000;
   color: #ffffff;
 }
 .mobile-view .site-share.site-share-facebook {
@@ -13197,6 +13226,8 @@ hr[data-divider-text]:before {
     -webkit-flex: 1 1 100% !important;
         -ms-flex: 1 1 100% !important;
             flex: 1 1 100% !important;
+    border-radius: -webkit-calc(var(--border-radius-standard) / 2);
+    border-radius: calc(var(--border-radius-standard) / 2);
   }
   .site-share:last-child {
     margin-bottom: 0;
@@ -13217,8 +13248,8 @@ hr[data-divider-text]:before {
     color: inherit !important;
   }
   .site-share.site-share-twitter {
-    border-color: #55acee;
-    background-color: #55acee;
+    border-color: #000;
+    background-color: #000;
     color: #ffffff;
   }
   .site-share.site-share-facebook {
@@ -15198,7 +15229,7 @@ hr.hr-border {
   background-color: #3b5998;
 }
 .pricing-grid .icon-set i.fa-twitter {
-  background-color: #55acee;
+  background-color: #000;
 }
 .pricing-grid .icon-set i.fa-instagram {
   background-color: #3f729b;
@@ -16133,7 +16164,7 @@ span.space {
   height: 100%;
 }
 .file-manager ul.youtube-videos li .fluid-width.ratio-16-9 {
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 .file-manager ul.youtube-videos li .video-title {
   text-overflow: ellipsis;
@@ -16173,6 +16204,7 @@ span.space {
   overflow: hidden;
   width: 100%;
   text-align: left;
+  padding: 10px;
 }
 .file-manager ul.youtube-videos li .video-content .video-meta {
   font-size: 80%;
@@ -16928,6 +16960,11 @@ span.space {
 .file-manager-topbar .btn-raised + .btn-raised {
   margin-left: 8px;
 }
+@media (max-width: 767px) {
+  .file-manager-topbar .btn-raised + .btn-raised {
+    margin-left: 0px;
+  }
+}
 .file-manager-topbar .dropdown > .btn {
   padding: 10px 15px;
   margin-left: 5px;
@@ -17388,10 +17425,7 @@ span.space {
 }
 @media (max-width: 767px) {
   .file-manager-topbar {
-    padding: 10px 0;
-  }
-  .file-manager-topbar h2 {
-    padding-left: 20px;
+    padding: 10px 20px;
   }
   body .file-viewer-sidebar .folder .folder-actions {
     display: block;
@@ -17417,6 +17451,15 @@ span.space {
 @media (max-width: 450px) {
   .file-manager .grid-view .file {
     width: 50%;
+  }
+  .file-manager .grid-view.one-col .file {
+    width: 100%;
+  }
+  .file-manager .grid-view.one-col .file .file-actions {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
 .panel-popup.panel-dark .nav-tabs:not(.hide) + .file-viewer-sidebar {

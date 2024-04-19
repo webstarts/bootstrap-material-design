@@ -150,6 +150,11 @@
 			.btn + .btn {
 				margin-left: 8px;
 			}
+			@media (max-width:767px) {
+				.btn + .btn {
+					margin-left: 0px;
+				}
+			}
 		}
 	}
 	.track-actions {
