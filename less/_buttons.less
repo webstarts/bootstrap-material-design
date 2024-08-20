@@ -318,9 +318,9 @@
 
   // spec: https://www.google.com/design/spec/components/buttons.html#buttons-toggle-buttons
   &.open {
-    .dropdown-toggle {
-      //box-shadow: none;
-    }
+    /* .dropdown-toggle {
+      box-shadow: none;
+    } */
 
     & > .dropdown-toggle.btn {
       .variations(~".btn", ~"", background-color, @mdb-btn-background-color);
@@ -331,9 +331,11 @@
     border-radius: 0 0 @border-radius-base @border-radius-base;
   }
 
-  &.btn-group-raised {
-    .shadow-2dp();
-  }
+  /* &.btn-group-raised {
+    & > .btn-raised:hover {
+      .shadow-2dp();
+    }
+  } */
 
   & .btn + .btn,
   .btn,

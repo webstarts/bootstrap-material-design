@@ -748,7 +748,27 @@
 		color: #222;
 	}
 }
+.ai-text-popup {
+	.window-body {
+		background-color: rgba(0,0,0,.04);
+	}
+	.chat-window {
+		.chat-bubble {
+			border-radius: ~"var(--border-radius-standard)";
+			border-width: 1px;
+			border-style: solid;
 
+			&.bubble-ai {
+				background-color: #fff;
+				border-color: #eee;
+			}
+			&.bubble-user {
+				background-color: #eee;
+				border-color: #ddd;
+			}
+		}
+	}
+}
 
 .theme-dark {
 	#playlist-editable .track-cover.default-cover {
@@ -804,6 +824,20 @@
 		    &.active {
 		    	border-color: @brand-primary;
 		    }
+		}
+	}
+	.ai-text-popup {
+		.chat-window {
+			.chat-bubble {
+				&.bubble-ai {
+					background-color: #2c2c2c;
+					border-color: #2a2a2a;
+				}
+				&.bubble-user {
+					background-color: #3c3c3c;
+					border-color: #3a3a3a;
+				}
+			}
 		}
 	}
 }

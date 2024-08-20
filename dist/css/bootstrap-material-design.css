@@ -1371,6 +1371,11 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
 .btn-group-vertical {
   position: relative;
   margin: 10px 1px;
+  /* &.btn-group-raised {
+    & > .btn-raised:hover {
+      .shadow-2dp();
+    }
+  } */
 }
 .btn-group.copy,
 .btn-group-vertical.copy {
@@ -1390,6 +1395,12 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
       -ms-flex-pack: justify;
           justify-content: space-between;
   border: 1px solid #efefef;
+}
+.btn-group.open,
+.btn-group-vertical.open {
+  /* .dropdown-toggle {
+      box-shadow: none;
+    } */
 }
 .btn-group.open > .dropdown-toggle.btn,
 .btn-group-vertical.open > .dropdown-toggle.btn,
@@ -1464,11 +1475,6 @@ fieldset[disabled][disabled] .btn-group-vertical.btn-group-raised:focus:not(:act
 .btn-group .dropdown-menu,
 .btn-group-vertical .dropdown-menu {
   border-radius: 0 0 2px 2px;
-}
-.btn-group.btn-group-raised,
-.btn-group-vertical.btn-group-raised {
-  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 .btn-group .btn + .btn,
 .btn-group-vertical .btn + .btn,
@@ -5087,6 +5093,11 @@ fieldset[disabled] .navbar .btn-link:focus {
   position: relative;
   height: 80px;
   width: 80px;
+  -webkit-animation: rotating 1.7s linear infinite;
+       -o-animation: rotating 1.7s linear infinite;
+          animation: rotating 1.7s linear infinite;
+}
+.rotate-infinite {
   -webkit-animation: rotating 1.7s linear infinite;
        -o-animation: rotating 1.7s linear infinite;
           animation: rotating 1.7s linear infinite;
@@ -14327,8 +14338,11 @@ hr.hr-border {
 .d-table-cell {
   display: table-cell !important;
 }
-.d-flex-inline {
-  display: flex-inline !important;
+.d-inline-flex {
+  display: -webkit-inline-box !important;
+  display: -webkit-inline-flex !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
 }
 .d-grid {
   display: grid!important;
@@ -14604,6 +14618,9 @@ hr.hr-border {
 }
 .w-100 {
   width: 100%;
+}
+.w-90 {
+  width: 90%;
 }
 .w-75 {
   width: 75%;
