@@ -1063,6 +1063,20 @@ body .container-fluid .jumbotron-whatsapp {
   top: 7.5px;
   left: 7.5px;
 }
+.btn.btn-fab.btn-fab-48,
+.input-group-btn .btn.btn-fab.btn-fab-48 {
+  min-width: 48px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  font-size: 24px;
+  line-height: 1;
+}
+.btn.btn-fab.btn-fab-48.material-icons,
+.input-group-btn .btn.btn-fab.btn-fab-48.material-icons {
+  top: 50%;
+  left: 50%;
+}
 .btn.btn-fab.btn-fab-sm,
 .input-group-btn .btn.btn-fab.btn-fab-sm {
   min-width: 20px;
@@ -3030,13 +3044,28 @@ textarea.auto-resize {
   right: 15px;
 }
 .form-group.label-floating .control-label + .form-control::-webkit-input-placeholder {
-  text-align: right;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out;
+          transition: opacity 0.4s ease-out;
 }
 .form-group.label-floating .control-label + .form-control::-moz-placeholder {
-  text-align: right;
+  opacity: 0;
+  transition: opacity 0.4s ease-out;
 }
 .form-group.label-floating .control-label + .form-control::placeholder {
-  text-align: right;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease-out;
+       -o-transition: opacity 0.4s ease-out;
+          transition: opacity 0.4s ease-out;
+}
+.form-group.label-floating .control-label + .form-control.is-focused::-webkit-input-placeholder {
+  opacity: 1;
+}
+.form-group.label-floating .control-label + .form-control.is-focused::-moz-placeholder {
+  opacity: 1;
+}
+.form-group.label-floating .control-label + .form-control.is-focused::placeholder {
+  opacity: 1;
 }
 .form-group.label-floating .selectize-control.single .selectize-input > .item {
   max-width: -webkit-calc(100% - 12px);
@@ -11748,6 +11777,8 @@ hr[data-divider-text]:before {
   color: #333;
   background: #fff;
   cursor: default;
+  font-weight: 500;
+  border-top: 1px solid rgba(153, 153, 153, 0.15);
 }
 .selectize-dropdown .active,
 .selectize-dropdown.form-control .active,
@@ -13413,6 +13444,10 @@ ol.unlist {
 .page-loader.absolute,
 .loading-mask.absolute {
   position: absolute;
+}
+.page-loader.no-bg,
+.loading-mask.no-bg {
+  background-color: transparent;
 }
 /* Loader */
 .ws-loader-mask,

@@ -440,7 +440,12 @@ textarea.auto-resize {
   }
 
   .control-label + .form-control::placeholder{
-    text-align: right;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+  }
+
+  .control-label + .form-control.is-focused::placeholder {
+    opacity: 1;
   }
 
   .selectize-control.single .selectize-input>.item {

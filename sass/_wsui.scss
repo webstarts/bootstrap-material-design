@@ -1280,6 +1280,9 @@ ul.unlist, ol.unlist {
     &.absolute{
         position: absolute;
     }
+    &.no-bg {
+        background-color: transparent;
+    }
 }
 
 /* Loader */
