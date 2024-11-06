@@ -437,12 +437,12 @@ textarea.auto-resize {
     right: 15px;
   }
 
-  .control-label + .form-control::placeholder{
+  .control-label + .form-control::placeholder {
     opacity: 0;
     transition: opacity 0.4s ease-out;
   }
 
-  .control-label + .form-control.is-focused::placeholder {
+  &.is-focused .control-label + .form-control::placeholder {
     opacity: 1;
   }
 

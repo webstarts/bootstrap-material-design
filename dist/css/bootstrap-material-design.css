@@ -3058,13 +3058,13 @@ textarea.auto-resize {
        -o-transition: opacity 0.4s ease-out;
           transition: opacity 0.4s ease-out;
 }
-.form-group.label-floating .control-label + .form-control.is-focused::-webkit-input-placeholder {
+.form-group.label-floating.is-focused .control-label + .form-control::-webkit-input-placeholder {
   opacity: 1;
 }
-.form-group.label-floating .control-label + .form-control.is-focused::-moz-placeholder {
+.form-group.label-floating.is-focused .control-label + .form-control::-moz-placeholder {
   opacity: 1;
 }
-.form-group.label-floating .control-label + .form-control.is-focused::placeholder {
+.form-group.label-floating.is-focused .control-label + .form-control::placeholder {
   opacity: 1;
 }
 .form-group.label-floating .selectize-control.single .selectize-input > .item {
