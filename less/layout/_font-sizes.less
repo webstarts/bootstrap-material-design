@@ -1,0 +1,26 @@
+@fs-sizes: 12, 14, 16, 18, 20, 24, 26, 28, 30, 32, 34, 36, 48;
+
+.loop-fs(@index, @viewport-suffix) when (@index > 0) {
+    .loop-fs(@index - 1, @viewport-suffix);
+    @value: extract(@fs-sizes, @index);
+    @value1: unit(@value, px);
+
+    & when (@viewport-suffix = '') {
+        @className: ~".fs-@{value}";
+        @{className} {
+            font-size: @value1;
+        }
+    }
+
+    & when not (@viewport-suffix = '') {
+        @classNameSm: ~".fs-@{viewport-suffix}-@{value}";
+        @{classNameSm} {
+            font-size: @value1 !important;
+        }
+    }
+}
+
+.loop-fs(length(@fs-sizes), '');
+@media(max-width: @grid-float-breakpoint-max) {
+.loop-fs(length(@fs-sizes), sm);
+}

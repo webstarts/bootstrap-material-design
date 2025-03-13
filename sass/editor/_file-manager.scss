@@ -521,6 +521,29 @@ span.space {
 					line-height: 1.4em;
 				}
 			}
+			&.file-drop-zone {
+				.upload-icon .material-icons {
+					font-size: 55px;
+					@media (max-width:767px) {
+						font-size: 40px;
+					}
+				}
+				.leaf {
+					background-color: $brand-primary;
+					cursor: pointer;
+					.upload-icon {
+						color: #fff;
+
+						h4 {
+							margin:0;
+							font-size: 18px;
+							@media (max-width:767px) {
+								font-size: 15px;
+							}
+						}
+					}
+				}
+			}
 		}
 		&.grid-col-2 {
 			.file {min-width: 50%;}

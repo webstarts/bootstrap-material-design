@@ -1,77 +1,184 @@
+@prefix: '.m', '.mt', '.mb', '.ml', '.mr', '.p', '.pt', '.pb', '.pl', '.pr', '.mx', '.my', '.px', '.py', '.gap';
+@viewport: '', sm; // Only need default and 'sm' viewport
+@values: 0, 5, 10, 15, 20, 50;
+
+// Mixins for margin and padding
 .m(@value) {
-    margin: @value!important;
+    margin: @value !important;
 }
 .mt(@value) {
-    margin-top: @value!important;
+    margin-top: @value !important;
 }
 .mb(@value) {
-    margin-bottom: @value!important;
+    margin-bottom: @value !important;
 }
 .ml(@value) {
-    margin-left: @value!important;
+    margin-left: @value !important;
 }
 .mr(@value) {
-    margin-right: @value!important;
+    margin-right: @value !important;
 }
 .p(@value) {
-    padding: @value!important;
+    padding: @value !important;
 }
 .pt(@value) {
-    padding-top: @value!important;
+    padding-top: @value !important;
 }
 .pb(@value) {
-    padding-bottom: @value!important;
+    padding-bottom: @value !important;
 }
 .pl(@value) {
-    padding-left: @value!important;
+    padding-left: @value !important;
 }
 .pr(@value) {
-    padding-right: @value!important;
+    padding-right: @value !important;
 }
-@values: 0, 5, 10, 15, 20;
+.mx(@value) {
+    margin-left: @value !important;
+    margin-right: @value !important;
+}
+.my(@value) {
+    margin-top: @value !important;
+    margin-bottom: @value !important;
+}
+.px(@value) {
+    padding-left: @value !important;
+    padding-right: @value !important;
+}
+.py(@value) {
+    padding-top: @value !important;
+    padding-bottom: @value !important;
+}
+.gap(@value) {
+    gap: @value !important;
+}
 
-.loop-values(@index) when (@index > 0) {
-    .loop-values(@index - 1);
+// Loop through viewports
+.loop-viewports(@index) when (@index > 0) {
+    .loop-viewports(@index - 1);
+    @viewport-suffix: extract(@viewport, @index);
+
+    // Generate media query for 'sm' viewport
+    & when not (@viewport-suffix = '') {
+        @media (max-width: @grid-float-breakpoint-max) {
+            .loop-values(length(@values), @viewport-suffix);
+        }
+    }
+
+    // Generate classes without media query for default viewport
+    & when (@viewport-suffix = '') {
+        .loop-values(length(@values), @viewport-suffix);
+    }
+}
+
+// Loop through values
+.loop-values(@index, @viewport-suffix) when (@index > 0) {
+    .loop-values(@index - 1, @viewport-suffix);
     @value: extract(@values, @index);
     @value1: unit(@value, px);
-    //@value1: if(isnumber(@value) and @value > 0, unit(@value, px), @value);
-    
-    /*.assign-value(@value) when (isnumber(@value)) {
-        @value1: unit(@value, px);
-    } */
-      
-    /* .assign-value(@value); */  // call the mixin with @value
 
-    .m-@{value} {
-        .m(@value1);
+    // Generate class names with optional viewport suffix
+    .generate-classes(@viewport-suffix, @value, @value1);
+}
+
+// Mixin to generate classes with optional viewport suffix
+.generate-classes(@viewport-suffix, @value, @value1) {
+    & when (@viewport-suffix = '') {
+        .m-@{value} {
+            .m(@value1);
+        }
+        .mx-@{value} {
+            .mx(@value1);
+        }
+        .my-@{value} {
+            .my(@value1);
+        }
+        .mt-@{value} {
+            .mt(@value1);
+        }
+        .mb-@{value} {
+            .mb(@value1);
+        }
+        .ml-@{value} {
+            .ml(@value1);
+        }
+        .mr-@{value} {
+            .mr(@value1);
+        }
+        .p-@{value} {
+            .p(@value1);
+        }
+        .px-@{value} {
+            .px(@value1);
+        }
+        .py-@{value} {
+            .py(@value1);
+        }
+        .pt-@{value} {
+            .pt(@value1);
+        }
+        .pb-@{value} {
+            .pb(@value1);
+        }
+        .pl-@{value} {
+            .pl(@value1);
+        }
+        .pr-@{value} {
+            .pr(@value1);
+        }
+        .gap-@{value} {
+            .gap(@value1);
+        }
     }
-    .mt-@{value} {
-        .mt(@value1);
-    }
-    .mb-@{value} {
-        .mb(@value1);
-    }
-    .ml-@{value} {
-        .ml(@value1);
-    }
-    .mr-@{value} {
-        .mr(@value1);
-    }
-    .p-@{value} {
-        .p(@value1);
-    }
-    .pt-@{value} {
-        .pt(@value1);
-    }
-    .pb-@{value} {
-        .pb(@value1);
-    }
-    .pl-@{value} {
-        .pl(@value1);
-    }
-    .pr-@{value} {
-        .pr(@value1);
+
+    & when not (@viewport-suffix = '') {
+        .m-@{viewport-suffix}-@{value} {
+            .m(@value1);
+        }
+        .mx-@{viewport-suffix}-@{value} {
+            .mx(@value1);
+        }
+        .my-@{viewport-suffix}-@{value} {
+            .my(@value1);
+        }
+        .mt-@{viewport-suffix}-@{value} {
+            .mt(@value1);
+        }
+        .mb-@{viewport-suffix}-@{value} {
+            .mb(@value1);
+        }
+        .ml-@{viewport-suffix}-@{value} {
+            .ml(@value1);
+        }
+        .mr-@{viewport-suffix}-@{value} {
+            .mr(@value1);
+        }
+        .p-@{viewport-suffix}-@{value} {
+            .p(@value1);
+        }
+        .px-@{viewport-suffix}-@{value} {
+            .px(@value1);
+        }
+        .py-@{viewport-suffix}-@{value} {
+            .py(@value1);
+        }
+        .pt-@{viewport-suffix}-@{value} {
+            .pt(@value1);
+        }
+        .pb-@{viewport-suffix}-@{value} {
+            .pb(@value1);
+        }
+        .pl-@{viewport-suffix}-@{value} {
+            .pl(@value1);
+        }
+        .pr-@{viewport-suffix}-@{value} {
+            .pr(@value1);
+        }
+        .gap-@{viewport-suffix}-@{value} {
+            .gap(@value1);
+        }
     }
 }
 
-.loop-values(length(@values));
+// Start the loop
+.loop-viewports(length(@viewport));

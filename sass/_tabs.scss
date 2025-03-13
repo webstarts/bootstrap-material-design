@@ -9,7 +9,8 @@
         border-style: solid;
         border-color: transparent;
         &.active {
-            border-color: $mdb-text-color-primary;
+            /* border-color: $mdb-text-color-primary; */
+            border-color: unquote("var(--brand-primary)");
 			background-color: rgba($mdb-text-color-primary-hex, (5/100));
         }
         > a {

@@ -1,0 +1,69 @@
+.pricing-page {
+    --spacing: 0.25rem;
+    @media (max-width: @grid-float-breakpoint-max) {
+        --spacing: 0.5rem;
+    }
+
+    .tab-area {
+		width: 33.33%;
+        @media (max-width: @grid-float-breakpoint-max) {
+            width: 100%;
+        }
+	}
+
+    .pricing-grid2 {
+      column-gap: 20px;
+      justify-content: center;
+      align-items: flex-start;
+      grid-template-columns: ~"repeat(2, minmax(320px, 1fr))";
+      @media (max-width: @grid-float-breakpoint-max) {
+        grid-template-columns: ~"repeat(1, minmax(320px, 500px))";
+        margin-top: 20px;
+      }
+    }
+
+	.pricing-grid2 ul {
+		list-style: none;
+		padding: 0;
+	}
+
+    .table-caption {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    .tbl-col-feature {
+        width: ~"calc(2 / 5* 100%)";
+    }
+      
+    .tbl-col-data {
+        width: ~"calc(1/5 * 100%)";
+    }
+  
+    .tp-space {
+        padding-top: ~"calc(var(--spacing) * 2)";
+    }
+  
+    .pad-block-line {
+        padding-block: ~"calc(var(--spacing) * 4)";
+    }
+  
+    .pad-block-head {
+        padding-block: ~"calc(var(--spacing) * 4)";
+    }
+  
+    .pricing-table tbody tr:not(:last-child) {
+        border-bottom: 1px solid #ddd;
+    }
+
+    .nav-tabs {
+        border-bottom: 1px solid #e0e0e0;
+    }
+}

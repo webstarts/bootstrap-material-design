@@ -8,3 +8,24 @@
     }
     @include loop-col($prefix, $i - 1);
 }
+
+/*
+@mixin loop-single($prefix, $i) when ($i > -1){
+    $colNum: $i * $step !default;
+    $className: unquote("#{$initial}#{$prefix}#{$colNum}") !default;
+    #{$className} {
+        #{$prop}: unquote("#{$colNum}#{$unit}") !default;
+    }
+    @include loop-single($prefix, $i - 1);
+}
+$step: 5 !default;
+$unit: px !default;
+$prop: column-gap !default;
+$initial: .col-gap- !default;
+@include loop-single('sm-', 4);
+
+// This will output:
+.col-gap-sm-20 {
+  column-gap: 20px;
+}
+*/

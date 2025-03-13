@@ -6,3 +6,24 @@
     }
     .loop-col(@prefix, @i - 1);
 }
+
+/*
+.loop-single(@prefix, @i) when (@i > -1) {
+    @colNum: @i * @step;
+    @className: ~"@{initial}@{prefix}@{colNum}";
+    @{className} {
+        @{prop}: ~"@{colNum}@{unit}";
+    }
+    .loop-single(@prefix, @i - 1);
+}
+@step: 5;
+@unit: px;
+@prop: column-gap;
+@initial: .col-gap-;
+.loop-single('sm-', 4);
+
+// This will output:
+.col-gap-sm-20 {
+  column-gap: 20px;
+}
+*/
