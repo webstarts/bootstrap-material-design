@@ -391,8 +391,6 @@ footer {
 ***** Browser Add-Ons
 ****/
 .browser-shadow {
-    -webkit-box-shadow: rgba(0,0,0,.06) 0px 3px 10px;
-    -moz-box-shadow: rgba(0,0,0,.06) 0px 3px 10px;
     box-shadow: rgba(0,0,0,.06) 0px 3px 10px;
 }
 .browser-content .browser-image {
@@ -545,7 +543,7 @@ footer {
     margin: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: ~"repeat(auto-fill, minmax(280px, 1fr))";
     gap: 20px;
 }
 
@@ -921,7 +919,7 @@ hr.hr-border {
         text-align: left;
     }
     .grid-row.even-col1-sm {
-        grid-template-columns: repeat(1, 1fr) !important;
+        grid-template-columns: ~"repeat(1, 1fr)!important";
     }
 }
 .grid-row {
@@ -932,22 +930,22 @@ hr.hr-border {
     align-items: start;
 }
 .grid-row.even-col2 {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: ~"repeat(2, 1fr)";
 }
 .grid-row.even-col3 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: ~"repeat(3, 1fr)";
 }
 .grid-row.even-col4 {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: ~"repeat(4, 1fr)";
 }
 .grid-row.auto-col2 {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: ~"repeat(2, auto)";
 }
 .grid-row.auto-col3 {
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: ~"repeat(3, auto)";
 }
 .grid-row.auto-col4 {
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: ~"repeat(4, auto)";
 }
 .position-absolute {
     position: absolute;

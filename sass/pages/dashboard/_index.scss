@@ -3,7 +3,7 @@
 .dashboard-grid {
 	display: grid;
 	gap: 30px;
-	grid-template-columns: repeat(auto-fill, minmax(262px, 1fr));
+	grid-template-columns: unquote("repeat(auto-fill, minmax(262px, 1fr))");
 	margin-top: 30px;
 
 	>div {
@@ -335,7 +335,7 @@
 		}
 	}
 	.dashboard-grid {
-		grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+		grid-template-columns: unquote("repeat(auto-fill, minmax(330px, 1fr))");
 		> div {
 			min-width: 100%;
 		}

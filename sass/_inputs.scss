@@ -454,6 +454,7 @@ textarea.auto-resize {
 
   .selectize-input .item {
     min-height: 22.84px;
+    border-radius: unquote("var(--border-radius-standard)");
   }
 
   .input-group {

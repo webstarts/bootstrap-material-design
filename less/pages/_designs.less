@@ -9,7 +9,7 @@
 
 .responsive-design-outer {
 	display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-template-columns: ~"repeat(auto-fill, minmax(360px, 1fr))";
     gap: 20px;
 }
 
@@ -47,6 +47,6 @@
 
 @media (max-width: @grid-float-breakpoint-max) {
 	.responsive-design-outer {
-	    grid-template-columns: 1fr;
+	    grid-template-columns: ~"1fr";
 	}
 }

@@ -57,7 +57,7 @@
   .btn-group-raised & {
     &:not(.btn-link) {
       //.shadow-2dp();
-      /*box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);*/
+      //box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 
       // colors on hover, focus, active
       &:hover,
@@ -67,7 +67,7 @@
 
         outline: 0;
         box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        /*box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);*/
+        //box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
 
         // FIXME: SPEC - this should be the 600 color, how can we get that programmatically if at all? Or are we limited to the color palette only?
         // SASS conversion note: please mirror any content change in _mixins-shared.scss button-variations-content
@@ -79,31 +79,30 @@
         // Spec:
         //  - Raised Light/Light theme no hover.
         //  - Raised Dark/Dark theme Hover color: 600
-        .theme-dark & {
-        }
+        //.theme-dark & {}
       }
 
       // shadow on active
-      &.active,
-      &:active {
-        &,
-        &:hover {
+      //&.active,
+      //&:active {
+        //&,
+        //&:hover {
           // .shadow-4dp();
-        }
-      }
+        //}
+      //}
 
       // shadow on focus
       //   Focus should take precedence over active, so specificity is needed
-      &:focus {
-        &,
-        &.active,
-        &:active {
-          &,
-          &:hover {
+      //&:focus {
+        //&,
+        //&.active,
+        //&:active {
+          //&,
+          //&:hover {
             // .focus-shadow();
-          }
-        }
-      }
+          //}
+       //}
+      //}
     }
   }
 

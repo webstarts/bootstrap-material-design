@@ -366,7 +366,7 @@
 			}
 		}
 		display: grid;
-		grid-template-columns: min-content 1fr;
+		grid-template-columns: ~"min-content 1fr";
 		position: relative;
 		margin: 0;
 		padding: 0;
@@ -592,7 +592,7 @@
 		.color-palettes {
 			display: grid;
 			grid-template-rows: auto;
-			grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+			grid-template-columns: ~"repeat(auto-fit, minmax(140px, 1fr))";
 			justify-content: center;
 			align-items: stretch;
 			grid-gap: 5px;
@@ -657,7 +657,7 @@
 .color-edit-popup {
 	.color-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+		grid-template-columns: ~"repeat(auto-fit, minmax(30px, 1fr))";
 		.color-col {
 			float: none;
     		margin: 0 auto;
