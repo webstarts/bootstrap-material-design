@@ -351,6 +351,20 @@ table.mce-colorbutton-grid .my-list .body { font-size: 12px; }
 	}
 }
 
+.selectize-dropdown.font-selector {
+	.selectize-dropdown-content {
+		max-height: 350px;
+
+		.option[data-selectable] {
+			padding: 5px 0;
+
+			img {
+				mix-blend-mode: multiply;
+			}
+		}
+	}
+}
+
 /* Add Content Block */
 .panel-modal.content-block-popup {
 	.wse-content-blocks {
@@ -1009,6 +1023,16 @@ align-items: center;
 	    	color: @brand-primary;
 	    }
     }
+	.selectize-dropdown.font-selector .selectize-dropdown-content {
+		.option[data-selectable] img {
+			filter: invert(.8);
+			mix-blend-mode: normal;
+		}
+		.option[data-selectable]:hover img,
+		.option[data-selectable].active img {
+			filter: invert(.78);
+		}
+	}
     /* setting & style popup */
     .advanced-settings {
         color: #ccc;

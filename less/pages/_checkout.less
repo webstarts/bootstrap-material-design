@@ -38,7 +38,7 @@
 	}
 }
 
-.StripeElement {
+.StripeElement:not(#payment-element) {
   position: relative;
   background-color: rgba(0,0,0,.05);
   padding: 12px 10px;
@@ -64,14 +64,14 @@
 	}
 }
 
-.StripeElement--focus:after {
+.StripeElement--focus:not(#payment-element):after {
 	transform: scaleX(1);
 }
 
-.StripeElement--invalid {
+.StripeElement--invalid:not(#payment-element) {
   border-bottom: 1px solid #f44336;
 }
 
-.StripeElement--webkit-autofill {
+.StripeElement--webkit-autofill:not(#payment-element) {
   background-color: #fefde5 !important;
 }

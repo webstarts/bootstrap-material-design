@@ -5,22 +5,25 @@
 
 // Bootstrap brand color customization
 $brand-primary: $black !default;
-$brand-secondary: $black !default;
-$brand-success: $black !default;
-$brand-danger: $black !default;
-$brand-warning: $black !default;
-$brand-info: $black !default;
+$brand-secondary: $grey-900 !default;
+$brand-success: $grey-900 !default;
+$brand-danger: $grey-900 !default;
+$brand-warning: $grey-900 !default;
+$brand-info: $grey-900 !default;
 $brand-default: $grey-400 !default;
 
 $border-radius-base: 0px !default;
 $border-radius-small: 0px !default;
 $border-radius-standard: 0px !default;
 
+$active-tab-bg: $grey-900 !default;
+$active-tab-bg-hover: $grey-800 !default;
+
 // Typography
 $font-family-sans-serif: 'Open Sans', 'Helvetica', 'Arial', sans-serif !default;
 $headings-font-weight: 400 !default;
 
-$body-bg: #fefefe !default;
+$body-bg: #f7f7f7 !default;
 $icon-color: rgba(0,0,0,0.5) !default;
 $link-color: $brand-primary !default;
 //---

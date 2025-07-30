@@ -5,10 +5,11 @@
     }
 
     .tab-area {
-		width: 33.33%;
-        @media (max-width: @grid-float-breakpoint-max) {
+		width: 100%;
+        max-width: 400px;
+        /* @media (max-width: @grid-float-breakpoint-max) {
             width: 100%;
-        }
+        } */
 	}
 
     .pricing-grid2 {
@@ -17,7 +18,7 @@
       align-items: flex-start;
       grid-template-columns: ~"repeat(2, minmax(320px, 1fr))";
       @media (max-width: @grid-float-breakpoint-max) {
-        grid-template-columns: ~"repeat(1, minmax(320px, 500px))";
+        grid-template-columns: ~"repeat(1, minmax(300px, 500px))";
         margin-top: 20px;
       }
     }

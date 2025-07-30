@@ -15,6 +15,10 @@
       color: inherit;
       background-color: transparent;
     }
+    &.with-text {
+      height: auto;
+      line-height: inherit;
+    }
   }
 
   .navbar-text {

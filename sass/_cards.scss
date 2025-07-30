@@ -369,18 +369,26 @@
 	}
 }
 
+.card + .card {
+	margin-top: 0;
+}
+
 @media (max-width: $screen-xs-max) {
 	
 	.card.inflate {
 		display: block;
 		margin: 0;
 		box-shadow: none;
-		border-radius: 0;
+		/* border-radius: 0; */
 		background: transparent;
 		
 		.card-content {
 			padding: 0;
 		}
+	}
+
+	.card.inflate + .card.inflate {
+		margin-top: 20px;
 	}
 	
 }

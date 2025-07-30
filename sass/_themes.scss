@@ -81,8 +81,11 @@
 .theme-dark,
 .panel-popup.panel-dark {
 
-    .panel-window-content .fab-close-btn a {
+    /* .panel-window-content .fab-close-btn a {
         background-color: #333!important;
+    } */
+    .panel-popup.popup-iframe.popup-minimal .panel-window-content {
+        background-color: #262626;
     }
 
     .form-group .selectize-dropdown.form-control,
@@ -294,4 +297,18 @@
     .indeterminate-progress .circular circle {
         stroke: #fff;
     }
+
+    .card {
+        color: inherit;
+    }
+
+    @media (min-width: $grid-float-breakpoint-max) {
+        .card {
+            background-color: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255,255,255,.03);
+        }
+    }
+
+    // Generate dark theme (nested under .theme-dark)
+    @include generate-gray-shades(length($gray-shades), 'dark');
 }

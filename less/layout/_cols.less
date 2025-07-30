@@ -1,3 +1,4 @@
+/* Flex Cols */
 .loop-col(@prefix, @i) when (@i > 0) {
     @colNum: @i * @step;
     @className: ~".col-@{prefix}@{colNum}";
@@ -6,6 +7,27 @@
     }
     .loop-col(@prefix, @i - 1);
 }
+
+/* Width */
+.loop-w(@prefix, @i) when (@i > 0) {
+    @colNum: @i * @step;
+    @className: ~".w-@{prefix}@{colNum}";
+    @{className} {
+        width: @colNum * 1%;
+    }
+    .loop-w(@prefix, @i - 1);
+}
+
+/* Height */
+.loop-h(@prefix, @i) when (@i > 0) {
+    @colNum: @i * @step;
+    @className: ~".h-@{prefix}@{colNum}";
+    @{className} {
+        height: @colNum * 1%;
+    }
+    .loop-h(@prefix, @i - 1);
+}
+
 
 /*
 .loop-single(@prefix, @i) when (@i > -1) {

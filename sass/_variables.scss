@@ -30,9 +30,12 @@ $brand-warning: $deep-orange !default;
 $brand-info: $cyan !default;
 $brand-default: $grey-400 !default;
 
+$active-tab-bg: $blue-500 !default;
+$active-tab-bg-hover: $blue-400 !default;
+
 $border-radius-base: 2px !default;
-$border-radius-small: 1px !default;
 $border-radius-standard: 8px !default;
+$border-radius-small: unquote("calc(var(--border-radius-standard) / 2)") !default;
 
 // Typography
 $font-family-sans-serif: 'Open Sans', 'Helvetica', 'Arial', sans-serif !default;

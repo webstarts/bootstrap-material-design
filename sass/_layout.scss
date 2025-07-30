@@ -610,8 +610,30 @@ hr.hr-border {
 .alternate-bg > *:nth-child(odd) {
     background-color: #f9f9f9;
 }
+.row-border-between + .row-border-between {
+    border-top: 1px solid #eee;
+}
+.row-hover:hover {
+    background-color: rgba(153,153,153,.1);
+}
+/* border border-solid border-gray-200 */
+.border-solid {
+    border-style: solid;
+}
+.border-0 {
+    border-width: 0;
+}
+.border {
+    border-width: 1px;
+}
+.border-t-1 {
+    border-width: 0;
+    border-top-width: 1px;
+}
+.border-b-1 {
+    border-top-width: 1px;
+}
 /** Utils **/
-
 
 /* Bootstrap 4 flex basics & display */
 @import 'layout/_gray-shades';
@@ -635,6 +657,9 @@ hr.hr-border {
 }
 .d-table-cell {
     display: table-cell!important;
+}
+.d-inline-block {
+    display: inline-block!important;
 }
 .d-inline-flex {
     display: inline-flex!important;
@@ -723,50 +748,39 @@ hr.hr-border {
 .flex-fill {
     flex: 1 1 auto!important;
 }
-.w-100 {
-    width: 100%;
-}
-.w-90 {
-    width: 90%;
-}
-.w-75 {
-    width: 75%;
-}
-.w-50 {
-    width: 50%;
-}
-.w-25 {
-    width: 25%;
-}
 .w-fit {
     width: fit-content;
 }
 .w-auto {
     width: auto;
 }
-.h-100 {
-    height: 100%;
-}
-.h-75 {
-    height: 75%;
-}
-.h-50 {
-    height: 50%;
-}
-.h-25 {
-    height: 25%;
-}
+$step: 5 !default;
+@include loop-w('', 20);
 .h-fit {
     height: fit-content;
 }
 .h-auto {
     height: auto;
 }
+$step: 5 !default;
+@include loop-h('', 20);
 .brd-0 {
     border: 0;
 }
 .absolute {
     position: absolute;
+    &.top {
+        top: 0;
+    }
+    &.bottom {
+        bottom: 0;
+    }
+    &.left {
+        left: 0;
+    }
+    &.right {
+        right: 0;
+    }
 }
 .relative {
     position: relative;
@@ -845,6 +859,10 @@ hr.hr-border {
         $step: 5 !default;
         @include loop-col('md-', 20); //_cols.less
     }
+    $step: 5 !default;
+    @include loop-h('md-', 20);
+    $step: 5 !default;
+    @include loop-w('md-', 20);
 }
 @media (max-width: $grid-float-breakpoint-max) {
     /* justify-content */
@@ -923,6 +941,10 @@ hr.hr-border {
     .grid-row.even-col1-sm {
         grid-template-columns: unquote("repeat(1, 1fr !important)");
     }
+    $step: 5 !default;
+    @include loop-h('sm-', 20);
+    $step: 5 !default;
+    @include loop-w('sm-', 20);
 }
 .grid-row {
     display: grid;
