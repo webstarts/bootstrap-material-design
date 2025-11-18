@@ -250,6 +250,8 @@
 		.wse-form-mask{ display:none; }
 		form > ul > li {
 			padding: 20px;
+			background-color: rgba(153,153,153,.1);
+			border-radius: unquote("var(--border-radius-standard)");
 			>.inp-con,
 			>label.desc,
 			>fieldset,
@@ -262,8 +264,7 @@
 				margin-left: 4%;
 			}
 			&.active {
-				background-color: rgba(255,255,255,.1);
-    			border-radius: 3px;
+				background-color: rgba(153,153,153,.2);
 			}
 			.del-dup {
 				display: flex;

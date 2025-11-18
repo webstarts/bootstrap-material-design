@@ -658,6 +658,22 @@ hr.hr-border {
 .d-table-cell {
     display: table-cell!important;
 }
+.d-block {
+    display: block!important;
+}
+.d-sm-block {
+    @media (max-width: $grid-float-breakpoint-max) {
+        display: block!important;
+    }
+}
+.d-sm-inline {
+    @media (max-width: $grid-float-breakpoint-max) {
+        display: inline!important;
+    }
+}
+.d-inline {
+    display: inline!important;
+}
 .d-inline-block {
     display: inline-block!important;
 }

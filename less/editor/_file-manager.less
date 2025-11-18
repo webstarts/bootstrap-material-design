@@ -645,6 +645,34 @@ span.space {
 			}
 		}
 	}
+	.font-view {
+		li.file + li.file {
+			padding-top: 10px;
+		}
+		.leaf {
+			border-radius: ~"var(--border-radius-standard)";
+			background-color: rgba(150,150,150,0.1);
+			position: relative;
+		}
+		.screen.select {
+			display: none;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			border-radius: ~"var(--border-radius-standard)";
+		}
+
+		.active {
+			.leaf {
+				background-color: rgba(150,150,150,0.2);
+			}
+			.screen.select {
+				display: block;
+			}
+		}
+	}
+	
 	li {
 		list-style: none;
 		padding: 0;

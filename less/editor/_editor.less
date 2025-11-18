@@ -335,7 +335,9 @@ table.mce-colorbutton-grid .my-list .body { font-size: 12px; }
     color: #333;
     font-size: 14px;
     padding: 20px 10px;
-    display: block;
+    display: flex;
+	align-items: center;
+	gap: 5px;
     text-decoration: none;
     cursor: pointer;
     border-top: 2px solid rgba(0,0,0,.12);
@@ -351,16 +353,29 @@ table.mce-colorbutton-grid .my-list .body { font-size: 12px; }
 	}
 }
 
-.selectize-dropdown.font-selector {
-	.selectize-dropdown-content {
-		max-height: 350px;
-
-		.option[data-selectable] {
-			padding: 5px 0;
-
+.fonts-dropdown {
+	li {
+		&:not(.font-uploaded) {
 			img {
 				mix-blend-mode: multiply;
 			}
+		}
+
+		a {
+			display: block;
+		}
+
+		a:hover, a.active {
+			background-color: rgba(153,153,153,.15);
+		}
+	}
+
+	.options-container {
+		.font-option-item:hover {
+			background-color: rgba(153,153,153,.15);
+		}
+		.font-option-item+.font-option-item{
+			border-left: 1px solid rgba(153,153,153,.15);
 		}
 	}
 }
@@ -1023,14 +1038,21 @@ align-items: center;
 	    	color: @brand-primary;
 	    }
     }
-	.selectize-dropdown.font-selector .selectize-dropdown-content {
-		.option[data-selectable] img {
-			filter: invert(.8);
-			mix-blend-mode: normal;
+	.fonts-dropdown {
+		li {
+			&:not(.font-uploaded) {
+				img {
+					mix-blend-mode: normal;
+					filter: invert(.8);
+				}
+				&:hover img,
+				.active img {
+					filter: invert(.78);
+				}
+			}
 		}
-		.option[data-selectable]:hover img,
-		.option[data-selectable].active img {
-			filter: invert(.78);
+		.options-container {
+			color: #fff;
 		}
 	}
     /* setting & style popup */

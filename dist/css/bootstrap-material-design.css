@@ -15069,6 +15069,22 @@ hr.hr-border {
 .d-table-cell {
   display: table-cell !important;
 }
+.d-block {
+  display: block!important;
+}
+@media (max-width: 767px) {
+  .d-sm-block {
+    display: block!important;
+  }
+}
+@media (max-width: 767px) {
+  .d-sm-inline {
+    display: inline!important;
+  }
+}
+.d-inline {
+  display: inline!important;
+}
 .d-inline-block {
   display: inline-block !important;
 }
@@ -17877,6 +17893,28 @@ span.space {
   top: 0;
   bottom: -35px;
   height: auto;
+}
+.file-manager .font-view li.file + li.file {
+  padding-top: 10px;
+}
+.file-manager .font-view .leaf {
+  border-radius: var(--border-radius-standard);
+  background-color: rgba(150, 150, 150, 0.1);
+  position: relative;
+}
+.file-manager .font-view .screen.select {
+  display: none;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: var(--border-radius-standard);
+}
+.file-manager .font-view .active .leaf {
+  background-color: rgba(150, 150, 150, 0.2);
+}
+.file-manager .font-view .active .screen.select {
+  display: block;
 }
 .file-manager li {
   list-style: none;
