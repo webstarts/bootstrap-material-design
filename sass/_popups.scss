@@ -5,13 +5,14 @@
   line-height: 1.3em;
   background: $mdb-popover-background;
   border: none;
-  border-radius: $border-radius-base;
+  border-radius: unquote("calc(var(--border-radius-standard) / 2)");
   text-align: left;
   @include shadow-z-1();
 }
 
 .tooltip-inner {
     min-width: min-content;
+    padding: 16px;
 }
 
 .tooltip, .tooltip.in {
@@ -21,8 +22,15 @@
 .popover, .tooltip {
   font-family: inherit;
   .arrow, .tooltip-arrow {
-    display: none;
+    /* display: none; */
   }
+}
+.tooltip {
+    &.top {
+        .tooltip-arrow {
+            border-top-color: $mdb-popover-background;
+        }
+    }
 }
 
 .tour-tour.popover {
@@ -72,7 +80,18 @@ $cl-color: #8a8a8a !default;
     $fg-color: #fff !default;
     $bd-color: transparent !default;
     $hd-color: #111 !default;
-    $arw-color: #000 !default;
+    $arw-color: #262626 !default;
     $cl-color: #fff !default;
     @include tour-popup($bg-color, $fg-color, $bd-color, $hd-color, $arw-color, $cl-color);
+
+    .tooltip {
+        &.top {
+            .tooltip-arrow {
+                border-top-color: $mdb-popover-background-dark;
+            }
+        }
+        .tooltip-inner {
+            background: $mdb-popover-background-dark;
+        }
+    }
 }

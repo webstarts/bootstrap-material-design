@@ -141,7 +141,8 @@ $mdb-checkbox-label-color: $mdb-label-color !default;
 $mdb-checkbox-border-color: $mdb-label-color-toggle-focus !default;
 
 // Popovers and Popups
-$mdb-popover-background: rgba(101, 101, 101, 0.9) !default;
+$mdb-popover-background: rgba(101, 101, 101, 0.98) !default;
+$mdb-popover-background-dark: rgba(25, 25, 25, 0.98) !default;
 $mdb-popover-color: #ececec !default;
 
 // Dropdown Menu

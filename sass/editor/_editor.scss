@@ -235,6 +235,9 @@
 #editableContent .break-word {
 	word-wrap: break-word;
 }
+#editableContent .mce-content-body {
+	line-break: auto;
+}
 
 .wse-txt-inner {
 	display: block;

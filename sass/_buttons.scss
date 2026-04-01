@@ -391,6 +391,51 @@ button.close:focus {
   color: $link-color;
 }
 
+.fab-btn-bar {
+  .btn-circle {
+      border-radius: 50%;
+      padding: 20px;
+      width: 20px;
+      height: 20px;
+      line-height: 1em;
+      margin: auto;
+      position: relative;
+      border: 1px solid unquote("var(--brand-default)");
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      cursor: pointer;
+
+      &:hover{
+        background-color: #e4e4e4;
+        text-decoration: none;
+        color:#000;
+      }
+
+      >.icon-sm {
+        font-size: 18px;
+        font-weight: normal;
+      }
+  }
+}
+
+.theme-dark,
+.panel-popup.panel-dark {
+  .fab-btn-bar .btn-circle {
+	color: #e4e4e4;
+	background-color: transparent;
+
+	&:hover{
+	  background-color: #e4e4e4;
+	  text-decoration: none;
+	  color:#000;
+	}
+  }
+}
+
+
+
 @media (max-width: $screen-xs-max) {
 	.btn {
 		&.block-phone {
