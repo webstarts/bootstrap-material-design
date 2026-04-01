@@ -24,3 +24,4 @@ Thumbs.db
 Gemfile.lock
 dist/*
 package-lock.json
+bootstrap-material-design.code-workspace
