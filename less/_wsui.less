@@ -1245,6 +1245,28 @@ ul.unlist, ol.unlist {
     vertical-align: middle;
 }
 
+.ai-text-popup {
+	.window-body {
+		background-color: rgba(0,0,0,.04);
+	}
+	.chat-window {
+		.chat-bubble {
+			border-radius: ~"var(--border-radius-standard)";
+			border-width: 1px;
+			border-style: solid;
+
+			&.bubble-ai {
+				background-color: #fff;
+				border-color: #eee;
+			}
+			&.bubble-user {
+				background-color: #eee;
+				border-color: #ddd;
+			}
+		}
+	}
+}
+
 #beacon-container .Beacon > div {
     z-index: 999!important;
 }
