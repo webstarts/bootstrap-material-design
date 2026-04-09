@@ -707,6 +707,9 @@ hr.hr-border {
     & > .col-sm-5 {float: none; padding-left: 0; padding-right: 0; width: auto;}
     & > .col-sm-10 {float: none; padding-left: 0; padding-right: 0; width: auto;}
 }
+.d-flex.hide {
+    display: none!important;
+}
 .d-none {
     display: none!important;
 }
