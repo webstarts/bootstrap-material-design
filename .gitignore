@@ -25,3 +25,4 @@ Gemfile.lock
 dist/*
 package-lock.json
 bootstrap-material-design.code-workspace
+publish.sh
