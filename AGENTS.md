@@ -12,7 +12,7 @@ WebStarts-specific editor/dashboard additions layered on top.
 
 ## Git
 
-- Repo root: `/Users/kashifnaseem/projects/webstarts/bootstrap-material-design`
+- Repo root: `~/projects/webstarts/bootstrap-material-design`
 - Current branch in this workspace: `master`
 - Remote: `https://github.com/webstarts/bootstrap-material-design.git`
 - Additional upstream remote in this checkout:
