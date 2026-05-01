@@ -5,7 +5,7 @@ This repo contains shared Bootstrap 3 Material Design theme assets used by the W
 It is effectively a Bootstrap makeover layer: Bootstrap 3 structure and components are restyled to look and behave closer to Material Design, with WebStarts-specific editor/dashboard additions layered on top.
 
 ## Git
-- Repo root: `~/projects/webstarts/bootstrap-material-design`
+- Repo root: `{PROJECT_ROOT}/bootstrap-material-design`
 - Current branch: `master`
 - Remote: `https://github.com/webstarts/bootstrap-material-design.git`
 - Additional upstream remote: `https://github.com/mdbootstrap/mdb-ui-kit.git`
@@ -111,8 +111,13 @@ links here and defines the full read order for WebStarts UI work.
   and global `border-box` sizing in mind when adjusting spacing or component
   proportions.
 - Popup classes: reuse existing modal/popup patterns before inventing a new
-  overlay. WebStarts admin code commonly creates popups through `WSUI.popup`
-  and related classes in `webstarts/cadmin/scripts/js`.
+  overlay. Common families include `.panel-popup`, `.panel-modal`, popover and
+  tooltip styles, `.ai-text-popup`, and WebStarts admin popups created through
+  `WSUI.popup` in `webstarts/cadmin/scripts/js`.
+- Source references for these helpers: `less/_layout.less` owns flex, width,
+  column, and `border-box` utilities; `less/layout/_margin-padding.less` owns
+  spacing utilities; `less/_wsui.less`, `less/_popups.less`, and
+  `less/_themes.less` own popup/modal/theme variants.
 
 Longer-term direction for WebStarts UI is a component-based setup where each
 feature ships its own CSS, JavaScript, and HTML together, instead of growing only
