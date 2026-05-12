@@ -12604,6 +12604,7 @@ hr[data-divider-text]:before {
 .edit-style-options-container .edit-style-options-container-sub + .edit-style-options-container-sub {
   margin-top: 5px;
 }
+.bg-thumb-preview-container .title,
 .edit-style-options-container .title {
   font-size: 13px !important;
   margin: 0 !important;
